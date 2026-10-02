@@ -21,3 +21,11 @@ No exact hex values are canonical in the initial records. Hex values derived fro
 ## Initial scope
 
 The initial records cover Federated Suns, Draconis Combine, Free Worlds League, Lyran Commonwealth, Capellan Confederation, and Free Rasalhague Republic. The government/faction candidates are provisional heraldry-derived interpretations of Camo Specs faction emblems and retain claim-level provenance in `research/claims/initial-six.yaml`.
+
+## Presentation site
+
+The project’s GitHub Pages site is the presentation layer for the reusable government/faction UI palettes:
+
+<https://sansd20.github.io/battletech-faction-colors/>
+
+The site reads `palettes/government-ui.yaml` at runtime. It is a visual reference, not an independent source of authority, and it does not establish military paint schemes or official hexadecimal color specifications.

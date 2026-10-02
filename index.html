@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A source-aware visual reference for BattleTech government and faction UI palettes.">
+  <title>BattleTech Faction Colors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="./" aria-label="BattleTech Faction Colors home">
+        <span class="wordmark-mark" aria-hidden="true">BT</span>
+        <span>BattleTech <strong>Faction Colors</strong></span>
+      </a>
+      <a class="repo-link" href="https://github.com/SANSd20/battletech-faction-colors">View repository <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Source-aware visual reference</p>
+        <h1>Government and faction identities, expressed as reusable UI palettes.</h1>
+        <p class="lede">A compact reference for the current six provisional dark UI palettes. The site presents the project’s reusable palette layer without treating exact digital values as official BattleTech color specifications.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#palettes">Explore palettes <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="#methodology">Read the methodology</a>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit-core"><span>UI</span><small>adaptation</small></div>
+      </div>
+    </section>
+
+    <section class="status-strip shell" aria-label="Project status">
+      <div><strong id="palette-count">Six</strong><span>initial palettes</span></div>
+      <div><strong>UI_ADAPTATION</strong><span>exact values</span></div>
+      <div><strong>PROVISIONAL</strong><span>current approval status</span></div>
+      <div><strong>YAML</strong><span>authoritative data source</span></div>
+    </section>
+
+    <section id="palettes" class="palette-section shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current collection</p>
+          <h2>Government / Faction Dark UI Palettes</h2>
+        </div>
+        <p class="section-intro">Each card keeps the primary identity color visible first, then shows the supporting colors, surfaces, and recommended text choices used by the reusable palette layer.</p>
+      </div>
+      <div id="palette-grid" class="palette-grid" aria-live="polite">
+        <div class="loading-card"><span class="loader" aria-hidden="true"></span>Loading palette data from <code>palettes/government-ui.yaml</code>…</div>
+      </div>
+      <noscript>
+        <div class="noscript-note">JavaScript is required to load the palette cards directly from the authoritative YAML file. The methodology and project boundaries remain available below.</div>
+      </noscript>
+    </section>
+
+    <section id="methodology" class="methodology shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">How to read this</p>
+          <h2>Presentation is not evidence authority.</h2>
+        </div>
+        <p class="section-intro">The project keeps source observations, identity conclusions, reusable UI palettes, and future consumer presentations distinct.</p>
+      </div>
+      <div class="method-grid">
+        <article class="method-card method-flow">
+          <p class="card-kicker">Information flow</p>
+          <div class="flow-list">
+            <span>Sources</span><i aria-hidden="true">↓</i>
+            <span>Research / provenance</span><i aria-hidden="true">↓</i>
+            <span>Canonical faction identity</span><i aria-hidden="true">↓</i>
+            <span>Reusable UI palettes</span><i aria-hidden="true">↓</i>
+            <span class="flow-highlight">Consumer / presentation layers</span>
+          </div>
+        </article>
+        <article class="method-card">
+          <p class="card-kicker">Status and scope</p>
+          <h3>What these colors mean</h3>
+          <p>Current government/faction identity claims are substantially <code>HERALDRY_DERIVED</code> and <code>RESEARCH_REQUIRED</code>. The exact hexadecimal values shown here are <code>UI_ADAPTATION</code> choices and remain <code>PROVISIONAL</code>.</p>
+          <p>Military identity is tracked separately. These cards are not military paint schemes and do not establish military color standards.</p>
+        </article>
+        <article class="method-card">
+          <p class="card-kicker">Rasalhague note</p>
+          <h3>Culturally informed UI adaptation</h3>
+          <p>Free Rasalhague uses a Swedish-inspired blue and gold/yellow UI direction, informed by its documented Swedish/Scandinavian cultural identity. Cyan/light blue and blue-gray remain supporting colors from the heraldry-derived identity.</p>
+          <p>This is not a claim that Swedish blue and yellow are canonically specified as official Free Rasalhague Republic national colors.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>BattleTech Faction Colors</span>
+      <span>Presentation layer · data source: <code>palettes/government-ui.yaml</code></span>
+      <a href="https://github.com/SANSd20/battletech-faction-colors">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
