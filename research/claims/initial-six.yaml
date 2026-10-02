@@ -1,0 +1,108 @@
+schema_version: 1
+project: battletech-faction-colors
+source_set:
+  - id: camospecs-factions-index
+    title: Camo Specs factions index
+    publisher: Camo Specs Online
+    url: https://camospecs.com/factions/
+    accessed: 2026-10-02
+    role: faction emblem index and source navigation
+
+claims:
+  - id: fs-heraldry-candidate
+    faction_id: federated-suns
+    subject: government_faction_identity
+    source_id: camospecs-factions-index
+    source_locator: https://camospecs.com/factions/federated-suns/
+    observation: red, yellow-gold, white, and black/gray are visible in the faction emblem; the sunburst and gold/yellow are treated as identity-bearing rather than merely structural.
+    observed_colors: [red, yellow-gold, white, black-gray]
+    identity_color_candidates:
+      primary: [yellow-gold]
+      secondary: [red]
+      neutral: [white]
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: strong
+    exact_hex_values: null
+
+  - id: dc-heraldry-candidate
+    faction_id: draconis-combine
+    subject: government_faction_identity
+    source_id: camospecs-factions-index
+    source_locator: https://camospecs.com/factions/draconis-combine/
+    observation: the emblem is dominated by a red field and black dragon.
+    observed_colors: [red, black]
+    identity_color_candidates:
+      primary: [red]
+      secondary: [black]
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: very-strong
+    exact_hex_values: null
+
+  - id: fwl-heraldry-candidate
+    faction_id: free-worlds-league
+    subject: government_faction_identity
+    source_id: camospecs-factions-index
+    source_locator: https://camospecs.com/factions/free-worlds-league/
+    observation: purple dominates the crest, with blue and white/light gray supporting colors.
+    observed_colors: [purple, blue, white-light-gray]
+    identity_color_candidates:
+      primary: [purple]
+      secondary: [blue]
+      neutral: [white-light-gray]
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: very-strong
+    exact_hex_values: null
+
+  - id: lc-heraldry-candidate
+    faction_id: lyran-commonwealth
+    subject: government_faction_identity
+    source_id: camospecs-factions-index
+    source_locator: https://camospecs.com/factions/lyran-commonwealth/
+    observation: blue background, copper/brown fist, gray/silver armor, and black are visible; copper/brown is interpreted as the depicted fist rather than faction identity.
+    observed_colors: [blue, copper-brown, gray-silver, black]
+    identity_color_candidates:
+      primary: [blue]
+      secondary: [gray-silver]
+    excluded_artwork_colors:
+      - color: copper-brown
+        reason: depicts the fist/object rather than functioning as faction identification
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: strong
+    exact_hex_values: null
+
+  - id: cc-heraldry-candidate
+    faction_id: capellan-confederation
+    subject: government_faction_identity
+    source_id: camospecs-factions-index
+    source_locator: https://camospecs.com/factions/capellan-confederation/
+    observation: green and yellow/gold are prominent; black and white are treated primarily as structural or neutral colors.
+    observed_colors: [green, yellow-gold, black, white]
+    identity_color_candidates:
+      primary: [green]
+      secondary: [yellow-gold]
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: strong
+    exact_hex_values: null
+
+  - id: frr-heraldry-candidate
+    faction_id: free-rasalhague-republic
+    subject: government_faction_identity
+    source_id: camospecs-factions-index
+    source_locator: https://camospecs.com/factions/free-rasalhague-republic/
+    observation: the emblem is dominated by dark blue, bright cyan/light blue, and silver/gray; small yellow-green details are not elevated into the main palette.
+    observed_colors: [dark-blue, cyan-light-blue, silver-gray, yellow-green]
+    identity_color_candidates:
+      primary: [dark-blue, cyan-light-blue]
+      secondary: [silver-gray]
+    excluded_artwork_colors:
+      - color: yellow-green
+        reason: minor detail without sufficient evidence for main identity status
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: strong
+    exact_hex_values: null

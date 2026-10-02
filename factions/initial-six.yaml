@@ -1,0 +1,62 @@
+schema_version: 1
+factions:
+  - id: federated-suns
+    name: Federated Suns
+    military_identity:
+      status: established_prior_dataset
+      colors: null
+      note: Military values are intentionally not reconstructed from the heraldry analysis.
+    government_faction_identity:
+      status: provisional
+      candidate_claim_id: fs-heraldry-candidate
+      exact_hex_values: null
+  - id: draconis-combine
+    name: Draconis Combine
+    military_identity:
+      status: established_prior_dataset
+      colors: null
+      note: Military values are intentionally not reconstructed from the heraldry analysis.
+    government_faction_identity:
+      status: provisional
+      candidate_claim_id: dc-heraldry-candidate
+      exact_hex_values: null
+  - id: free-worlds-league
+    name: Free Worlds League
+    military_identity:
+      status: established_prior_dataset
+      colors: null
+      note: Military values are intentionally not reconstructed from the heraldry analysis.
+    government_faction_identity:
+      status: provisional
+      candidate_claim_id: fwl-heraldry-candidate
+      exact_hex_values: null
+  - id: lyran-commonwealth
+    name: Lyran Commonwealth
+    military_identity:
+      status: established_prior_dataset
+      colors: null
+      note: Military values are intentionally not reconstructed from the heraldry analysis.
+    government_faction_identity:
+      status: provisional
+      candidate_claim_id: lc-heraldry-candidate
+      exact_hex_values: null
+  - id: capellan-confederation
+    name: Capellan Confederation
+    military_identity:
+      status: established_prior_dataset
+      colors: null
+      note: Military values are intentionally not reconstructed from the heraldry analysis.
+    government_faction_identity:
+      status: provisional
+      candidate_claim_id: cc-heraldry-candidate
+      exact_hex_values: null
+  - id: free-rasalhague-republic
+    name: Free Rasalhague Republic
+    military_identity:
+      status: established_prior_dataset
+      colors: null
+      note: Military values are intentionally not reconstructed from the heraldry analysis.
+    government_faction_identity:
+      status: provisional
+      candidate_claim_id: frr-heraldry-candidate
+      exact_hex_values: null
