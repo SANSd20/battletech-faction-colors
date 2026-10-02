@@ -67,7 +67,7 @@ palettes:
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
-  roles: {primary: '#58B8D8', primary_deep: '#28566A', primary_surface: '#356D80', panel: '#1E2B31', panel_alt: '#293B43', border: '#688894', secondary: '#B9C5CA', accent: '#A9DDEF', foreground: '#EFF7FA', ink: '#111111'}
-  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
-  contrast_checks: {foreground_on_panel: 13.39, foreground_on_panel_alt: 10.75, recommended_text_on_primary: 8.33, recommended_text_on_secondary: 10.7, recommended_text_on_accent: 12.84, border_against_panel: 3.83}
-  design_note: Cyan/light blue is the primary UI expression, supported by dark blue surfaces and silver/gray. Minor yellow-green emblem detail remains excluded.
+  roles: {primary: '#0B6FA4', primary_deep: '#06456A', primary_surface: '#174F70', panel: '#172C38', panel_alt: '#213C4B', border: '#648392', secondary: '#E7B928', accent: '#79C7E3', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.26, foreground_on_panel_alt: 10.64, recommended_text_on_primary: 5.04, recommended_text_on_secondary: 10.22, recommended_text_on_accent: 9.97, border_against_panel: 3.58}
+  design_note: Swedish-inspired blue and gold/yellow are the approved UI foundation, informed by Rasalhague's documented Swedish/Scandinavian cultural identity. Cyan/light blue and blue-gray remain supporting colors from the heraldry-derived identity. This is a UI adaptation, not a claim that Swedish national colors are canonically specified as official FRR colors.
