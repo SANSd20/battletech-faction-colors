@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BattleTech Government UI Palette Preview</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background: #101318; color: #e8edf2; }
+    body { margin: 0; padding: 2rem; }
+    header { max-width: 1100px; margin: 0 auto 1.5rem; }
+    h1 { margin-bottom: .35rem; }
+    p { color: #b9c2cc; line-height: 1.5; }
+    .grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
+    .card { overflow: hidden; border: 1px solid #3b424b; border-radius: 12px; background: #1b1f25; box-shadow: 0 8px 24px #0005; }
+    .hero { padding: 1.1rem; min-height: 7rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero h2 { margin: 0; font-size: 1.15rem; }
+    .hero code { opacity: .85; }
+    .content { padding: 1rem; }
+    .sample { padding: .8rem; border-radius: 8px; margin-bottom: 1rem; line-height: 1.45; }
+    .sample strong { display: block; margin-bottom: .25rem; }
+    .swatches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+    .swatch { min-height: 3.1rem; padding: .55rem; border-radius: 7px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #ffffff33; }
+    .swatch span { font-size: .78rem; opacity: .9; }
+    .swatch code { font-size: .78rem; }
+    .note { max-width: 1100px; margin: 1.5rem auto 0; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Government / Faction Dark UI Palettes</h1>
+    <p>Reference preview of the six provisional <code>UI_ADAPTATION</code> palettes in <code>government-ui.yaml</code>. Roles are application-neutral; consumer applications assign their own semantic meanings.</p>
+  </header>
+  <main class="grid" id="palettes"></main>
+  <p class="note">Exact hex values are project design choices, not official BattleTech digital color specifications. Source identity claims remain <code>HERALDRY_DERIVED</code> and <code>RESEARCH_REQUIRED</code>.</p>
+  <script>
+    // Values mirror palettes/government-ui.yaml. Keep this reference preview synchronized with that file.
+    const palettes = [
+      { name: 'Federated Suns', primary: '#D6AE3D', primary_deep: '#6B4D12', primary_surface: '#4B3A18', panel: '#241F18', panel_alt: '#332A1D', border: '#806E48', secondary: '#A83A32', accent: '#F0D77A', foreground: '#F4EEDC', ink: '#111111', textOnPrimary: 'ink', textOnSecondary: 'foreground', textOnAccent: 'ink' },
+      { name: 'Draconis Combine', primary: '#C92A2A', primary_deep: '#681B1B', primary_surface: '#542323', panel: '#211F1F', panel_alt: '#302C2C', border: '#776767', secondary: '#171717', accent: '#E05252', foreground: '#F3E7E5', ink: '#111111', textOnPrimary: 'foreground', textOnSecondary: 'foreground', textOnAccent: 'ink' },
+      { name: 'Free Worlds League', primary: '#7047A3', primary_deep: '#382550', primary_surface: '#49345F', panel: '#282232', panel_alt: '#372E43', border: '#796A8A', secondary: '#3F62A8', accent: '#C5B3D9', foreground: '#F0EBF5', ink: '#111111', textOnPrimary: 'foreground', textOnSecondary: 'foreground', textOnAccent: 'ink' },
+      { name: 'Lyran Commonwealth', primary: '#356DA8', primary_deep: '#1D3B5D', primary_surface: '#294F73', panel: '#202B35', panel_alt: '#2B3A47', border: '#657F96', secondary: '#AAB5BF', accent: '#D8E2E8', foreground: '#F0F4F7', ink: '#111111', textOnPrimary: 'foreground', textOnSecondary: 'ink', textOnAccent: 'ink' },
+      { name: 'Capellan Confederation', primary: '#00A86B', primary_deep: '#0B3A2B', primary_surface: '#174C3B', panel: '#173C2F', panel_alt: '#205242', border: '#4C9B7A', secondary: '#C9A83D', accent: '#E2C36E', foreground: '#ECF5F0', ink: '#111111', textOnPrimary: 'ink', textOnSecondary: 'ink', textOnAccent: 'ink' },
+      { name: 'Free Rasalhague Republic', primary: '#58B8D8', primary_deep: '#28566A', primary_surface: '#356D80', panel: '#1E2B31', panel_alt: '#293B43', border: '#688894', secondary: '#B9C5CA', accent: '#A9DDEF', foreground: '#EFF7FA', ink: '#111111', textOnPrimary: 'ink', textOnSecondary: 'ink', textOnAccent: 'ink' }
+    ];
+    const labels = { primary: 'Primary', secondary: 'Secondary', primary_surface: 'Primary surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
+    document.querySelector('#palettes').innerHTML = palettes.map(p => {
+      const text = p[p.textOnPrimary];
+      const textColor = key => key === 'primary' ? p[p.textOnPrimary] : key === 'secondary' ? p[p.textOnSecondary] : key === 'accent' ? p[p.textOnAccent] : p.ink;
+      const swatches = Object.entries(labels).map(([key, label]) => `<div class="swatch" style="background:${p[key]};color:${textColor(key)}"><span>${label}</span><code>${p[key]}</code></div>`).join('');
+      return `<article class="card"><div class="hero" style="background:${p.primary_surface};color:${p.foreground}"><h2>${p.name}</h2><code>${p.primary} + ${p.secondary}</code></div><div class="content" style="background:${p.panel};color:${p.foreground}"><div class="sample" style="background:${p.primary};color:${text}"><strong>Recommended text sample</strong>Faction identity surfaces remain readable while preserving the primary color.</div><div class="swatches">${swatches}</div></div></article>`;
+    }).join('');
+  </script>
+</body>
+</html>
