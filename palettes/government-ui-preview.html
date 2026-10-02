@@ -45,7 +45,7 @@
     const labels = { primary: 'Primary', secondary: 'Secondary', primary_surface: 'Primary surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
     document.querySelector('#palettes').innerHTML = palettes.map(p => {
       const text = p[p.textOnPrimary];
-      const textColor = key => key === 'primary' ? p[p.textOnPrimary] : key === 'secondary' ? p[p.textOnSecondary] : key === 'accent' ? p[p.textOnAccent] : p.ink;
+      const textColor = key => key === 'primary' ? p[p.textOnPrimary] : key === 'secondary' ? p[p.textOnSecondary] : key === 'accent' ? p[p.textOnAccent] : ['primary_surface', 'panel', 'panel_alt', 'border', 'ink'].includes(key) ? p.foreground : p.ink;
       const swatches = Object.entries(labels).map(([key, label]) => `<div class="swatch" style="background:${p[key]};color:${textColor(key)}"><span>${label}</span><code>${p[key]}</code></div>`).join('');
       return `<article class="card"><div class="hero" style="background:${p.primary_surface};color:${p.foreground}"><h2>${p.name}</h2><code>${p.primary} + ${p.secondary}</code></div><div class="content" style="background:${p.panel};color:${p.foreground}"><div class="sample" style="background:${p.primary};color:${text}"><strong>Recommended text sample</strong>Faction identity surfaces remain readable while preserving the primary color.</div><div class="swatches">${swatches}</div></div></article>`;
     }).join('');
