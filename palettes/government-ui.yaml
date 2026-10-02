@@ -1,18 +1,20 @@
 schema_version: 1
 project: battletech-faction-colors
 palette_set:
-  id: initial-six-government-dark-ui
+  id: government-faction-dark-ui
   identity_type: government_faction_identity
-  purpose: reusable dark UI adaptation
+  purpose: reusable government/faction dark UI adaptations
   approval_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
   notes:
   - Exact hexadecimal values are project UI adaptations, not official BattleTech color specifications.
   - Source faction identities remain HERALDRY_DERIVED and RESEARCH_REQUIRED until stronger evidence is approved.
   - Roles are application-neutral. Consumers such as Combat Infantry and the A Time of War character creator map these colors to their own semantic UI roles.
+  - Expansion records remain provisional and reference individual research claims; unresolved identities are not assigned placeholder UI colors.
 palettes:
 - faction_id: federated-suns
   name: Federated Suns
+  group: Successor States / Inner Sphere
   identity_claim_id: fs-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -23,6 +25,7 @@ palettes:
   design_note: Gold/yellow is the primary government identity color, with red retained as a supporting heraldic color. White is represented by the light foreground/accent range.
 - faction_id: draconis-combine
   name: Draconis Combine
+  group: Successor States / Inner Sphere
   identity_claim_id: dc-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -33,6 +36,7 @@ palettes:
   design_note: Red remains primary and charcoal/black provides the secondary identity and dark surfaces.
 - faction_id: free-worlds-league
   name: Free Worlds League
+  group: Successor States / Inner Sphere
   identity_claim_id: fwl-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -43,6 +47,7 @@ palettes:
   design_note: Purple remains primary. Blue is retained as the supporting heraldic color and pale violet serves as the light neutral.
 - faction_id: lyran-commonwealth
   name: Lyran Commonwealth
+  group: Successor States / Inner Sphere
   identity_claim_id: lc-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -53,6 +58,7 @@ palettes:
   design_note: Blue remains primary with silver/gray supporting it. Copper/brown from the fist artwork is intentionally excluded from the identity palette.
 - faction_id: capellan-confederation
   name: Capellan Confederation
+  group: Successor States / Inner Sphere
   identity_claim_id: cc-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -63,6 +69,7 @@ palettes:
   design_note: Green remains primary with yellow/gold as the supporting heraldic color.
 - faction_id: free-rasalhague-republic
   name: Free Rasalhague Republic
+  group: Successor States / Inner Sphere
   identity_claim_id: frr-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -71,3 +78,1258 @@ palettes:
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
   contrast_checks: {foreground_on_panel: 13.26, foreground_on_panel_alt: 10.64, recommended_text_on_primary: 5.04, recommended_text_on_secondary: 10.22, recommended_text_on_accent: 9.97, border_against_panel: 3.58}
   design_note: Swedish-inspired blue and gold/yellow are the approved UI foundation, informed by Rasalhague's documented Swedish/Scandinavian cultural identity. Cyan/light blue and blue-gray remain supporting colors from the heraldry-derived identity. This is a UI adaptation, not a claim that Swedish national colors are canonically specified as official FRR colors.
+
+- faction_id: clan-blood-spirit
+  name: Clan Blood Spirit
+  group: Clans
+  identity_claim_id: clan-blood-spirit-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#B8C4CB'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 10.61
+    recommended_text_on_accent: 12.39
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with silver gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-burrock
+  name: Clan Burrock
+  group: Clans
+  identity_claim_id: clan-burrock-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#22272B'
+    primary_deep: '#121A20'
+    primary_surface: '#191F25'
+    panel: '#131A1F'
+    panel_alt: '#1C272E'
+    border: '#BCA752'
+    secondary: '#D6A72F'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 16.13
+    foreground_on_panel_alt: 13.98
+    recommended_text_on_primary: 13.84
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 12.39
+    border_against_panel: 7.35
+  design_note: Black is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: clan-cloud-cobra
+  name: Clan Cloud Cobra
+  group: Clans
+  identity_claim_id: clan-cloud-cobra-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#1599A8'
+    primary_deep: '#0D4A54'
+    primary_surface: '#106A77'
+    panel: '#0F3A42'
+    panel_alt: '#165A67'
+    border: '#97D1D8'
+    secondary: '#7047A3'
+    accent: '#AAB5BF'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.31
+    foreground_on_panel_alt: 7.16
+    recommended_text_on_primary: 5.53
+    recommended_text_on_secondary: 6.18
+    recommended_text_on_accent: 9.06
+    border_against_panel: 7.29
+  design_note: Cyan is the provisional primary identity candidate, with purple as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: clan-coyote
+  name: Clan Coyote
+  group: Clans
+  identity_claim_id: clan-coyote-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#A97A2B'
+    primary_deep: '#4B3D20'
+    primary_surface: '#725625'
+    panel: '#39311F'
+    panel_alt: '#594C2E'
+    border: '#C5AD6A'
+    secondary: '#D6A72F'
+    accent: '#63869E'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.8
+    foreground_on_panel_alt: 7.72
+    recommended_text_on_primary: 4.95
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 4.89
+    border_against_panel: 5.85
+  design_note: Ochre is the provisional primary identity candidate, with gold red as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-diamond-shark
+  name: Clan Diamond Shark
+  group: Clans
+  identity_claim_id: clan-diamond-shark-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#AAB5BF'
+    primary_deep: '#4B555E'
+    primary_surface: '#737D86'
+    panel: '#394249'
+    panel_alt: '#596771'
+    border: '#BECCD4'
+    secondary: '#B52A32'
+    accent: '#63869E'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 9.41
+    foreground_on_panel_alt: 5.35
+    recommended_text_on_primary: 9.06
+    recommended_text_on_secondary: 5.77
+    recommended_text_on_accent: 4.89
+    border_against_panel: 6.23
+  design_note: Silver is the provisional primary identity candidate, with red as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: clan-fire-mandrill
+  name: Clan Fire Mandrill
+  group: Clans
+  identity_claim_id: clan-fire-mandrill-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B44525'
+    primary_deep: '#56291F'
+    primary_surface: '#843723'
+    panel: '#40241F'
+    panel_alt: '#65372D'
+    border: '#C7A259'
+    secondary: '#D6A72F'
+    accent: '#30383D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 12.94
+    foreground_on_panel_alt: 9.02
+    recommended_text_on_primary: 5.05
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 10.96
+    border_against_panel: 5.87
+  design_note: Orange Red is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-ghost-bear
+  name: Clan Ghost Bear
+  group: Clans
+  identity_claim_id: clan-ghost-bear-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#5C9FBD'
+    primary_deep: '#2B4C5D'
+    primary_surface: '#3F6E85'
+    panel: '#233C48'
+    panel_alt: '#365D70'
+    border: '#B0CED9'
+    secondary: '#AAB5BF'
+    accent: '#23466A'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 10.64
+    foreground_on_panel_alt: 6.52
+    recommended_text_on_primary: 6.43
+    recommended_text_on_secondary: 9.06
+    recommended_text_on_accent: 8.94
+    border_against_panel: 7.0
+  design_note: Ice Blue is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-goliath-scorpion
+  name: Clan Goliath Scorpion
+  group: Clans
+  identity_claim_id: clan-goliath-scorpion-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#4D9368'
+    primary_deep: '#1E4334'
+    primary_surface: '#2B6144'
+    panel: '#1B362D'
+    panel_alt: '#295444'
+    border: '#B2A053'
+    secondary: '#22272B'
+    accent: '#B2A17D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.96
+    foreground_on_panel_alt: 7.88
+    recommended_text_on_primary: 5.12
+    recommended_text_on_secondary: 13.84
+    recommended_text_on_accent: 7.45
+    border_against_panel: 4.99
+  design_note: Green is the provisional primary identity candidate, with black gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: scorpion-empire
+  name: Scorpion Empire
+  group: Clan successor states
+  identity_claim_id: scorpion-empire-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#4D9368'
+    primary_deep: '#1E4334'
+    primary_surface: '#2B6144'
+    panel: '#1B362D'
+    panel_alt: '#295444'
+    border: '#B2A053'
+    secondary: '#B52A32'
+    accent: '#B2A17D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.96
+    foreground_on_panel_alt: 7.88
+    recommended_text_on_primary: 5.12
+    recommended_text_on_secondary: 5.77
+    recommended_text_on_accent: 7.45
+    border_against_panel: 4.99
+  design_note: Green is the provisional primary identity candidate, with red gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-hells-horses
+  name: Clan Hell's Horses
+  group: Clans
+  identity_claim_id: clan-hells-horses-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#8E692C'
+    primary_deep: '#403520'
+    primary_surface: '#604B25'
+    panel: '#312D20'
+    panel_alt: '#4D452F'
+    border: '#B3666E'
+    secondary: '#B52A32'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 12.63
+    foreground_on_panel_alt: 8.73
+    recommended_text_on_primary: 4.58
+    recommended_text_on_secondary: 5.77
+    recommended_text_on_accent: 12.39
+    border_against_panel: 3.3
+  design_note: Ochre Brown is the provisional primary identity candidate, with red as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-ice-hellion
+  name: Clan Ice Hellion
+  group: Clans
+  identity_claim_id: clan-ice-hellion-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#5C9FBD'
+    primary_deep: '#2B4C5D'
+    primary_surface: '#3F6E85'
+    panel: '#233C48'
+    panel_alt: '#365D70'
+    border: '#B0CED9'
+    secondary: '#C56A2C'
+    accent: '#30383D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 10.64
+    foreground_on_panel_alt: 6.52
+    recommended_text_on_primary: 6.43
+    recommended_text_on_secondary: 4.92
+    recommended_text_on_accent: 10.96
+    border_against_panel: 7.0
+  design_note: Ice Blue is the provisional primary identity candidate, with orange as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-jade-falcon
+  name: Clan Jade Falcon
+  group: Clans
+  identity_claim_id: clan-jade-falcon-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#4D9368'
+    primary_deep: '#1E4334'
+    primary_surface: '#2B6144'
+    panel: '#1B362D'
+    panel_alt: '#295444'
+    border: '#B2A053'
+    secondary: '#356DA8'
+    accent: '#D6A72F'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.96
+    foreground_on_panel_alt: 7.88
+    recommended_text_on_primary: 5.12
+    recommended_text_on_secondary: 4.94
+    recommended_text_on_accent: 8.48
+    border_against_panel: 4.99
+  design_note: Green is the provisional primary identity candidate, with blue as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: clan-nova-cat
+  name: Clan Nova Cat
+  group: Clans
+  identity_claim_id: clan-nova-cat-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#23466A'
+    primary_deep: '#13273A'
+    primary_surface: '#19344E'
+    panel: '#132331'
+    panel_alt: '#1C354B'
+    border: '#78AEC4'
+    secondary: '#B52A32'
+    accent: '#AAB5BF'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.69
+    foreground_on_panel_alt: 11.61
+    recommended_text_on_primary: 8.94
+    recommended_text_on_secondary: 5.77
+    recommended_text_on_accent: 9.06
+    border_against_panel: 6.59
+  design_note: Navy is the provisional primary identity candidate, with red gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-sea-fox
+  name: Clan Sea Fox
+  group: Clans
+  identity_claim_id: clan-sea-fox-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#6FA9C8'
+    primary_deep: '#335062'
+    primary_surface: '#4C758C'
+    panel: '#283E4B'
+    panel_alt: '#3F6275'
+    border: '#A6B5BE'
+    secondary: '#AAB5BF'
+    accent: '#23466A'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 10.25
+    foreground_on_panel_alt: 6.0
+    recommended_text_on_primary: 7.36
+    recommended_text_on_secondary: 9.06
+    recommended_text_on_accent: 8.94
+    border_against_panel: 5.3
+  design_note: Pale Blue is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: clan-snow-raven
+  name: Clan Snow Raven
+  group: Clans
+  identity_claim_id: clan-snow-raven-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#385467'
+    primary_deep: '#1C2D39'
+    primary_surface: '#273D4C'
+    panel: '#192730'
+    panel_alt: '#263B49'
+    border: '#A7C4D0'
+    secondary: '#5C9FBD'
+    accent: '#BFC9CE'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.03
+    foreground_on_panel_alt: 10.68
+    recommended_text_on_primary: 7.32
+    recommended_text_on_secondary: 6.43
+    recommended_text_on_accent: 11.21
+    border_against_panel: 8.33
+  design_note: Slate is the provisional primary identity candidate, with ice blue as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: raven-alliance
+  name: Raven Alliance
+  group: Clan successor states
+  identity_claim_id: raven-alliance-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#22272B'
+    primary_deep: '#121A20'
+    primary_surface: '#191F25'
+    panel: '#131A1F'
+    panel_alt: '#1C272E'
+    border: '#BCA752'
+    secondary: '#5C9FBD'
+    accent: '#BFC9CE'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 16.13
+    foreground_on_panel_alt: 13.98
+    recommended_text_on_primary: 13.84
+    recommended_text_on_secondary: 6.43
+    recommended_text_on_accent: 11.21
+    border_against_panel: 7.35
+  design_note: Black is the provisional primary identity candidate, with ice blue as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-star-adder
+  name: Clan Star Adder
+  group: Clans
+  identity_claim_id: clan-star-adder-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#23466A'
+    primary_deep: '#13273A'
+    primary_surface: '#19344E'
+    panel: '#132331'
+    panel_alt: '#1C354B'
+    border: '#78AEC4'
+    secondary: '#127385'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.69
+    foreground_on_panel_alt: 11.61
+    recommended_text_on_primary: 8.94
+    recommended_text_on_secondary: 5.05
+    recommended_text_on_accent: 12.39
+    border_against_panel: 6.59
+  design_note: Navy is the provisional primary identity candidate, with cyan gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-steel-viper
+  name: Clan Steel Viper
+  group: Clans
+  identity_claim_id: clan-steel-viper-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#287665'
+    primary_deep: '#163F3C'
+    primary_surface: '#1F5A51'
+    panel: '#153332'
+    panel_alt: '#204F4C'
+    border: '#9AC1AB'
+    secondary: '#22272B'
+    accent: '#83C7A1'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 12.43
+    foreground_on_panel_alt: 8.44
+    recommended_text_on_primary: 4.98
+    recommended_text_on_secondary: 13.84
+    recommended_text_on_accent: 9.58
+    border_against_panel: 6.83
+  design_note: Teal Green is the provisional primary identity candidate, with black as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: clan-stone-lion
+  name: Clan Stone Lion
+  group: Clans
+  identity_claim_id: clan-stone-lion-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#30383D'
+    primary_deep: '#182128'
+    primary_surface: '#222A30'
+    panel: '#171F25'
+    panel_alt: '#222F36'
+    border: '#AB9B79'
+    secondary: '#B08A4C'
+    accent: '#B2A17D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 15.31
+    foreground_on_panel_alt: 12.62
+    recommended_text_on_primary: 10.96
+    recommended_text_on_secondary: 5.92
+    recommended_text_on_accent: 7.45
+    border_against_panel: 6.11
+  design_note: Charcoal is the provisional primary identity candidate, with gold brown as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: clan-widowmaker
+  name: Clan Widowmaker
+  group: Clans
+  identity_claim_id: clan-widowmaker-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#22272B'
+    primary_deep: '#121A20'
+    primary_surface: '#191F25'
+    panel: '#131A1F'
+    panel_alt: '#1C272E'
+    border: '#BCA752'
+    secondary: '#D6A72F'
+    accent: '#616D74'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 16.13
+    foreground_on_panel_alt: 13.98
+    recommended_text_on_primary: 13.84
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 4.88
+    border_against_panel: 7.35
+  design_note: Black is the provisional primary identity candidate, with gold red as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: clan-wolf
+  name: Clan Wolf
+  group: Clans
+  identity_claim_id: clan-wolf-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#D6A72F'
+    accent: '#30383D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 10.96
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: comstar
+  name: ComStar
+  group: Interstellar organizations
+  identity_claim_id: comstar-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#AAB5BF'
+    primary_deep: '#4B555E'
+    primary_surface: '#737D86'
+    panel: '#394249'
+    panel_alt: '#596771'
+    border: '#BECCD4'
+    secondary: '#22272B'
+    accent: '#BFC9CE'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 9.41
+    foreground_on_panel_alt: 5.35
+    recommended_text_on_primary: 9.06
+    recommended_text_on_secondary: 13.84
+    recommended_text_on_accent: 11.21
+    border_against_panel: 6.23
+  design_note: Silver is the provisional primary identity candidate, with black as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: republic-of-the-sphere
+  name: Republic of the Sphere
+  group: Successor States / Inner Sphere
+  identity_claim_id: republic-of-the-sphere-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#22272B'
+    primary_deep: '#121A20'
+    primary_surface: '#191F25'
+    panel: '#131A1F'
+    panel_alt: '#1C272E'
+    border: '#BCA752'
+    secondary: '#D6A72F'
+    accent: '#AAB5BF'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 16.13
+    foreground_on_panel_alt: 13.98
+    recommended_text_on_primary: 13.84
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 9.06
+    border_against_panel: 7.35
+  design_note: Black is the provisional primary identity candidate, with gold blue as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: word-of-blake
+  name: Word of Blake
+  group: Interstellar organizations
+  identity_claim_id: word-of-blake-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#22272B'
+    primary_deep: '#121A20'
+    primary_surface: '#191F25'
+    panel: '#131A1F'
+    panel_alt: '#1C272E'
+    border: '#BCA752'
+    secondary: '#B9C2C8'
+    accent: '#765A99'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 16.13
+    foreground_on_panel_alt: 13.98
+    recommended_text_on_primary: 13.84
+    recommended_text_on_secondary: 10.44
+    recommended_text_on_accent: 5.22
+    border_against_panel: 7.35
+  design_note: Black is the provisional primary identity candidate, with silver white as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: calderon-protectorate
+  name: Calderon Protectorate
+  group: Periphery
+  identity_claim_id: calderon-protectorate-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#22272B'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 13.84
+    recommended_text_on_accent: 12.39
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with black gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: circinus-federation
+  name: Circinus Federation
+  group: Periphery
+  identity_claim_id: circinus-federation-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#765A99'
+    primary_deep: '#362F4E'
+    primary_surface: '#50416D'
+    panel: '#2A283E'
+    panel_alt: '#423E60'
+    border: '#A7A0C2'
+    secondary: '#AAB5BF'
+    accent: '#30383D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 13.1
+    foreground_on_panel_alt: 9.23
+    recommended_text_on_primary: 5.22
+    recommended_text_on_secondary: 9.06
+    recommended_text_on_accent: 10.96
+    border_against_panel: 5.74
+  design_note: Violet is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: fiefdom-of-randis
+  name: Fiefdom of Randis
+  group: Periphery
+  identity_claim_id: fiefdom-of-randis-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#798C56'
+    primary_deep: '#32402C'
+    primary_surface: '#4A5B37'
+    panel: '#283427'
+    panel_alt: '#3E503B'
+    border: '#B6BEA9'
+    secondary: '#AAB5BF'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.97
+    foreground_on_panel_alt: 7.98
+    recommended_text_on_primary: 5.12
+    recommended_text_on_secondary: 9.06
+    recommended_text_on_accent: 12.39
+    border_against_panel: 6.78
+  design_note: Olive is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: hanseatic-league
+  name: Hanseatic League
+  group: Periphery
+  identity_claim_id: hanseatic-league-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#D6A72F'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 12.39
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with gold black as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: magistracy-of-canopus
+  name: Magistracy of Canopus
+  group: Periphery
+  identity_claim_id: magistracy-of-canopus-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#4D9368'
+    primary_deep: '#1E4334'
+    primary_surface: '#2B6144'
+    panel: '#1B362D'
+    panel_alt: '#295444'
+    border: '#B2A053'
+    secondary: '#D6A72F'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.96
+    foreground_on_panel_alt: 7.88
+    recommended_text_on_primary: 5.12
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 12.39
+    border_against_panel: 4.99
+  design_note: Green is the provisional primary identity candidate, with gold white as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: marian-hegemony
+  name: Marian Hegemony
+  group: Periphery
+  identity_claim_id: marian-hegemony-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#23466A'
+    primary_deep: '#13273A'
+    primary_surface: '#19344E'
+    panel: '#132331'
+    panel_alt: '#1C354B'
+    border: '#78AEC4'
+    secondary: '#B8C4CB'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.69
+    foreground_on_panel_alt: 11.61
+    recommended_text_on_primary: 8.94
+    recommended_text_on_secondary: 10.61
+    recommended_text_on_accent: 12.39
+    border_against_panel: 6.59
+  design_note: Navy is the provisional primary identity candidate, with silver gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: fronc-reaches
+  name: Fronc Reaches
+  group: Periphery
+  identity_claim_id: fronc-reaches-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#356DA8'
+    primary_deep: '#1A3754'
+    primary_surface: '#254D77'
+    panel: '#182E42'
+    panel_alt: '#244667'
+    border: '#B3666E'
+    secondary: '#B52A32'
+    accent: '#D9D1BA'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 12.78
+    foreground_on_panel_alt: 8.98
+    recommended_text_on_primary: 4.94
+    recommended_text_on_secondary: 5.77
+    recommended_text_on_accent: 12.39
+    border_against_panel: 3.34
+  design_note: Blue is the provisional primary identity candidate, with red gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: nueva-castile
+  name: Nueva Castile
+  group: Periphery
+  identity_claim_id: nueva-castile-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#4D9368'
+    primary_deep: '#1E4334'
+    primary_surface: '#2B6144'
+    panel: '#1B362D'
+    panel_alt: '#295444'
+    border: '#B2A053'
+    secondary: '#D9D1BA'
+    accent: '#798C56'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 11.96
+    foreground_on_panel_alt: 7.88
+    recommended_text_on_primary: 5.12
+    recommended_text_on_secondary: 12.39
+    recommended_text_on_accent: 5.12
+    border_against_panel: 4.99
+  design_note: Green is the provisional primary identity candidate, with cream as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: niops-association
+  name: Niops Association
+  group: Periphery
+  identity_claim_id: niops-association-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#30383D'
+    primary_deep: '#182128'
+    primary_surface: '#222A30'
+    panel: '#171F25'
+    panel_alt: '#222F36'
+    border: '#AB9B79'
+    secondary: '#AAB5BF'
+    accent: '#BFC9CE'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 15.31
+    foreground_on_panel_alt: 12.62
+    recommended_text_on_primary: 10.96
+    recommended_text_on_secondary: 9.06
+    recommended_text_on_accent: 11.21
+    border_against_panel: 6.11
+  design_note: Charcoal is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: outworlds-alliance
+  name: Outworlds Alliance
+  group: Periphery
+  identity_claim_id: outworlds-alliance-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#D3B839'
+    accent: '#798C56'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 9.61
+    recommended_text_on_accent: 5.12
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with yellow cream as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
+    not official BattleTech color specifications.
+- faction_id: taurian-concordat
+  name: Taurian Concordat
+  group: Periphery
+  identity_claim_id: taurian-concordat-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#8A5638'
+    primary_deep: '#3E2D25'
+    primary_surface: '#5D3E2D'
+    panel: '#302723'
+    panel_alt: '#4B3C34'
+    border: '#C4C0AA'
+    secondary: '#D9D1BA'
+    accent: '#22272B'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 13.39
+    foreground_on_panel_alt: 9.66
+    recommended_text_on_primary: 5.56
+    recommended_text_on_secondary: 12.39
+    recommended_text_on_accent: 13.84
+    border_against_panel: 7.96
+  design_note: Brown is the provisional primary identity candidate, with cream as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
+- faction_id: rim-worlds-republic
+  name: Rim Worlds Republic
+  group: Historical states
+  identity_claim_id: rim-worlds-republic-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#356DA8'
+    accent: '#616D74'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: foreground
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 4.94
+    recommended_text_on_accent: 4.88
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with blue black as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: star-league
+  name: Star League
+  group: Historical states
+  identity_claim_id: star-league-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#2C8C91'
+    primary_deep: '#17444B'
+    primary_surface: '#1F6268'
+    panel: '#16363C'
+    panel_alt: '#20545C'
+    border: '#C1D2D7'
+    secondary: '#E9F0F2'
+    accent: '#23466A'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: ink
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 11.85
+    foreground_on_panel_alt: 7.76
+    recommended_text_on_primary: 4.74
+    recommended_text_on_secondary: 16.38
+    recommended_text_on_accent: 8.94
+    border_against_panel: 8.28
+  design_note: Teal is the provisional primary identity candidate, with white gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+    official BattleTech color specifications.
+- faction_id: aurigan-coalition
+  name: Aurigan Coalition
+  group: Periphery
+  identity_claim_id: aurigan-coalition-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#D6A72F'
+    accent: '#22272B'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 13.84
+    border_against_panel: 3.99
+  design_note: Red is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.

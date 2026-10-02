@@ -1,0 +1,935 @@
+schema_version: 1
+project: battletech-faction-colors
+source_set:
+- id: camospecs-faction-page
+  title: Camo Specs individual faction pages and displayed emblem/logo assets
+  publisher: Camo Specs Online
+  url: https://camospecs.com/factions/
+  accessed: '2026-10-02'
+  role: visual faction/emblem evidence; military scheme context kept separate
+claims:
+- id: clan-blood-spirit-heraldry-candidate
+  faction_id: clan-blood-spirit
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-blood-spirit/
+  image_source_locator: https://camospecs.com/factions/clan-blood-spirit/ (displayed emblem/logo asset)
+  observation: black, brown/tan, muted green, and dark red are visible in the Camo Specs emblem; red/brown and metallic neutrals are treated as candidates while black remains structural.
+  observed_colors:
+  - red
+  - silver-gold
+  - cream
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - silver-gold
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-burrock-heraldry-candidate
+  faction_id: clan-burrock
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-burrock/
+  image_source_locator: https://camospecs.com/factions/clan-burrock/ (displayed emblem/logo asset)
+  observation: the displayed emblem is predominantly black and cream with tan/gold details; the object-like tan elements are not treated as a complete official specification.
+  observed_colors:
+  - black
+  - gold
+  - cream
+  identity_color_candidates:
+    primary:
+    - black
+    secondary:
+    - gold
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-cloud-cobra-heraldry-candidate
+  faction_id: clan-cloud-cobra
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-cloud-cobra/
+  image_source_locator: https://camospecs.com/factions/clan-cloud-cobra/ (displayed emblem/logo asset)
+  observation: black, muted purple, cyan/teal, and pale blue are visible; cyan and purple are the identity-bearing candidates.
+  observed_colors:
+  - cyan
+  - purple
+  - silver
+  identity_color_candidates:
+    primary:
+    - cyan
+    secondary:
+    - purple
+    neutral:
+    - silver
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-coyote-heraldry-candidate
+  faction_id: clan-coyote
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-coyote/
+  image_source_locator: https://camospecs.com/factions/clan-coyote/ (displayed emblem/logo asset)
+  observation: blue-gray, ochre/brown, black, and muted red-brown are visible; ochre and gold/brown are treated as the strongest candidates.
+  observed_colors:
+  - ochre
+  - gold-red
+  - blue-gray
+  identity_color_candidates:
+    primary:
+    - ochre
+    secondary:
+    - gold-red
+    neutral:
+    - blue-gray
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-diamond-shark-heraldry-candidate
+  faction_id: clan-diamond-shark
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-diamond-shark/
+  image_source_locator: https://camospecs.com/factions/clan-diamond-shark/ (displayed emblem/logo asset)
+  observation: gray/silver, red, black, and brown/tan are visible; silver and red are the identity-bearing candidates.
+  observed_colors:
+  - silver
+  - red
+  - blue-gray
+  identity_color_candidates:
+    primary:
+    - silver
+    secondary:
+    - red
+    neutral:
+    - blue-gray
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-fire-mandrill-heraldry-candidate
+  faction_id: clan-fire-mandrill
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-fire-mandrill/
+  image_source_locator: https://camospecs.com/factions/clan-fire-mandrill/ (displayed emblem/logo asset)
+  observation: dark charcoal, red/orange, tan, and muted gold are visible; orange-red and gold are treated as candidates.
+  observed_colors:
+  - orange-red
+  - gold
+  - charcoal
+  identity_color_candidates:
+    primary:
+    - orange-red
+    secondary:
+    - gold
+    neutral:
+    - charcoal
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-ghost-bear-heraldry-candidate
+  faction_id: clan-ghost-bear
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-ghost-bear/
+  image_source_locator: https://camospecs.com/factions/clan-ghost-bear/ (displayed emblem/logo asset)
+  observation: dark charcoal, silver, ice blue, and blue-gray are visible; ice blue and silver are identity-bearing candidates.
+  observed_colors:
+  - ice-blue
+  - silver
+  - navy
+  identity_color_candidates:
+    primary:
+    - ice-blue
+    secondary:
+    - silver
+    neutral:
+    - navy
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-goliath-scorpion-heraldry-candidate
+  faction_id: clan-goliath-scorpion
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-goliath-scorpion/
+  image_source_locator: https://camospecs.com/factions/clan-goliath-scorpion/ (displayed emblem/logo asset)
+  observation: black, gold, olive green, and sand are visible; green and gold/black are treated as candidates.
+  observed_colors:
+  - green
+  - black-gold
+  - sand
+  identity_color_candidates:
+    primary:
+    - green
+    secondary:
+    - black-gold
+    neutral:
+    - sand
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: scorpion-empire-heraldry-candidate
+  faction_id: scorpion-empire
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/scorpion-empire/
+  image_source_locator: https://camospecs.com/factions/scorpion-empire/ (displayed emblem/logo asset)
+  observation: black, dark red, brown, and pale gold are visible; green/red-gold interpretation remains provisional and separate from Clan Goliath Scorpion.
+  observed_colors:
+  - green
+  - red-gold
+  - sand
+  identity_color_candidates:
+    primary:
+    - green
+    secondary:
+    - red-gold
+    neutral:
+    - sand
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-hells-horses-heraldry-candidate
+  faction_id: clan-hells-horses
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-hells-horses/
+  image_source_locator: https://camospecs.com/factions/clan-hells-horses/ (displayed emblem/logo asset)
+  observation: cream, ochre/brown, maroon, and muted gold are visible; ochre-brown and red are candidates.
+  observed_colors:
+  - ochre-brown
+  - red
+  - cream
+  identity_color_candidates:
+    primary:
+    - ochre-brown
+    secondary:
+    - red
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-ice-hellion-heraldry-candidate
+  faction_id: clan-ice-hellion
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-ice-hellion/
+  image_source_locator: https://camospecs.com/factions/clan-ice-hellion/ (displayed emblem/logo asset)
+  observation: black, gray, ice blue, and muted maroon are visible; ice blue is supported, while orange remains a provisional supporting interpretation.
+  observed_colors:
+  - ice-blue
+  - orange
+  - charcoal
+  identity_color_candidates:
+    primary:
+    - ice-blue
+    secondary:
+    - orange
+    neutral:
+    - charcoal
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-jade-falcon-heraldry-candidate
+  faction_id: clan-jade-falcon
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-jade-falcon/
+  image_source_locator: https://camospecs.com/factions/clan-jade-falcon/ (displayed emblem/logo asset)
+  observation: black/navy, vivid green, pale green, and gray are visible; green is primary and blue is a supporting candidate.
+  observed_colors:
+  - green
+  - blue
+  - gold
+  identity_color_candidates:
+    primary:
+    - green
+    secondary:
+    - blue
+    neutral:
+    - gold
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-nova-cat-heraldry-candidate
+  faction_id: clan-nova-cat
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-nova-cat/
+  image_source_locator: https://camospecs.com/factions/clan-nova-cat/ (displayed emblem/logo asset)
+  observation: navy, white/silver, blue-gray, red, and gold are visible; navy and red/gold are candidates.
+  observed_colors:
+  - navy
+  - red-gold
+  - silver
+  identity_color_candidates:
+    primary:
+    - navy
+    secondary:
+    - red-gold
+    neutral:
+    - silver
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-sea-fox-heraldry-candidate
+  faction_id: clan-sea-fox
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-sea-fox/
+  image_source_locator: https://camospecs.com/factions/clan-sea-fox/ (displayed emblem/logo asset)
+  observation: white, navy, pale blue, and blue-gray are visible; pale blue and silver/white are candidates.
+  observed_colors:
+  - pale-blue
+  - silver
+  - navy
+  identity_color_candidates:
+    primary:
+    - pale-blue
+    secondary:
+    - silver
+    neutral:
+    - navy
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-smoke-jaguar-heraldry-candidate
+  faction_id: clan-smoke-jaguar
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-smoke-jaguar/
+  image_source_locator: https://camospecs.com/factions/clan-smoke-jaguar/ (displayed emblem/logo asset)
+  observation: the retrievable legacy Camo Specs asset is effectively monochrome/gray at usable resolution; no sufficiently distinct identity color set is established.
+  observed_colors:
+  - unresolved
+  - unresolved
+  - unresolved
+  identity_color_candidates: {}
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: limited
+  exact_hex_values: null
+  interpretation: No sufficiently supported, distinct government/faction color identity has yet been established; keep unresolved pending stronger evidence.
+- id: clan-snow-raven-heraldry-candidate
+  faction_id: clan-snow-raven
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-snow-raven/
+  image_source_locator: https://camospecs.com/factions/clan-snow-raven/ (displayed emblem/logo asset)
+  observation: white, black, muted green, and pale cyan/blue are visible; slate, ice blue, and white remain provisional candidates.
+  observed_colors:
+  - slate
+  - ice-blue
+  - white
+  identity_color_candidates:
+    primary:
+    - slate
+    secondary:
+    - ice-blue
+    neutral:
+    - white
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: raven-alliance-heraldry-candidate
+  faction_id: raven-alliance
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/raven-alliance/
+  image_source_locator: https://camospecs.com/factions/raven-alliance/ (displayed emblem/logo asset)
+  observation: black, white, pale blue, and blue-gray are visible; black and ice blue/white are candidates.
+  observed_colors:
+  - black
+  - ice-blue
+  - white
+  identity_color_candidates:
+    primary:
+    - black
+    secondary:
+    - ice-blue
+    neutral:
+    - white
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-star-adder-heraldry-candidate
+  faction_id: clan-star-adder
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-star-adder/
+  image_source_locator: https://camospecs.com/factions/clan-star-adder/ (displayed emblem/logo asset)
+  observation: navy, dark blue, cream, brown, and muted blue are visible; navy is primary, with cyan/gold retained as a provisional interpretation.
+  observed_colors:
+  - navy
+  - cyan-gold
+  - cream
+  identity_color_candidates:
+    primary:
+    - navy
+    secondary:
+    - cyan-gold
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-steel-viper-heraldry-candidate
+  faction_id: clan-steel-viper
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-steel-viper/
+  image_source_locator: https://camospecs.com/factions/clan-steel-viper/ (displayed emblem/logo asset)
+  observation: black, green, teal, and mint are visible; teal-green and mint are identity-bearing candidates.
+  observed_colors:
+  - teal-green
+  - black
+  - mint
+  identity_color_candidates:
+    primary:
+    - teal-green
+    secondary:
+    - black
+    neutral:
+    - mint
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-stone-lion-heraldry-candidate
+  faction_id: clan-stone-lion
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-stone-lion/
+  image_source_locator: https://camospecs.com/factions/clan-stone-lion/ (displayed emblem/logo asset)
+  observation: black, charcoal, gray-brown, and tan/gold are visible; charcoal and gold-brown are candidates.
+  observed_colors:
+  - charcoal
+  - gold-brown
+  - sand
+  identity_color_candidates:
+    primary:
+    - charcoal
+    secondary:
+    - gold-brown
+    neutral:
+    - sand
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-widowmaker-heraldry-candidate
+  faction_id: clan-widowmaker
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-widowmaker/
+  image_source_locator: https://camospecs.com/factions/clan-widowmaker/ (displayed emblem/logo asset)
+  observation: black, charcoal, gold, and muted brown are visible; black and gold/red remain candidates.
+  observed_colors:
+  - black
+  - gold-red
+  - gray
+  identity_color_candidates:
+    primary:
+    - black
+    secondary:
+    - gold-red
+    neutral:
+    - gray
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-wolf-heraldry-candidate
+  faction_id: clan-wolf
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-wolf/
+  image_source_locator: https://camospecs.com/factions/clan-wolf/ (displayed emblem/logo asset)
+  observation: black, red, orange, and gold are visible; red and gold are identity-bearing candidates.
+  observed_colors:
+  - red
+  - gold
+  - charcoal
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - gold
+    neutral:
+    - charcoal
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: clan-wolf-in-exile-heraldry-candidate
+  faction_id: clan-wolf-in-exile
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/clan-wolf-in-exile/
+  image_source_locator: https://camospecs.com/factions/clan-wolf-in-exile/ (displayed emblem/logo asset)
+  observation: the page displays the Clan Wolf emblem asset rather than a distinct Wolf-in-Exile identity mark; separate colors cannot be responsibly established.
+  observed_colors:
+  - unresolved
+  - unresolved
+  - unresolved
+  identity_color_candidates: {}
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: limited
+  exact_hex_values: null
+  interpretation: No sufficiently supported, distinct government/faction color identity has yet been established; keep unresolved pending stronger evidence.
+- id: comstar-heraldry-candidate
+  faction_id: comstar
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/comstar/
+  image_source_locator: https://camospecs.com/factions/comstar/ (displayed emblem/logo asset)
+  observation: the emblem is predominantly black, gray, and silver/white; silver and black are candidates.
+  observed_colors:
+  - silver
+  - black
+  - white
+  identity_color_candidates:
+    primary:
+    - silver
+    secondary:
+    - black
+    neutral:
+    - white
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: republic-of-the-sphere-heraldry-candidate
+  faction_id: republic-of-the-sphere
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/republic-of-the-sphere/
+  image_source_locator: https://camospecs.com/factions/republic-of-the-sphere/ (displayed emblem/logo asset)
+  observation: black, gray, silver, and pale neutral colors are visible; dark/black is supported, while gold/blue remains a provisional broader identity adaptation.
+  observed_colors:
+  - black
+  - gold-blue
+  - silver
+  identity_color_candidates:
+    primary:
+    - black
+    secondary:
+    - gold-blue
+    neutral:
+    - silver
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: word-of-blake-heraldry-candidate
+  faction_id: word-of-blake
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/word-of-blake/
+  image_source_locator: https://camospecs.com/factions/word-of-blake/ (displayed emblem/logo asset)
+  observation: the displayed emblem is predominantly black/charcoal with gray and silver highlights; black and silver/white are candidates.
+  observed_colors:
+  - black
+  - silver-white
+  - violet
+  identity_color_candidates:
+    primary:
+    - black
+    secondary:
+    - silver-white
+    neutral:
+    - violet
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: calderon-protectorate-heraldry-candidate
+  faction_id: calderon-protectorate
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/calderon-protectorate/
+  image_source_locator: https://camospecs.com/factions/calderon-protectorate/ (displayed emblem/logo asset)
+  observation: black, vivid red, and muted red/coral are visible; red and black are candidates.
+  observed_colors:
+  - red
+  - black-gold
+  - cream
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - black-gold
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: circinus-federation-heraldry-candidate
+  faction_id: circinus-federation
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/circinus-federation-2/
+  image_source_locator: https://camospecs.com/factions/circinus-federation-2/ (displayed emblem/logo asset)
+  observation: white, violet, gray, and dark purple are visible; violet and silver/gray are candidates.
+  observed_colors:
+  - violet
+  - silver
+  - charcoal
+  identity_color_candidates:
+    primary:
+    - violet
+    secondary:
+    - silver
+    neutral:
+    - charcoal
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: fiefdom-of-randis-heraldry-candidate
+  faction_id: fiefdom-of-randis
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/fiefdom-of-randis/
+  image_source_locator: https://camospecs.com/factions/fiefdom-of-randis/ (displayed emblem/logo asset)
+  observation: white, olive green, gray-green, and pale tan are visible; olive and silver/cream are candidates.
+  observed_colors:
+  - olive
+  - silver
+  - cream
+  identity_color_candidates:
+    primary:
+    - olive
+    secondary:
+    - silver
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: hanseatic-league-heraldry-candidate
+  faction_id: hanseatic-league
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/hanseatic-league/
+  image_source_locator: https://camospecs.com/factions/hanseatic-league/ (displayed emblem/logo asset)
+  observation: black, red, coral, gold, and cream are visible; red and gold/black are candidates.
+  observed_colors:
+  - red
+  - gold-black
+  - cream
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - gold-black
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: magistracy-of-canopus-heraldry-candidate
+  faction_id: magistracy-of-canopus
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/magictracy-of-canopus/
+  image_source_locator: https://camospecs.com/factions/magictracy-of-canopus/ (displayed emblem/logo asset)
+  observation: white, green, muted yellow-green, and gray are visible; green and gold/white are candidates.
+  observed_colors:
+  - green
+  - gold-white
+  - cream
+  identity_color_candidates:
+    primary:
+    - green
+    secondary:
+    - gold-white
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: marian-hegemony-heraldry-candidate
+  faction_id: marian-hegemony
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/marian-hegemony/
+  image_source_locator: https://camospecs.com/factions/marian-hegemony/ (displayed emblem/logo asset)
+  observation: white, navy, gray, and muted gold/tan are visible; navy and silver/gold are candidates.
+  observed_colors:
+  - navy
+  - silver-gold
+  - cream
+  identity_color_candidates:
+    primary:
+    - navy
+    secondary:
+    - silver-gold
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: fronc-reaches-heraldry-candidate
+  faction_id: fronc-reaches
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/fronc-reaches/
+  image_source_locator: https://camospecs.com/factions/fronc-reaches/ (displayed emblem/logo asset)
+  observation: white, blue, gray, and red are visible; blue, red, and gold remain candidates.
+  observed_colors:
+  - blue
+  - red-gold
+  - cream
+  identity_color_candidates:
+    primary:
+    - blue
+    secondary:
+    - red-gold
+    neutral:
+    - cream
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: nueva-castile-heraldry-candidate
+  faction_id: nueva-castile
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/nueva-castile/
+  image_source_locator: https://camospecs.com/factions/nueva-castile/ (displayed emblem/logo asset)
+  observation: olive/green, cream, and muted gray-green are visible; green and cream are candidates.
+  observed_colors:
+  - green
+  - cream
+  - olive
+  identity_color_candidates:
+    primary:
+    - green
+    secondary:
+    - cream
+    neutral:
+    - olive
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: niops-association-heraldry-candidate
+  faction_id: niops-association
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/niops-association/
+  image_source_locator: https://camospecs.com/factions/niops-association/ (displayed emblem/logo asset)
+  observation: the displayed asset is monochrome black, white, and gray; a neutral palette is supported, but no stronger chromatic identity is established.
+  observed_colors:
+  - charcoal
+  - silver
+  - white
+  identity_color_candidates:
+    primary:
+    - charcoal
+    secondary:
+    - silver
+    neutral:
+    - white
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: limited
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: outworlds-alliance-heraldry-candidate
+  faction_id: outworlds-alliance
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/outworlds-alliance/
+  image_source_locator: https://camospecs.com/factions/outworlds-alliance/ (displayed emblem/logo asset)
+  observation: white, red, yellow/cream, and olive-gray are visible; red and yellow/cream are candidates.
+  observed_colors:
+  - red
+  - yellow-cream
+  - olive
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - yellow-cream
+    neutral:
+    - olive
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: taurian-concordat-heraldry-candidate
+  faction_id: taurian-concordat
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/taurian-concordat/
+  image_source_locator: https://camospecs.com/factions/taurian-concordat/ (displayed emblem/logo asset)
+  observation: white/cream, brown, black, and tan are visible; brown and cream are candidates.
+  observed_colors:
+  - brown
+  - cream
+  - black
+  identity_color_candidates:
+    primary:
+    - brown
+    secondary:
+    - cream
+    neutral:
+    - black
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: umayyad-caliphate-heraldry-candidate
+  faction_id: umayyad-caliphate
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/umayyad-caliphate/
+  image_source_locator: https://camospecs.com/factions/umayyad-caliphate/ (displayed emblem/logo asset)
+  observation: no usable Camo Specs emblem asset was retrieved for independent color observation; identity remains unresolved.
+  observed_colors:
+  - unresolved
+  - unresolved
+  - unresolved
+  identity_color_candidates: {}
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: limited
+  exact_hex_values: null
+  interpretation: No sufficiently supported, distinct government/faction color identity has yet been established; keep unresolved pending stronger evidence.
+- id: rim-worlds-republic-heraldry-candidate
+  faction_id: rim-worlds-republic
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/rim-worlds-republic/
+  image_source_locator: https://camospecs.com/factions/rim-worlds-republic/ (displayed emblem/logo asset)
+  observation: black, red, blue, and gray are visible; red and blue-black are candidates.
+  observed_colors:
+  - red
+  - blue-black
+  - gray
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - blue-black
+    neutral:
+    - gray
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: star-league-heraldry-candidate
+  faction_id: star-league
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/star-league/
+  image_source_locator: https://camospecs.com/factions/star-league/ (displayed emblem/logo asset)
+  observation: white, pale cyan/teal, blue-green, and dark teal are visible; teal and white/gold are candidates.
+  observed_colors:
+  - teal
+  - white-gold
+  - navy
+  identity_color_candidates:
+    primary:
+    - teal
+    secondary:
+    - white-gold
+    neutral:
+    - navy
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: moderate
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: aurigan-coalition-heraldry-candidate
+  faction_id: aurigan-coalition
+  subject: government_faction_identity
+  source_id: camospecs-faction-page
+  source_locator: https://camospecs.com/factions/aurigan-coalition/
+  image_source_locator: https://camospecs.com/factions/aurigan-coalition/ (displayed emblem/logo asset)
+  observation: black, red, gold/yellow, and brown are visible; red and gold are candidates.
+  observed_colors:
+  - red
+  - gold
+  - black
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - gold
+    neutral:
+    - black
+  evidence_classification: HERALDRY_DERIVED
+  approval_status: RESEARCH_REQUIRED
+  confidence: strong
+  exact_hex_values: null
+  interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.

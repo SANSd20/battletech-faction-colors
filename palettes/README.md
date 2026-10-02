@@ -1,6 +1,6 @@
 # Reusable UI palettes
 
-`government-ui.yaml` contains the initial reusable dark-UI adaptations for the six government/faction identities:
+`government-ui.yaml` contains the reusable dark-UI adaptations for the currently supported government/faction identities. The initial six are:
 
 - Federated Suns
 - Draconis Combine
@@ -8,6 +8,8 @@
 - Lyran Commonwealth
 - Capellan Confederation
 - Free Rasalhague Republic
+
+The remaining expansion records are grouped as Clans, Clan successor states, Successor States / Inner Sphere, Periphery, interstellar organizations, and historical states. Identities without sufficient evidence remain in the research records as unresolved and do not receive placeholder palette values.
 
 The palette roles are application-neutral. They describe faction-themed surfaces, borders, identity colors, supporting colors, and foreground choices. They do not assign application semantics such as `danger`, `success`, `dead`, `disabled`, or `warning`.
 

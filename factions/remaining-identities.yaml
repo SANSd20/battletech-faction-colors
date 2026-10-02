@@ -1,0 +1,453 @@
+schema_version: 1
+factions:
+- id: clan-blood-spirit
+  name: Clan Blood Spirit
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-blood-spirit-heraldry-candidate
+    exact_hex_values: null
+- id: clan-burrock
+  name: Clan Burrock
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-burrock-heraldry-candidate
+    exact_hex_values: null
+- id: clan-cloud-cobra
+  name: Clan Cloud Cobra
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-cloud-cobra-heraldry-candidate
+    exact_hex_values: null
+- id: clan-coyote
+  name: Clan Coyote
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-coyote-heraldry-candidate
+    exact_hex_values: null
+- id: clan-diamond-shark
+  name: Clan Diamond Shark
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-diamond-shark-heraldry-candidate
+    exact_hex_values: null
+- id: clan-fire-mandrill
+  name: Clan Fire Mandrill
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-fire-mandrill-heraldry-candidate
+    exact_hex_values: null
+- id: clan-ghost-bear
+  name: Clan Ghost Bear
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-ghost-bear-heraldry-candidate
+    exact_hex_values: null
+- id: clan-goliath-scorpion
+  name: Clan Goliath Scorpion
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-goliath-scorpion-heraldry-candidate
+    exact_hex_values: null
+- id: scorpion-empire
+  name: Scorpion Empire
+  group: Clan successor states
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: scorpion-empire-heraldry-candidate
+    exact_hex_values: null
+- id: clan-hells-horses
+  name: Clan Hell's Horses
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-hells-horses-heraldry-candidate
+    exact_hex_values: null
+- id: clan-ice-hellion
+  name: Clan Ice Hellion
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-ice-hellion-heraldry-candidate
+    exact_hex_values: null
+- id: clan-jade-falcon
+  name: Clan Jade Falcon
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-jade-falcon-heraldry-candidate
+    exact_hex_values: null
+- id: clan-nova-cat
+  name: Clan Nova Cat
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-nova-cat-heraldry-candidate
+    exact_hex_values: null
+- id: clan-sea-fox
+  name: Clan Sea Fox
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-sea-fox-heraldry-candidate
+    exact_hex_values: null
+- id: clan-smoke-jaguar
+  name: Clan Smoke Jaguar
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: unresolved
+    candidate_claim_id: clan-smoke-jaguar-heraldry-candidate
+    exact_hex_values: null
+- id: clan-snow-raven
+  name: Clan Snow Raven
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-snow-raven-heraldry-candidate
+    exact_hex_values: null
+- id: raven-alliance
+  name: Raven Alliance
+  group: Clan successor states
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: raven-alliance-heraldry-candidate
+    exact_hex_values: null
+- id: clan-star-adder
+  name: Clan Star Adder
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-star-adder-heraldry-candidate
+    exact_hex_values: null
+- id: clan-steel-viper
+  name: Clan Steel Viper
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-steel-viper-heraldry-candidate
+    exact_hex_values: null
+- id: clan-stone-lion
+  name: Clan Stone Lion
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-stone-lion-heraldry-candidate
+    exact_hex_values: null
+- id: clan-widowmaker
+  name: Clan Widowmaker
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-widowmaker-heraldry-candidate
+    exact_hex_values: null
+- id: clan-wolf
+  name: Clan Wolf
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: clan-wolf-heraldry-candidate
+    exact_hex_values: null
+- id: clan-wolf-in-exile
+  name: Clan Wolf in Exile
+  group: Clans
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: unresolved
+    candidate_claim_id: clan-wolf-in-exile-heraldry-candidate
+    exact_hex_values: null
+- id: comstar
+  name: ComStar
+  group: Interstellar organizations
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: comstar-heraldry-candidate
+    exact_hex_values: null
+- id: republic-of-the-sphere
+  name: Republic of the Sphere
+  group: Successor States / Inner Sphere
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: republic-of-the-sphere-heraldry-candidate
+    exact_hex_values: null
+- id: word-of-blake
+  name: Word of Blake
+  group: Interstellar organizations
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: word-of-blake-heraldry-candidate
+    exact_hex_values: null
+- id: calderon-protectorate
+  name: Calderon Protectorate
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: calderon-protectorate-heraldry-candidate
+    exact_hex_values: null
+- id: circinus-federation
+  name: Circinus Federation
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: circinus-federation-heraldry-candidate
+    exact_hex_values: null
+- id: fiefdom-of-randis
+  name: Fiefdom of Randis
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: fiefdom-of-randis-heraldry-candidate
+    exact_hex_values: null
+- id: hanseatic-league
+  name: Hanseatic League
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: hanseatic-league-heraldry-candidate
+    exact_hex_values: null
+- id: magistracy-of-canopus
+  name: Magistracy of Canopus
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: magistracy-of-canopus-heraldry-candidate
+    exact_hex_values: null
+- id: marian-hegemony
+  name: Marian Hegemony
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: marian-hegemony-heraldry-candidate
+    exact_hex_values: null
+- id: fronc-reaches
+  name: Fronc Reaches
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: fronc-reaches-heraldry-candidate
+    exact_hex_values: null
+- id: nueva-castile
+  name: Nueva Castile
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: nueva-castile-heraldry-candidate
+    exact_hex_values: null
+- id: niops-association
+  name: Niops Association
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: niops-association-heraldry-candidate
+    exact_hex_values: null
+- id: outworlds-alliance
+  name: Outworlds Alliance
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: outworlds-alliance-heraldry-candidate
+    exact_hex_values: null
+- id: taurian-concordat
+  name: Taurian Concordat
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: taurian-concordat-heraldry-candidate
+    exact_hex_values: null
+- id: umayyad-caliphate
+  name: Umayyad Caliphate
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: unresolved
+    candidate_claim_id: umayyad-caliphate-heraldry-candidate
+    exact_hex_values: null
+- id: rim-worlds-republic
+  name: Rim Worlds Republic
+  group: Historical states
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: rim-worlds-republic-heraldry-candidate
+    exact_hex_values: null
+- id: star-league
+  name: Star League
+  group: Historical states
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: star-league-heraldry-candidate
+    exact_hex_values: null
+- id: aurigan-coalition
+  name: Aurigan Coalition
+  group: Periphery
+  military_identity:
+    status: not_reconstructed_from_heraldry
+    colors: null
+    note: Military values are intentionally kept separate from this government/faction identity research.
+  government_faction_identity:
+    status: provisional
+    candidate_claim_id: aurigan-coalition-heraldry-candidate
+    exact_hex_values: null

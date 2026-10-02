@@ -77,7 +77,7 @@ function card(palette) {
   return `<article class="palette-card" style="${rootVars}">
     <div class="palette-hero">
       <h3>${esc(palette.name)}</h3>
-      <div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>Government / faction identity · <code>${esc(palette.identity_claim_status)}</code></div>
+      <div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Government / faction identity')} · <code>${esc(palette.identity_claim_status)}</code></div>
     </div>
     <div class="palette-body">
       <div class="palette-labels">
@@ -95,14 +95,31 @@ function card(palette) {
   </article>`;
 }
 
+function parsePendingFactions(text) {
+  return text.split(/\n(?=- id:)/).slice(1).map((block) => {
+    const name = block.match(/\n\s+name: (.+)/)?.[1]?.trim();
+    const status = block.match(/government_faction_identity:\s*\n\s+status: (.+)/)?.[1]?.trim();
+    return name && status === 'unresolved' ? name : null;
+  }).filter(Boolean);
+}
+
 async function loadPalettes() {
   const grid = document.querySelector('#palette-grid');
+  const pending = document.querySelector('#pending-identities');
   try {
-    const response = await fetch(PALETTE_SOURCE, { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const palettes = parsePaletteYaml(await response.text());
+    const [paletteResponse, factionResponse] = await Promise.all([
+      fetch(PALETTE_SOURCE, { cache: 'no-cache' }),
+      fetch('factions/remaining-identities.yaml', { cache: 'no-cache' })
+    ]);
+    if (!paletteResponse.ok || !factionResponse.ok) throw new Error(`HTTP ${paletteResponse.status}/${factionResponse.status}`);
+    const [paletteText, factionText] = await Promise.all([paletteResponse.text(), factionResponse.text()]);
+    const palettes = parsePaletteYaml(paletteText);
     document.querySelector('#palette-count').textContent = palettes.length;
     grid.innerHTML = palettes.map(card).join('');
+    const unresolved = parsePendingFactions(factionText);
+    if (unresolved.length) {
+      pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Research Pending</h2></div><p>These identities remain visible as part of the expansion scope, but no placeholder colors are presented as findings.</p></div><div class="pending-list">${unresolved.map((name) => `<span>${esc(name)} <b>Research required</b></span>`).join('')}</div>`;
+    }
   } catch (error) {
     grid.innerHTML = `<div class="error-card"><strong>Palette data could not be loaded.</strong><br><span>Open <code>${esc(PALETTE_SOURCE)}</code> directly or visit the repository to inspect the authoritative source.</span></div>`;
     console.error(error);
