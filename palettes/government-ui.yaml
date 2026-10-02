@@ -1,0 +1,73 @@
+schema_version: 1
+project: battletech-faction-colors
+palette_set:
+  id: initial-six-government-dark-ui
+  identity_type: government_faction_identity
+  purpose: reusable dark UI adaptation
+  approval_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  notes:
+  - Exact hexadecimal values are project UI adaptations, not official BattleTech color specifications.
+  - Source faction identities remain HERALDRY_DERIVED and RESEARCH_REQUIRED until stronger evidence is approved.
+  - Roles are application-neutral. Consumers such as Combat Infantry and the A Time of War character creator map these colors to their own semantic UI roles.
+palettes:
+- faction_id: federated-suns
+  name: Federated Suns
+  identity_claim_id: fs-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles: {primary: '#D6AE3D', primary_deep: '#6B4D12', primary_surface: '#4B3A18', panel: '#241F18', panel_alt: '#332A1D', border: '#806E48', secondary: '#A83A32', accent: '#F0D77A', foreground: '#F4EEDC', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 14.1, foreground_on_panel_alt: 12.16, recommended_text_on_primary: 8.97, recommended_text_on_secondary: 5.46, recommended_text_on_accent: 13.22, border_against_panel: 3.3}
+  design_note: Gold/yellow is the primary government identity color, with red retained as a supporting heraldic color. White is represented by the light foreground/accent range.
+- faction_id: draconis-combine
+  name: Draconis Combine
+  identity_claim_id: dc-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles: {primary: '#C92A2A', primary_deep: '#681B1B', primary_surface: '#542323', panel: '#211F1F', panel_alt: '#302C2C', border: '#776767', secondary: '#171717', accent: '#E05252', foreground: '#F3E7E5', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.57, foreground_on_panel_alt: 11.41, recommended_text_on_primary: 4.51, recommended_text_on_secondary: 14.83, recommended_text_on_accent: 4.94, border_against_panel: 3.06}
+  design_note: Red remains primary and charcoal/black provides the secondary identity and dark surfaces.
+- faction_id: free-worlds-league
+  name: Free Worlds League
+  identity_claim_id: fwl-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles: {primary: '#7047A3', primary_deep: '#382550', primary_surface: '#49345F', panel: '#282232', panel_alt: '#372E43', border: '#796A8A', secondary: '#3F62A8', accent: '#C5B3D9', foreground: '#F0EBF5', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.12, foreground_on_panel_alt: 10.96, recommended_text_on_primary: 5.74, recommended_text_on_secondary: 5.08, recommended_text_on_accent: 9.73, border_against_panel: 3.11}
+  design_note: Purple remains primary. Blue is retained as the supporting heraldic color and pale violet serves as the light neutral.
+- faction_id: lyran-commonwealth
+  name: Lyran Commonwealth
+  identity_claim_id: lc-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles: {primary: '#356DA8', primary_deep: '#1D3B5D', primary_surface: '#294F73', panel: '#202B35', panel_alt: '#2B3A47', border: '#657F96', secondary: '#AAB5BF', accent: '#D8E2E8', foreground: '#F0F4F7', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.02, foreground_on_panel_alt: 10.56, recommended_text_on_primary: 4.86, recommended_text_on_secondary: 9.06, recommended_text_on_accent: 14.35, border_against_panel: 3.45}
+  design_note: Blue remains primary with silver/gray supporting it. Copper/brown from the fist artwork is intentionally excluded from the identity palette.
+- faction_id: capellan-confederation
+  name: Capellan Confederation
+  identity_claim_id: cc-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles: {primary: '#00A86B', primary_deep: '#0B3A2B', primary_surface: '#174C3B', panel: '#173C2F', panel_alt: '#205242', border: '#4C9B7A', secondary: '#C9A83D', accent: '#E2C36E', foreground: '#ECF5F0', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 10.96, foreground_on_panel_alt: 8.05, recommended_text_on_primary: 6.13, recommended_text_on_secondary: 8.23, recommended_text_on_accent: 11.03, border_against_panel: 3.64}
+  design_note: Green remains primary with yellow/gold as the supporting heraldic color.
+- faction_id: free-rasalhague-republic
+  name: Free Rasalhague Republic
+  identity_claim_id: frr-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles: {primary: '#58B8D8', primary_deep: '#28566A', primary_surface: '#356D80', panel: '#1E2B31', panel_alt: '#293B43', border: '#688894', secondary: '#B9C5CA', accent: '#A9DDEF', foreground: '#EFF7FA', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.39, foreground_on_panel_alt: 10.75, recommended_text_on_primary: 8.33, recommended_text_on_secondary: 10.7, recommended_text_on_accent: 12.84, border_against_panel: 3.83}
+  design_note: Cyan/light blue is the primary UI expression, supported by dark blue surfaces and silver/gray. Minor yellow-green emblem detail remains excluded.
