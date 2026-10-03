@@ -74,7 +74,7 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(2.4rem, 6vw, 5.2rem
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 28px; }
 h2 { margin-bottom: 0; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.08; letter-spacing: -.04em; }
 .section-intro { max-width: 455px; margin-bottom: 0; color: var(--text-soft); font-size: .94rem; }
-.palette-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.palette-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 18px; }
 .collection-controls { display: flex; justify-content: flex-end; gap: 8px; margin: -2px 0 18px; }
 .utility-button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--text-soft); font: inherit; font-size: .76rem; font-weight: 700; cursor: pointer; }
 .utility-button:hover, .utility-button:focus-visible { border-color: var(--accent); color: var(--text); }
