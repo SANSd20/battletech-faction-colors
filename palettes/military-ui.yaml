@@ -131,3 +131,15 @@ palettes:
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: foreground}
   contrast_checks: {foreground_on_panel: 10.96, foreground_on_panel_alt: 14.57, recommended_text_on_primary: 10.96, recommended_text_on_secondary: 14.57, recommended_text_on_accent: 5.38, border_against_panel: 6.11}
   design_note: White/camouflage militia roots with charcoal, light gray, and red Shadow Division elements; this is a reusable synthesis across documented formations, not a claim of one paint scheme for every unit.
+- faction_id: umayyad-caliphate
+  name: Umayyad Caliphate
+  group: Periphery
+  military_claim_id: umayyad-caliphate-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: SHARED_PRACTICAL_IDENTITY
+  shared_with_government_palette: true
+  evidence_classification: REPRESENTATIVE_DERIVED
+  roles: {primary: '#B3262E', primary_deep: '#53191F', primary_surface: '#76232A', panel: '#351D21', panel_alt: '#50272D', border: '#A66B70', secondary: '#F2F0E8', accent: '#D9D4CA', foreground: '#F7F3EE', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 14.09, foreground_on_panel_alt: 11.39, recommended_text_on_primary: 5.88, recommended_text_on_secondary: 16.55, recommended_text_on_accent: 12.79, border_against_panel: 3.68}
+  design_note: Intentionally shares the Government red/white UI values because the independent military evidence identifies red-star-on-white as the only common military element. It does not claim a universal Umayyad uniform scheme.

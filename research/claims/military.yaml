@@ -243,9 +243,11 @@ claims:
   observation: No organization-wide military scheme was established in this pass.
 - id: umayyad-caliphate-military-identity
   faction_id: umayyad-caliphate
-  status: RESEARCH_PENDING
-  evidence_classification: RESEARCH_REQUIRED
-  observation: The red-star-on-white excerpt identifies a common insignia but explicitly says uniforms are disparate; it does not establish a universal military paint scheme.
+  source_id: user-provided-excerpt
+  source_locator: pending
+  status: ESTABLISHED
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The supplied excerpt identifies a red star on a white backdrop as the only common element in the Caliphate's disparate uniforms. The reusable palette represents this common military identifying element, not a universal uniform or paint scheme; publication provenance remains pending.
 - id: rim-worlds-republic-military-identity
   faction_id: rim-worlds-republic
   status: RESEARCH_PENDING

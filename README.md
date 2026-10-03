@@ -26,6 +26,8 @@ Clan Military Pass 2 deepens the Clan claims without merging successor identitie
 
 Military Research Pass 3 resolves ComStar and Word of Blake independently from Government/Faction heraldry. ComStar uses a white/light-gray organizational adaptation grounded in Com Guard evidence, while Word of Blake uses a distinct charcoal/light-gray/red synthesis grounded in Militia and Shadow Division evidence. Republic of the Sphere and Star League remain pending because their documented formations use multiple schemes without a defensible single reusable identity.
 
+Military Research Pass 4 keeps most Periphery and historical identities pending because available Camo Specs evidence is formation-specific or materially varied. Umayyad Caliphate is the exception: its red-star-on-white common military identifying element is represented by a carefully labeled palette sharing the Government red/white UI values; this does not claim a universal uniform scheme. Magistracy of Canopus, Taurian Concordat, Outworlds Alliance, Marian Hegemony, and the remaining Pass 4 identities remain unresolved pending stronger organization-wide evidence.
+
 ## Presentation site
 
 The project’s GitHub Pages site is the presentation layer for the reusable government/faction UI palettes:
