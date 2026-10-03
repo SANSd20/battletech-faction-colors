@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A source-aware visual reference for BattleTech government and faction UI palettes.">
   <title>BattleTech Faction Colors</title>
-    <link rel="stylesheet" href="styles.css?rev=a11y">
+    <link rel="stylesheet" href="styles.css?rev=collapsible">
 </head>
 <body>
   <header class="site-header">
@@ -59,6 +59,10 @@
         </div>
         <p id="mode-intro" class="section-intro">Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.</p>
       </div>
+      <div class="collection-controls" aria-label="Palette browsing controls">
+        <button type="button" class="utility-button" data-collection-action="expand">Expand All</button>
+        <button type="button" class="utility-button" data-collection-action="collapse">Collapse All</button>
+      </div>
       <div id="palette-grid" class="palette-grid" aria-live="polite">
         <div class="loading-card"><span class="loader" aria-hidden="true"></span>Loading palette data from <code>palettes/government-ui.yaml</code>…</div>
       </div>
@@ -111,6 +115,6 @@
     </div>
   </footer>
 
-    <script src="site.js?rev=a11y"></script>
+    <script src="site.js?rev=collapsible"></script>
 </body>
 </html>
