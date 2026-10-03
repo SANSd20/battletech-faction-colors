@@ -41,3 +41,5 @@ The project’s GitHub Pages site is the presentation layer for the reusable gov
 <https://sansd20.github.io/battletech-faction-colors/>
 
 The site reads `palettes/government-ui.yaml` at runtime. It is a visual reference, not an independent source of authority, and it does not establish military paint schemes or official hexadecimal color specifications.
+
+Validation and accessibility: [`tools/audit-contrast.js`](tools/audit-contrast.js) checks reusable palette role backgrounds against the `foreground` and `ink` candidates using WCAG relative luminance.

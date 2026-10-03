@@ -38,3 +38,9 @@ For a Clan or Clan-successor identity with `INSUFFICIENT_EVIDENCE`, consumers ma
 Resolve identities by their stable `faction_id`, read the current YAML files at integration time, and preserve the distinction between Government / Faction and Military. The presentation site may group records for readability—for example, Clan Wolf and Clan Wolf in Exile are shown together as `Clan Wolf / Clan Wolf in Exile`—but their authoritative records, IDs, claims, and palette entries remain separate.
 
 When no supported Military palette exists, expose the recorded military status and explanation to users rather than silently substituting another identity context.
+
+## Stable consumer baseline
+
+`v1.0.0` is the first stable, reproducible consumer baseline. Consumers that need a fixed contract should pin to the `v1.0.0` tag. Consumers that intentionally follow the latest evolving authority may track `main`; tracking `main` is optional, not required.
+
+Combat Infantry primarily consumes Military identity. The A Time of War Character Creator generally consumes Government / Faction identity for faction affiliation, using Military identity when the actual UI context represents military service or organization. Consumer-specific semantic roles remain local to those projects; new or conflicting evidence should be returned to this repository for authoritative review.
