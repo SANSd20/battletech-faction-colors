@@ -41,7 +41,7 @@ code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; fo
 .repo-link, .footer-inner a { color: var(--text-soft); font-size: .88rem; text-decoration: none; }
 .repo-link:hover, .footer-inner a:hover { color: var(--focus); }
 
-.hero { min-height: 480px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); align-items: center; gap: 48px; padding-top: 74px; padding-bottom: 72px; }
+.hero { display: grid; grid-template-columns: minmax(0, 720px); align-items: center; gap: 48px; padding-top: 74px; padding-bottom: 72px; }
 .hero-copy { max-width: 720px; }
 .eyebrow, .card-kicker { margin: 0 0 12px; color: #79c7e3; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
@@ -54,13 +54,6 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(2.4rem, 6vw, 5.2rem
 .button-primary:hover { background: #2385a7; }
 .button-secondary { background: rgba(20, 34, 44, .62); color: var(--text-soft); }
 
-.hero-orbit { position: relative; width: min(100%, 390px); aspect-ratio: 1; justify-self: center; }
-.orbit { position: absolute; inset: 8%; border: 1px solid rgba(121, 199, 227, .3); border-radius: 50%; transform: rotate(-24deg) skewX(-12deg); }
-.orbit-one { box-shadow: 0 0 70px rgba(39, 150, 190, .16); }
-.orbit-two { inset: 22%; border-color: rgba(231, 185, 40, .44); transform: rotate(48deg) skewX(14deg); }
-.orbit-core { position: absolute; inset: 34%; display: grid; place-content: center; border: 1px solid #79c7e3; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #216f8c, #0b2a3a 72%); box-shadow: 0 0 50px rgba(43, 160, 197, .2); text-align: center; }
-.orbit-core span { font-size: 2.3rem; font-weight: 850; line-height: 1; letter-spacing: -.08em; }
-.orbit-core small { margin-top: 6px; color: #c6eaf4; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
 
 .status-strip { display: grid; grid-template-columns: repeat(4, 1fr); margin-bottom: 104px; border: 1px solid var(--line); border-radius: 12px; background: rgba(18, 31, 40, .72); box-shadow: var(--shadow); }
 .status-strip > div { display: grid; gap: 3px; padding: 19px 21px; border-right: 1px solid var(--line); }
@@ -170,7 +163,6 @@ h2 { margin-bottom: 0; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.0
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 @media (max-width: 850px) {
   .hero { grid-template-columns: 1fr; padding-top: 58px; }
-  .hero-orbit { width: min(100%, 290px); margin-top: -10px; }
   .status-strip { margin-bottom: 78px; }
   .method-grid { grid-template-columns: 1fr 1fr; }
   .method-card:last-child { grid-column: 1 / -1; }
