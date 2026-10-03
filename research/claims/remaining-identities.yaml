@@ -959,3 +959,18 @@ claims:
   confidence: strong
   exact_hex_values: null
   interpretation: Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.
+- id: aurigan-coalition-house-arano-colors
+  faction_id: aurigan-coalition
+  subject: government_faction_identity
+  source_type: DIRECT_PRIMARY_SOURCE
+  source: House Arano: The Aurigan Coalition
+  publisher: Catalyst Game Labs
+  year: 2019
+  printed_page: 17
+  pdf_page: 19
+  observation: House Sigil is a gold Great Cormorant on a red field; House Colors are red and black with gold trim.
+  evidence_classification: ESTABLISHED
+  limitation: The source explicitly states House Arano colors and does not explicitly name them as universal Aurigan Coalition national colors.
+  identity_synthesis: House Arano is used as the user-approved representative Government/Faction color basis for the Aurigan Coalition.
+  synthesis_evidence_classification: REPRESENTATIVE_DERIVED
+  exact_hex_values: null

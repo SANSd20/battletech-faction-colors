@@ -1361,7 +1361,7 @@ palettes:
 - faction_id: aurigan-coalition
   name: Aurigan Coalition
   group: Periphery
-  identity_claim_id: aurigan-coalition-heraldry-candidate
+  identity_claim_id: aurigan-coalition-house-arano-colors
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
@@ -1372,25 +1372,24 @@ palettes:
     panel: '#3C1B21'
     panel_alt: '#5E2831'
     border: '#C4666D'
-    secondary: '#D6A72F'
-    accent: '#22272B'
+    secondary: '#111111'
+    accent: '#D6A72F'
     foreground: '#F1F6F8'
     ink: '#111111'
   recommended_text:
     on_panel: foreground
     on_panel_alt: foreground
     on_primary: foreground
-    on_secondary: ink
-    on_accent: foreground
+    on_secondary: foreground
+    on_accent: ink
   contrast_checks:
     foreground_on_panel: 14.06
     foreground_on_panel_alt: 10.57
     recommended_text_on_primary: 5.77
-    recommended_text_on_secondary: 8.48
-    recommended_text_on_accent: 13.84
+    recommended_text_on_secondary: 17.33
+    recommended_text_on_accent: 8.48
     border_against_panel: 3.99
-  design_note: Red is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
-    BattleTech color specifications.
+  design_note: Red and black are the representative Government/Faction identity colors, with gold used as trim/accent, based on the explicitly stated House Arano colors in House Arano: The Aurigan Coalition, p.17. House Arano is used as the user-approved representative basis for the Coalition. Exact hex values are UI adaptations, not official BattleTech digital specifications.
 - faction_id: umayyad-caliphate
   name: Umayyad Caliphate
   group: Periphery
