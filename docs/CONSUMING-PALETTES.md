@@ -41,6 +41,6 @@ When no supported Military palette exists, expose the recorded military status a
 
 ## Stable consumer baseline
 
-`v1.0.0` is the first stable, reproducible consumer baseline. Consumers that need a fixed contract should pin to the `v1.0.0` tag. Consumers that intentionally follow the latest evolving authority may track `main`; tracking `main` is optional, not required.
+`v1.0.0` was the first stable, reproducible consumer baseline. `v1.1.0` is the current stable consumer baseline. Consumers that need the current fixed contract should pin to the `v1.1.0` tag; consumers intentionally requiring the older contract may continue to pin `v1.0.0`. Consumers that intentionally follow the latest evolving authority may track `main`; tracking `main` is optional, not required.
 
 Consumers representing political or faction affiliation generally use Government / Faction identity. Consumers representing military units, formations, service, or military organizations use Military identity. An individual consumer may use both contexts in different UI areas. Consumer-specific semantic roles remain local to the consuming project; new or conflicting faction-color evidence should be returned to this repository for authoritative review.
