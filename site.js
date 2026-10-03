@@ -67,23 +67,36 @@ const stateCopy = {
   INSUFFICIENT_EVIDENCE: { label: 'Insufficient evidence', className: 'sketch-state', text: 'Available sources do not support a defensible reusable faction-wide Military palette.' }
 };
 
+function hexRgb(hex) { const value = hex.replace('#', ''); return [0, 2, 4].map((offset) => parseInt(value.slice(offset, offset + 2), 16) / 255); }
+function luminance(hex) { return hexRgb(hex).map((channel) => channel <= .03928 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4).reduce((sum, channel, index) => sum + channel * [0.2126, 0.7152, 0.0722][index], 0); }
+function contrastRatio(background, foreground) { const light = Math.max(luminance(background), luminance(foreground)); const dark = Math.min(luminance(background), luminance(foreground)); return (light + .05) / (dark + .05); }
+function chooseReadableText(background, palette) {
+  const candidates = [palette.roles.foreground, palette.roles.ink].filter(Boolean);
+  const best = candidates.sort((a, b) => contrastRatio(background, b) - contrastRatio(background, a))[0];
+  if (!best || contrastRatio(background, best) < 4.5) throw new Error(`No readable text candidate for ${background}`);
+  return best;
+}
+
 function swatch(key, palette) {
   const value = palette.roles[key];
-  const textRole = key === 'primary' ? palette.recommended_text.on_primary : key === 'secondary' ? palette.recommended_text.on_secondary : key === 'accent' ? palette.recommended_text.on_accent : ['primary_surface', 'panel', 'panel_alt', 'border'].includes(key) ? 'foreground' : 'ink';
-  return `<div class="swatch" style="background:${esc(value)};color:${esc(palette.roles[textRole])}"><span class="swatch-label">${esc(labelFor[key])}</span><code>${esc(value)}</code></div>`;
+  const background = ['border', 'primary_surface'].includes(key) && contrastRatio(value, palette.roles.foreground) < 4.5 && contrastRatio(value, palette.roles.ink) < 4.5 ? palette.roles.panel : value;
+  const textColor = chooseReadableText(background, palette);
+  const border = background !== value ? `;border:2px solid ${esc(value)}` : '';
+  return `<div class="swatch" style="background:${esc(background)};color:${esc(textColor)}${border}"><span class="swatch-label">${esc(labelFor[key])}</span><code>${esc(value)}</code></div>`;
 }
 
 function paletteCard(palette, mode, presentation = null) {
   const r = palette.roles, contrast = palette.contrast_checks;
   const rootVars = Object.entries(r).map(([key, value]) => `--${key.replaceAll('_', '-')}:${value}`).join(';');
   const swatches = ['primary', 'secondary', 'primary_surface', 'panel', 'panel_alt', 'border', 'accent', 'foreground', 'ink'].map((key) => swatch(key, palette)).join('');
-  const primaryText = r[palette.recommended_text.on_primary], secondaryText = r[palette.recommended_text.on_secondary];
+  const headerText = chooseReadableText(r.primary, palette), primaryText = chooseReadableText(r.primary, palette), secondaryText = chooseReadableText(r.secondary, palette);
+  const primaryChipText = chooseReadableText(r.primary, palette), secondaryChipText = chooseReadableText(r.secondary, palette);
   const presentationClass = presentation ? ' fallback-card' : '';
   const statusLabel = presentation ? 'GOVERNMENT PALETTE FALLBACK' : mode === 'military' ? 'MILITARY' : esc(palette.identity_claim_status);
   const statusNote = presentation ? 'Military-specific evidence is insufficient for a reusable Clan-wide palette. Government/Faction colors are shown as the approved practical UI fallback.' : palette.design_note;
   return `<article class="palette-card${presentationClass}" data-faction="${esc(palette.faction_id)}" style="${rootVars}">
-    <div class="palette-hero"><h3>${esc(palette.name)}</h3><div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Identity')} · <code>${statusLabel}</code></div></div>
-    <div class="palette-body"><div class="palette-labels"><div class="identity-chip primary-chip"><span>Primary identity</span><code>${esc(r.primary)}</code></div><div class="identity-chip secondary-chip"><span>Secondary / support</span><code>${esc(r.secondary)}</code></div></div>
+    <div class="palette-hero" style="color:${esc(headerText)}"><h3>${esc(palette.name)}</h3><div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Identity')} · <code>${statusLabel}</code></div></div>
+    <div class="palette-body"><div class="palette-labels"><div class="identity-chip primary-chip" style="color:${esc(primaryChipText)}"><span>Primary identity</span><code>${esc(r.primary)}</code></div><div class="identity-chip secondary-chip" style="color:${esc(secondaryChipText)}"><span>Secondary / support</span><code>${esc(r.secondary)}</code></div></div>
     <div class="swatch-grid">${swatches}</div><div class="sample-row"><div class="text-sample primary-sample" style="--primary-text:${esc(primaryText)}"><strong>Primary text</strong>Readable sample</div><div class="text-sample secondary-sample" style="--secondary-text:${esc(secondaryText)}"><strong>Secondary text</strong>Readable sample</div></div>
     <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p><p class="note">${esc(statusNote)}</p></div></article>`;
 }

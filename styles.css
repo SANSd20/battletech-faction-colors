@@ -84,19 +84,19 @@ h2 { margin-bottom: 0; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.0
 .fallback-card .palette-hero-meta code { color: #111; background: #d8dde0; }
 .palette-hero { position: relative; min-height: 158px; padding: 25px 26px 22px; background: var(--primary); isolation: isolate; }
 .palette-hero::after { position: absolute; right: -42px; bottom: -85px; width: 230px; height: 230px; border: 2px solid var(--secondary); border-radius: 50%; content: ""; opacity: 1; }
-.palette-hero h3 { position: relative; z-index: 1; max-width: 72%; margin-bottom: 20px; color: var(--foreground); font-size: 1.38rem; line-height: 1.1; letter-spacing: -.025em; }
-.palette-hero-meta { position: relative; z-index: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; color: var(--foreground); font-size: .75rem; }
+.palette-hero h3 { position: relative; z-index: 1; max-width: 72%; margin-bottom: 20px; color: inherit; font-size: 1.38rem; line-height: 1.1; letter-spacing: -.025em; }
+.palette-hero-meta { position: relative; z-index: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; color: inherit; font-size: .75rem; }
 .color-dot { display: inline-block; width: 11px; height: 11px; border: 1px solid rgba(255, 255, 255, .45); border-radius: 50%; vertical-align: -1px; }
 .palette-body { padding: 20px 22px 22px; }
 .palette-labels { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 19px; }
 .identity-chip { min-height: 62px; padding: 11px 13px; border: 1px solid var(--border); border-radius: 8px; background: var(--panel-alt); }
 .identity-chip.primary-chip { background: var(--primary); color: var(--foreground); }
 .identity-chip.secondary-chip { background: var(--secondary); color: var(--ink); }
-.identity-chip span { display: block; margin-bottom: 4px; font-size: .69rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .83; }
+.identity-chip span { display: block; margin-bottom: 4px; font-size: .69rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: 1; }
 .identity-chip code { font-size: .86rem; font-weight: 700; }
 .swatch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
 .swatch { min-height: 65px; padding: 9px; border: 1px solid rgba(255, 255, 255, .12); border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; }
-.swatch-label { font-size: .65rem; font-weight: 700; line-height: 1.1; opacity: .88; }
+.swatch-label { font-size: .65rem; font-weight: 700; line-height: 1.1; opacity: 1; }
 .swatch code { font-size: .65rem; line-height: 1; }
 .sample-row { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 13px; }
 .text-sample { min-height: 65px; padding: 12px; border-radius: 7px; font-size: .75rem; }
