@@ -798,6 +798,38 @@ palettes:
     border_against_panel: 3.99
   design_note: Red is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
     BattleTech color specifications.
+- faction_id: clan-wolf-in-exile
+  name: Clan Wolf in Exile
+  group: Clans
+  identity_claim_id: clan-wolf-in-exile-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B52A32'
+    primary_deep: '#501B23'
+    primary_surface: '#7A2129'
+    panel: '#3C1B21'
+    panel_alt: '#5E2831'
+    border: '#C4666D'
+    secondary: '#D6A72F'
+    accent: '#30383D'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: foreground
+  contrast_checks:
+    foreground_on_panel: 14.06
+    foreground_on_panel_alt: 10.57
+    recommended_text_on_primary: 5.77
+    recommended_text_on_secondary: 8.48
+    recommended_text_on_accent: 10.96
+    border_against_panel: 3.99
+  design_note: Intentional shared palette relationship: Clan Wolf in Exile is a separate faction identity using Clan Wolf's exact government/faction UI adaptation.
 - faction_id: comstar
   name: ComStar
   group: Interstellar organizations
@@ -1359,3 +1391,35 @@ palettes:
     border_against_panel: 3.99
   design_note: Red is the provisional primary identity candidate, with gold as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
     BattleTech color specifications.
+- faction_id: umayyad-caliphate
+  name: Umayyad Caliphate
+  group: Periphery
+  identity_claim_id: umayyad-caliphate-heraldry-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#B3262E'
+    primary_deep: '#53191F'
+    primary_surface: '#76232A'
+    panel: '#351D21'
+    panel_alt: '#50272D'
+    border: '#A66B70'
+    secondary: '#F2F0E8'
+    accent: '#D9D4CA'
+    foreground: '#F7F3EE'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.09
+    foreground_on_panel_alt: 11.39
+    recommended_text_on_primary: 5.88
+    recommended_text_on_secondary: 16.55
+    recommended_text_on_accent: 12.79
+    border_against_panel: 3.68
+  design_note: Crimson red plus white is the provisional government/faction UI foundation. The white identity basis comes from the user-provided red-star-on-white excerpt; military uniforms remain explicitly disparate and are not assigned a universal palette.

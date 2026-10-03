@@ -531,17 +531,23 @@ claims:
   source_id: camospecs-faction-page
   source_locator: https://camospecs.com/factions/clan-wolf-in-exile/
   image_source_locator: https://camospecs.com/factions/clan-wolf-in-exile/ (displayed emblem/logo asset)
-  observation: the page displays the Clan Wolf emblem asset rather than a distinct Wolf-in-Exile identity mark; separate colors cannot be responsibly established.
+  observation: the page displays the Clan Wolf emblem asset rather than a distinct Wolf-in-Exile identity mark. Project decision: Clan Wolf in Exile intentionally shares Clan Wolf's government/faction UI palette while remaining a separate faction identity.
   observed_colors:
-  - unresolved
-  - unresolved
-  - unresolved
-  identity_color_candidates: {}
+  - red
+  - gold
+  - charcoal
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - gold
+    neutral:
+    - charcoal
   evidence_classification: HERALDRY_DERIVED
   approval_status: RESEARCH_REQUIRED
-  confidence: limited
+  confidence: strong
   exact_hex_values: null
-  interpretation: No sufficiently supported, distinct government/faction color identity has yet been established; keep unresolved pending stronger evidence.
+  interpretation: Clan Wolf in Exile remains a separate faction record, but its government/faction UI palette intentionally reuses Clan Wolf's exact UI adaptation because the available emblem evidence is shared.
 - id: comstar-heraldry-candidate
   faction_id: comstar
   subject: government_faction_identity
@@ -867,20 +873,23 @@ claims:
 - id: umayyad-caliphate-heraldry-candidate
   faction_id: umayyad-caliphate
   subject: government_faction_identity
-  source_id: camospecs-faction-page
-  source_locator: https://camospecs.com/factions/umayyad-caliphate/
-  image_source_locator: https://camospecs.com/factions/umayyad-caliphate/ (displayed emblem/logo asset)
-  observation: no usable Camo Specs emblem asset was retrieved for independent color observation; identity remains unresolved.
+  source_id: user-provided-excerpt
+  source_locator: pending
+  image_source_locator: pending
+  observation: User-provided excerpt states that the Umayyad Caliphate insignia depicts a red star on a white backdrop, described as the only common element in the Caliphate's disparate uniforms.
   observed_colors:
-  - unresolved
-  - unresolved
-  - unresolved
-  identity_color_candidates: {}
+  - red
+  - white
+  identity_color_candidates:
+    primary:
+    - red
+    secondary:
+    - white
   evidence_classification: HERALDRY_DERIVED
   approval_status: RESEARCH_REQUIRED
   confidence: limited
   exact_hex_values: null
-  interpretation: No sufficiently supported, distinct government/faction color identity has yet been established; keep unresolved pending stronger evidence.
+  interpretation: Red plus white supports a provisional government/faction identity basis. The statement does not establish a universal military paint or uniform scheme because it explicitly describes disparate uniforms.
 - id: rim-worlds-republic-heraldry-candidate
   faction_id: rim-worlds-republic
   subject: government_faction_identity

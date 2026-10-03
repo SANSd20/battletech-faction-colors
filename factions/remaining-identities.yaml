@@ -250,9 +250,9 @@ factions:
     colors: null
     note: Military values are intentionally kept separate from this government/faction identity research.
   government_faction_identity:
-    status: unresolved
+    status: provisional
     candidate_claim_id: clan-wolf-in-exile-heraldry-candidate
-    exact_hex_values: null
+    exact_hex_values: UI_ADAPTATION
 - id: comstar
   name: ComStar
   group: Interstellar organizations

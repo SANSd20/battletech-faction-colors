@@ -35,18 +35,31 @@ function parsePaletteYaml(text) {
   const lines = text.split(/\r?\n/);
   const palettes = [];
   let current = null;
+  let activeMap = null;
   for (const line of lines) {
     const faction = line.match(/^\- faction_id:\s*(.+)$/);
     if (faction) {
       current = { faction_id: scalar(faction[1]) };
       palettes.push(current);
+      activeMap = null;
       continue;
     }
     if (!current) continue;
+    if (activeMap) {
+      const nested = line.match(/^ {4}([a-z_]+):\s*(.+)$/);
+      if (nested) {
+        current[activeMap][nested[1]] = scalar(nested[2]);
+        continue;
+      }
+      if (line.trim() && !line.startsWith('    ')) activeMap = null;
+    }
     const field = line.match(/^  ([a-z_]+):\s*(.*)$/);
     if (!field) continue;
     const [, key, value] = field;
-    if (['roles', 'recommended_text', 'contrast_checks'].includes(key)) current[key] = flowMap(value);
+    if (['roles', 'recommended_text', 'contrast_checks'].includes(key)) {
+      current[key] = value.trim() ? flowMap(value) : {};
+      activeMap = value.trim() ? null : key;
+    }
     else if (key !== 'notes') current[key] = scalar(value);
   }
   if (!palettes.length || palettes.some((palette) => !palette.name || !palette.roles)) throw new Error('No usable palettes found.');
