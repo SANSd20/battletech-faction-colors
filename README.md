@@ -32,6 +32,8 @@ The final unresolved review records a separate `research/claims/military-review.
 
 ## Presentation site
 
+Consumer projects should follow [`docs/CONSUMING-PALETTES.md`](docs/CONSUMING-PALETTES.md) when selecting an identity context or handling unresolved Military evidence.
+
 The project’s GitHub Pages site is the presentation layer for the reusable government/faction UI palettes:
 
 <https://sansd20.github.io/battletech-faction-colors/>

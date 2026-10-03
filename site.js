@@ -85,6 +85,15 @@ function paletteCard(palette, mode) {
     <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p><p class="note">${esc(palette.design_note)}</p></div></article>`;
 }
 
+function presentationPalettes(palettes) {
+  const wolf = palettes.find((palette) => palette.faction_id === 'clan-wolf');
+  const exile = palettes.find((palette) => palette.faction_id === 'clan-wolf-in-exile');
+  return palettes.filter((palette) => palette.faction_id !== 'clan-wolf-in-exile').map((palette) => {
+    if (palette.faction_id !== 'clan-wolf' || !exile) return palette;
+    return { ...palette, name: 'Clan Wolf / Clan Wolf in Exile', faction_id: 'clan-wolf-presentation', design_note: `${palette.design_note} Presentation grouping: Clan Wolf in Exile remains a separate authoritative identity and is shown here alongside Clan Wolf.` };
+  });
+}
+
 function blueprintCard(faction, state) {
   const copy = stateCopy[state.status];
   return `<article class="blueprint-card ${copy.className}" data-faction="${esc(faction.faction_id)}"><div class="blueprint-grid" aria-hidden="true"></div><div class="blueprint-content"><p class="blueprint-kicker">Military identity analysis</p><h3>${esc(faction.name)}</h3><div class="blueprint-status">${esc(copy.label)}</div><p>${esc(copy.text)}</p><div class="placeholder-swatches"><span>PRIMARY ?</span><span>SECONDARY ?</span><span>ACCENT ?</span></div><p class="blueprint-reason">${esc(state.reason)}</p></div></article>`;
@@ -106,9 +115,9 @@ async function renderMode(mode) {
     if (responses.some((response) => !response.ok)) throw new Error('Palette data request failed.');
     const texts = await Promise.all(responses.map((response) => response.text()));
     const government = parsePaletteYaml(texts[0]);
-    if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = government.map((p) => paletteCard(p, mode)).join(''); pending.innerHTML = ''; return; }
+    if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = presentationPalettes(government).map((p) => paletteCard(p, mode)).join(''); pending.innerHTML = ''; return; }
     const military = parsePaletteYaml(texts[1]), review = parseReviewYaml(texts[2]), byFaction = Object.fromEntries(military.map((p) => [p.faction_id, p]));
-    const cards = government.map((faction) => { const palette = byFaction[faction.faction_id]; if (palette) return paletteCard(palette, mode); const state = review[`${faction.faction_id}-military-identity`]; return state ? blueprintCard(faction, state) : ''; }).join('');
+    const cards = presentationPalettes(government).map((faction) => { const palette = byFaction[faction.faction_id] || (faction.faction_id === 'clan-wolf-presentation' ? { ...byFaction['clan-wolf'], name: faction.name, faction_id: faction.faction_id, design_note: `${byFaction['clan-wolf'].design_note} Presentation grouping: Clan Wolf in Exile remains a separate authoritative identity and is shown here alongside Clan Wolf.` } : null); if (palette) return paletteCard(palette, mode); const state = review[`${faction.faction_id}-military-identity`]; return state ? blueprintCard(faction, state) : ''; }).join('');
     const counts = Object.values(review).reduce((a, v) => { a[v.status] = (a[v.status] || 0) + 1; return a; }, {});
     document.querySelector('#palette-count').textContent = military.length; grid.innerHTML = cards; pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Military research states</h2></div><p>${military.length} finished palettes · ${counts.NO_UNIFIED_PALETTE || 0} technical conclusions · ${counts.INSUFFICIENT_EVIDENCE || 0} insufficient-evidence records.</p></div>`;
   } catch (error) { grid.innerHTML = `<div class="error-card"><strong>Identity data could not be loaded.</strong><br><span>${esc(error.message)}</span></div>`; pending.innerHTML = ''; console.error(error); }
