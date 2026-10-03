@@ -130,12 +130,12 @@ async function renderMode(mode) {
   document.querySelector('#mode-intro').textContent = mode === 'military' ? 'Military identity is researched separately from Government/Faction identity. Finished cards show supported reusable palettes; technical cards show documented variation or insufficient evidence.' : 'Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.';
   document.querySelector('#mode-count-label').textContent = mode === 'military' ? 'finished Military palettes' : 'finished Government / faction palettes';
   try {
-    const urls = mode === 'military' ? [SOURCES.government, SOURCES.military, SOURCES.review] : [SOURCES.government];
+    const urls = mode === 'military' ? [SOURCES.government, SOURCES.military, SOURCES.review] : [SOURCES.government, SOURCES.military];
     const responses = await Promise.all(urls.map((url) => fetch(url, { cache: 'no-cache' })));
     if (responses.some((response) => !response.ok)) throw new Error('Palette data request failed.');
     const texts = await Promise.all(responses.map((response) => response.text()));
-    const government = parsePaletteYaml(texts[0]);
-    if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = presentationPalettes(government).map((p) => paletteCard(p, mode)).join(''); pending.innerHTML = ''; return; }
+    const government = parsePaletteYaml(texts[0]), militaryGroups = mode === 'government' ? Object.fromEntries(parsePaletteYaml(texts[1]).map((p) => [p.faction_id, p.group])) : {};
+    if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = presentationPalettes(government).map((p) => paletteCard(militaryGroups[p.faction_id] && !p.group ? { ...p, group: militaryGroups[p.faction_id] } : p, mode)).join(''); pending.innerHTML = ''; return; }
     const military = parsePaletteYaml(texts[1]), review = parseReviewYaml(texts[2]), byFaction = Object.fromEntries(military.map((p) => [p.faction_id, p]));
     let fallbackCount = 0;
     const cards = presentationPalettes(government).map((faction) => { const state = review[`${faction.faction_id}-military-identity`]; const palette = byFaction[faction.faction_id] || (faction.faction_id === 'clan-wolf-presentation' ? { ...byFaction['clan-wolf'], name: faction.name, faction_id: faction.faction_id, design_note: `${byFaction['clan-wolf'].design_note} Presentation grouping: Clan Wolf in Exile remains a separate authoritative identity and is shown here alongside Clan Wolf.` } : null); if (palette) return paletteCard(palette, mode); if (state?.status === 'INSUFFICIENT_EVIDENCE' && ['Clans', 'Clan successor states'].includes(faction.group)) { fallbackCount += 1; return paletteCard({ ...faction, faction_id: faction.faction_id }, mode, true); } return state ? blueprintCard(faction, state) : ''; }).join('');
