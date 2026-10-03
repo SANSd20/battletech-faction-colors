@@ -162,8 +162,8 @@ factions:
     colors: null
     note: Military values are intentionally kept separate from this government/faction identity research.
   government_faction_identity:
-    status: unresolved
-    candidate_claim_id: clan-smoke-jaguar-heraldry-candidate
+    status: provisional
+    candidate_claim_id: clan-smoke-jaguar-representative-candidate
     exact_hex_values: null
 - id: clan-snow-raven
   name: Clan Snow Raven

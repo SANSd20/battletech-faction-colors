@@ -1,20 +1,18 @@
 schema_version: 1
 project: battletech-faction-colors
 palette_set:
-  id: government-faction-dark-ui
+  id: initial-six-government-dark-ui
   identity_type: government_faction_identity
-  purpose: reusable government/faction dark UI adaptations
+  purpose: reusable dark UI adaptation
   approval_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
   notes:
   - Exact hexadecimal values are project UI adaptations, not official BattleTech color specifications.
   - Source faction identities remain HERALDRY_DERIVED and RESEARCH_REQUIRED until stronger evidence is approved.
   - Roles are application-neutral. Consumers such as Combat Infantry and the A Time of War character creator map these colors to their own semantic UI roles.
-  - Expansion records remain provisional and reference individual research claims; unresolved identities are not assigned placeholder UI colors.
 palettes:
 - faction_id: federated-suns
   name: Federated Suns
-  group: Successor States / Inner Sphere
   identity_claim_id: fs-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -25,7 +23,6 @@ palettes:
   design_note: Gold/yellow is the primary government identity color, with red retained as a supporting heraldic color. White is represented by the light foreground/accent range.
 - faction_id: draconis-combine
   name: Draconis Combine
-  group: Successor States / Inner Sphere
   identity_claim_id: dc-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -36,7 +33,6 @@ palettes:
   design_note: Red remains primary and charcoal/black provides the secondary identity and dark surfaces.
 - faction_id: free-worlds-league
   name: Free Worlds League
-  group: Successor States / Inner Sphere
   identity_claim_id: fwl-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -47,7 +43,6 @@ palettes:
   design_note: Purple remains primary. Blue is retained as the supporting heraldic color and pale violet serves as the light neutral.
 - faction_id: lyran-commonwealth
   name: Lyran Commonwealth
-  group: Successor States / Inner Sphere
   identity_claim_id: lc-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -58,7 +53,6 @@ palettes:
   design_note: Blue remains primary with silver/gray supporting it. Copper/brown from the fist artwork is intentionally excluded from the identity palette.
 - faction_id: capellan-confederation
   name: Capellan Confederation
-  group: Successor States / Inner Sphere
   identity_claim_id: cc-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -69,7 +63,6 @@ palettes:
   design_note: Green remains primary with yellow/gold as the supporting heraldic color.
 - faction_id: free-rasalhague-republic
   name: Free Rasalhague Republic
-  group: Successor States / Inner Sphere
   identity_claim_id: frr-heraldry-candidate
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
@@ -541,6 +534,39 @@ palettes:
     border_against_panel: 5.3
   design_note: Pale Blue is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
     not official BattleTech color specifications.
+- faction_id: clan-smoke-jaguar
+  name: Clan Smoke Jaguar
+  group: Clans
+  identity_claim_id: clan-smoke-jaguar-representative-candidate
+  identity_claim_status: RESEARCH_REQUIRED
+  palette_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  roles:
+    primary: '#23466A'
+    primary_deep: '#13273A'
+    primary_surface: '#19344E'
+    panel: '#132331'
+    panel_alt: '#1C354B'
+    border: '#78AEC4'
+    secondary: '#AAB5BF'
+    accent: '#C56A2C'
+    foreground: '#F1F6F8'
+    ink: '#111111'
+  recommended_text:
+    on_panel: foreground
+    on_panel_alt: foreground
+    on_primary: foreground
+    on_secondary: ink
+    on_accent: ink
+  contrast_checks:
+    foreground_on_panel: 14.69
+    foreground_on_panel_alt: 11.61
+    recommended_text_on_primary: 8.94
+    recommended_text_on_secondary: 9.06
+    recommended_text_on_accent: 4.92
+    border_against_panel: 6.59
+  design_note: Navy is the provisional primary identity candidate, with silver as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official
+    BattleTech color specifications.
 - faction_id: clan-snow-raven
   name: Clan Snow Raven
   group: Clans

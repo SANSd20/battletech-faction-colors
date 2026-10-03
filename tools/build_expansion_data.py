@@ -27,7 +27,7 @@ IDENTITIES = [
     ("clan-jade-falcon", "Clan Jade Falcon", "Clans", "green", "blue", "gold", "strong", "https://camospecs.com/factions/clan-jade-falcon/"),
     ("clan-nova-cat", "Clan Nova Cat", "Clans", "navy", "red-gold", "silver", "strong", "https://camospecs.com/factions/clan-nova-cat/"),
     ("clan-sea-fox", "Clan Sea Fox", "Clans", "pale-blue", "silver", "navy", "strong", "https://camospecs.com/factions/clan-sea-fox/"),
-    ("clan-smoke-jaguar", "Clan Smoke Jaguar", "Clans", "unresolved", "unresolved", "unresolved", "limited", "https://camospecs.com/factions/clan-smoke-jaguar/"),
+    ("clan-smoke-jaguar", "Clan Smoke Jaguar", "Clans", "navy", "silver", "orange", "moderate", "https://camospecs.com/factions/clan-smoke-jaguar/"),
     ("clan-snow-raven", "Clan Snow Raven", "Clans", "slate", "ice-blue", "white", "moderate", "https://camospecs.com/factions/clan-snow-raven/"),
     ("raven-alliance", "Raven Alliance", "Clan successor states", "black", "ice-blue", "white", "strong", "https://camospecs.com/factions/raven-alliance/"),
     ("clan-star-adder", "Clan Star Adder", "Clans", "navy", "cyan-gold", "cream", "moderate", "https://camospecs.com/factions/clan-star-adder/"),
@@ -96,7 +96,7 @@ OBSERVED = {
     "clan-jade-falcon": "black/navy, vivid green, pale green, and gray are visible; green is primary and blue is a supporting candidate.",
     "clan-nova-cat": "navy, white/silver, blue-gray, red, and gold are visible; navy and red/gold are candidates.",
     "clan-sea-fox": "white, navy, pale blue, and blue-gray are visible; pale blue and silver/white are candidates.",
-    "clan-smoke-jaguar": "the retrievable legacy Camo Specs asset is effectively monochrome/gray at usable resolution; no sufficiently distinct identity color set is established.",
+    "clan-smoke-jaguar": "the attached 1131x1585 PNG shows a distinct Smoke Jaguar-associated emblem/scheme: dark blue/black wing-like elements, a gray-brown jaguar figure, black detailing, and small orange/gold accents. The image is treated as representative identity evidence, not as proof of an official military-wide or government color standard.",
     "clan-snow-raven": "white, black, muted green, and pale cyan/blue are visible; slate, ice blue, and white remain provisional candidates.",
     "raven-alliance": "black, white, pale blue, and blue-gray are visible; black and ice blue/white are candidates.",
     "clan-star-adder": "navy, dark blue, cream, brown, and muted blue are visible; navy is primary, with cyan/gold retained as a provisional interpretation.",
@@ -196,9 +196,10 @@ def palette(identity, name, group, primary_token, secondary_token, accent_token,
         'border_against_panel': contrast(roles['border'], roles['panel']),
     }
     note = f"{primary_token.replace('-', ' ').title()} is the provisional primary identity candidate, with {secondary_token.replace('-', ' ')} as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not official BattleTech color specifications."
+    claim_suffix = 'representative-candidate' if identity == 'clan-smoke-jaguar' else 'heraldry-candidate'
     return {
         'faction_id': identity, 'name': name, 'group': group,
-        'identity_claim_id': f'{identity}-heraldry-candidate',
+        'identity_claim_id': f'{identity}-{claim_suffix}',
         'identity_claim_status': 'RESEARCH_REQUIRED', 'palette_status': 'PROVISIONAL',
         'evidence_classification': 'UI_ADAPTATION', 'roles': roles,
         'recommended_text': {'on_panel': 'foreground', 'on_panel_alt': 'foreground', 'on_primary': on_primary, 'on_secondary': on_secondary, 'on_accent': on_accent},
@@ -207,20 +208,22 @@ def palette(identity, name, group, primary_token, secondary_token, accent_token,
 
 def claim(identity, name, group, primary, secondary, accent, confidence, locator):
     unresolved = primary == 'unresolved'
+    attached = identity == 'clan-smoke-jaguar'
     observed = OBSERVED[identity]
     candidates = {} if unresolved else {'primary': [primary], 'secondary': [secondary], 'neutral': [accent]}
     item = {
-        'id': f'{identity}-heraldry-candidate', 'faction_id': identity, 'subject': 'government_faction_identity',
-        'source_id': 'camospecs-faction-page', 'source_locator': locator,
-        'image_source_locator': f'{locator} (displayed emblem/logo asset)', 'observation': observed,
+        'id': f'{identity}-representative-candidate' if attached else f'{identity}-heraldry-candidate', 'faction_id': identity, 'subject': 'government_faction_identity',
+        'source_id': 'user-provided-csj-image' if attached else 'camospecs-faction-page',
+        'source_locator': 'research/assets/clan-smoke-jaguar/csj.png (original attachment file_000000008b7c81f5a03d2c186d53bd7e)' if attached else locator,
+        'image_source_locator': 'research/assets/clan-smoke-jaguar/csj.png; original attachment file_000000008b7c81f5a03d2c186d53bd7e; SHA-256 df355b2f348432b517a310ead7336d5813390f145f212955802aefdaabdfe789' if attached else f'{locator} (displayed emblem/logo asset)', 'observation': observed,
         'observed_colors': [x.strip() for x in (primary + ', ' + secondary + ', ' + accent).split(',')],
-        'identity_color_candidates': candidates, 'evidence_classification': 'HERALDRY_DERIVED',
+        'identity_color_candidates': candidates, 'evidence_classification': 'REPRESENTATIVE_DERIVED' if attached else 'HERALDRY_DERIVED',
         'approval_status': 'RESEARCH_REQUIRED', 'confidence': confidence, 'exact_hex_values': None,
     }
     if unresolved:
         item['interpretation'] = 'No sufficiently supported, distinct government/faction color identity has yet been established; keep unresolved pending stronger evidence.'
     else:
-        item['interpretation'] = 'Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.'
+        item['interpretation'] = 'The supplied representative image supports a provisional identity-associated palette direction, but does not establish a canonical government palette or military-wide paint standard.' if attached else 'Observed emblem colors are treated as identity candidates only provisionally; military paint schemes and object/artwork colors are not promoted automatically.'
     return item
 
 def yaml_block(value):
@@ -231,12 +234,16 @@ def yaml_list_block(value):
     return '- ' + lines[0] + '\n' + '\n'.join('  ' + line for line in lines[1:])
 
 def main():
-    claims = {'schema_version': 1, 'project': 'battletech-faction-colors', 'source_set': [{'id': 'camospecs-faction-page', 'title': 'Camo Specs individual faction pages and displayed emblem/logo assets', 'publisher': 'Camo Specs Online', 'url': 'https://camospecs.com/factions/', 'accessed': ACCESS_DATE, 'role': 'visual faction/emblem evidence; military scheme context kept separate'}], 'claims': []}
+    claims = {'schema_version': 1, 'project': 'battletech-faction-colors', 'source_set': [
+        {'id': 'camospecs-faction-page', 'title': 'Camo Specs individual faction pages and displayed emblem/logo assets', 'publisher': 'Camo Specs Online', 'url': 'https://camospecs.com/factions/', 'accessed': ACCESS_DATE, 'role': 'visual faction/emblem evidence; military scheme context kept separate'},
+        {'id': 'user-provided-csj-image', 'title': 'User-provided Clan Smoke Jaguar image', 'publisher': 'User-provided attachment', 'locator': 'research/assets/clan-smoke-jaguar/csj.png', 'original_attachment': 'file_000000008b7c81f5a03d2c186d53bd7e', 'sha256': 'df355b2f348432b517a310ead7336d5813390f145f212955802aefdaabdfe789', 'dimensions': '1131x1585 RGBA PNG', 'accessed': ACCESS_DATE, 'role': 'representative identity-associated visual evidence; not a canonical military or government color specification'}
+    ], 'claims': []}
     factions = {'schema_version': 1, 'factions': []}
     palette_records = []
     for identity, name, group, primary, secondary, accent, confidence, locator in IDENTITIES:
         claims['claims'].append(claim(identity, name, group, primary, secondary, accent, confidence, locator))
-        factions['factions'].append({'id': identity, 'name': name, 'group': group, 'military_identity': {'status': 'not_reconstructed_from_heraldry', 'colors': None, 'note': 'Military values are intentionally kept separate from this government/faction identity research.'}, 'government_faction_identity': {'status': 'provisional' if primary != 'unresolved' else 'unresolved', 'candidate_claim_id': f'{identity}-heraldry-candidate', 'exact_hex_values': None}})
+        claim_suffix = 'representative-candidate' if identity == 'clan-smoke-jaguar' else 'heraldry-candidate'
+        factions['factions'].append({'id': identity, 'name': name, 'group': group, 'military_identity': {'status': 'not_reconstructed_from_heraldry', 'colors': None, 'note': 'Military values are intentionally kept separate from this government/faction identity research.'}, 'government_faction_identity': {'status': 'provisional' if primary != 'unresolved' else 'unresolved', 'candidate_claim_id': f'{identity}-{claim_suffix}', 'exact_hex_values': None}})
         record = palette(identity, name, group, primary, secondary, accent, confidence, locator)
         if record: palette_records.append(record)
 
