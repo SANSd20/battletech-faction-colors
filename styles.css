@@ -32,6 +32,11 @@ code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; fo
 .header-inner, .footer-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .wordmark { display: inline-flex; align-items: center; gap: 11px; color: var(--text); text-decoration: none; font-size: .94rem; letter-spacing: .02em; }
 .wordmark strong { color: #79c7e3; font-weight: 700; }
+.header-layer-control { display: none; align-items: center; gap: 3px; margin-left: auto; margin-right: 18px; padding: 3px; border: 1px solid var(--line); border-radius: 7px; background: rgba(18, 31, 40, .94); }
+.header-layer-control.is-visible { display: flex; }
+.header-mode-button { padding: 7px 9px; border: 0; border-radius: 4px; background: transparent; color: var(--text-soft); font: inherit; font-size: .68rem; font-weight: 800; cursor: pointer; }
+.header-mode-button.is-active { background: #315d70; color: #f1f6f8; }
+.header-mode-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .wordmark-mark { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #4f9bb7; border-radius: 9px; background: #12384b; color: #dff5fc; font-size: .73rem; font-weight: 800; letter-spacing: .08em; }
 .repo-link, .footer-inner a { color: var(--text-soft); font-size: .88rem; text-decoration: none; }
 .repo-link:hover, .footer-inner a:hover { color: var(--focus); }
@@ -75,6 +80,8 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(2.4rem, 6vw, 5.2rem
 h2 { margin-bottom: 0; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.08; letter-spacing: -.04em; }
 .section-intro { max-width: 455px; margin-bottom: 0; color: var(--text-soft); font-size: .94rem; }
 .palette-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 18px; }
+.palette-grid { --collapsed-card-height: 181.69px; }
+.palette-card:not(.is-expanded), .blueprint-card:not(.is-expanded) { height: var(--collapsed-card-height); }
 .collection-controls { display: flex; justify-content: flex-end; gap: 8px; margin: -2px 0 18px; }
 .utility-button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--text-soft); font: inherit; font-size: .76rem; font-weight: 700; cursor: pointer; }
 .utility-button:hover, .utility-button:focus-visible { border-color: var(--accent); color: var(--text); }
@@ -187,6 +194,8 @@ h2 { margin-bottom: 0; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.0
   .pending-heading { display: block; }
   .pending-heading > p { margin-top: 15px; }
   .palette-grid, .method-grid { grid-template-columns: 1fr; }
+  .header-layer-control { margin-right: 8px; }
+  .header-mode-button { padding: 7px 5px; font-size: .61rem; }
   .method-card:last-child { grid-column: auto; }
   .swatch-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 5px; padding: 18px 0; }

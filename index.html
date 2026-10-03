@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A source-aware visual reference for BattleTech government and faction UI palettes.">
   <title>BattleTech Faction Colors</title>
-    <link rel="stylesheet" href="styles.css?rev=independent-heights">
+    <link rel="stylesheet" href="styles.css?rev=v11-ux">
 </head>
 <body>
   <header class="site-header">
@@ -14,6 +14,10 @@
         <span class="wordmark-mark" aria-hidden="true">BT</span>
         <span>BattleTech <strong>Faction Colors</strong></span>
       </a>
+      <div class="header-layer-control" aria-label="Identity layer" hidden>
+        <button type="button" class="header-mode-button" data-mode="government" aria-pressed="true">Government / Faction</button>
+        <button type="button" class="header-mode-button" data-mode="military" aria-pressed="false">Military</button>
+      </div>
       <a class="repo-link" href="https://github.com/SANSd20/battletech-faction-colors">View repository <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -21,9 +25,9 @@
   <main>
     <section class="hero shell">
       <div class="hero-copy">
-        <p class="eyebrow">Source-aware visual reference</p>
-        <h1>Government and military identities, expressed as reusable UI palettes.</h1>
-        <p class="lede">A source-aware presentation of political/faction identity and separately researched Military identity. The site presents reusable UI adaptations without treating exact digital values as official BattleTech color specifications.</p>
+        <p class="eyebrow">BattleTech faction color reference</p>
+        <h1>BattleTech Faction Colors</h1>
+        <p class="lede">Government and military faction colors based on documented sources, with uncertain or unavailable colors clearly identified.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#palettes">Explore palettes <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="#methodology">Read the methodology</a>
@@ -55,7 +59,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Current collection</p>
-          <h2 id="mode-heading">Government / Faction dark UI palettes</h2>
+          <h2 id="mode-heading">Government / Faction Colors</h2>
         </div>
         <p id="mode-intro" class="section-intro">Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.</p>
       </div>
@@ -115,6 +119,6 @@
     </div>
   </footer>
 
-    <script src="site.js?rev=collapsible-groups"></script>
+    <script src="site.js?rev=v11-ux"></script>
 </body>
 </html>

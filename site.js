@@ -126,8 +126,8 @@ async function renderMode(mode) {
   const grid = document.querySelector('#palette-grid'), pending = document.querySelector('#pending-identities');
   document.body.dataset.identity = mode;
   document.querySelectorAll('[data-mode]').forEach((button) => { const active = button.dataset.mode === mode; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
-  document.querySelector('#mode-heading').textContent = mode === 'military' ? 'Military identity dark UI palettes' : 'Government / Faction dark UI palettes';
-  document.querySelector('#mode-intro').textContent = mode === 'military' ? 'Military identity is researched separately from Government/Faction identity. Finished cards show supported reusable palettes; technical cards show documented variation or insufficient evidence.' : 'Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.';
+  document.querySelector('#mode-heading').textContent = mode === 'military' ? 'Military Colors' : 'Government / Faction Colors';
+  document.querySelector('#mode-intro').textContent = 'Government and military faction colors based on documented sources, with uncertain or unavailable colors clearly identified.';
   document.querySelector('#mode-count-label').textContent = mode === 'military' ? 'finished Military palettes' : 'finished Government / faction palettes';
   try {
     const urls = mode === 'military' ? [SOURCES.government, SOURCES.military, SOURCES.review] : [SOURCES.government, SOURCES.military];
@@ -158,5 +158,10 @@ document.addEventListener('click', (event) => {
   const action = event.target.closest('[data-collection-action]')?.dataset.collectionAction;
   if (action) document.querySelectorAll('#palette-grid [data-faction]').forEach((card) => { const expanded = action === 'expand', button = card.querySelector('[aria-controls]'); expansionState.set(card.dataset.faction, expanded); card.classList.toggle('is-expanded', expanded); button.setAttribute('aria-expanded', String(expanded)); card.querySelector(`#${button.getAttribute('aria-controls')}`).hidden = !expanded; });
 });
+const layerSelector = document.querySelector('.identity-switcher'), headerLayerControl = document.querySelector('.header-layer-control');
+if ('IntersectionObserver' in window && layerSelector && headerLayerControl) {
+  const selectorObserver = new IntersectionObserver(([entry]) => { headerLayerControl.hidden = entry.isIntersecting; headerLayerControl.classList.toggle('is-visible', !entry.isIntersecting); }, { rootMargin: '-64px 0px 0px 0px', threshold: 0.01 });
+  selectorObserver.observe(layerSelector);
+}
 window.addEventListener('popstate', () => renderMode(getMode()));
 renderMode(getMode());
