@@ -17,9 +17,9 @@ palettes:
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
-  roles: {primary: '#D6AE3D', primary_deep: '#6B4D12', primary_surface: '#4B3A18', panel: '#241F18', panel_alt: '#332A1D', border: '#806E48', secondary: '#A83A32', accent: '#F0D77A', foreground: '#F4EEDC', ink: '#111111'}
+  roles: {primary: '#D6AE3D', primary_deep: '#6B4D12', primary_surface: '#4B3A18', panel: '#241F18', panel_alt: '#332A1D', border: '#806E48', secondary: '#C52127', accent: '#F0D77A', foreground: '#F4EEDC', ink: '#111111'}
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: foreground, on_accent: ink}
-  contrast_checks: {foreground_on_panel: 14.1, foreground_on_panel_alt: 12.16, recommended_text_on_primary: 8.97, recommended_text_on_secondary: 5.46, recommended_text_on_accent: 13.22, border_against_panel: 3.3}
+  contrast_checks: {foreground_on_panel: 14.1, foreground_on_panel_alt: 12.16, recommended_text_on_primary: 8.97, recommended_text_on_secondary: 5.0, recommended_text_on_accent: 13.22, border_against_panel: 3.3}
   design_note: Gold/yellow is the primary government identity color, with red retained as a supporting heraldic color. White is represented by the light foreground/accent range.
 - faction_id: draconis-combine
   name: Draconis Combine
