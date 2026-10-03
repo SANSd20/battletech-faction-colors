@@ -1,0 +1,112 @@
+schema_version: 1
+subject: military_identity_review
+status_model:
+  RESEARCH_PENDING: concrete_named_lead_remains
+  INSUFFICIENT_EVIDENCE: no_accessible_evidence_supports_a_palette_and_no_specific_unreviewed_lead_remains
+  NO_UNIFIED_PALETTE: positive_evidence_shows_materially_varied_formation_schemes
+reviewed_claims:
+- id: clan-blood-spirit-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains after prior Clan research.
+- id: clan-burrock-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: clan-cloud-cobra-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: clan-coyote-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: clan-diamond-shark-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Accessible evidence does not establish a reusable Diamond Shark-wide scheme.
+- id: clan-fire-mandrill-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: clan-ghost-bear-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Formation and parade variation is visible, but no reusable Clan-wide standard is established.
+- id: clan-goliath-scorpion-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: scorpion-empire-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Successor-state military evidence is insufficient for a reusable palette.
+- id: clan-ice-hellion-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: clan-jade-falcon-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Formation examples are insufficient to establish one Clan-wide palette.
+- id: clan-nova-cat-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
+- id: clan-sea-fox-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Successor and mercantile military evidence is insufficient for one reusable palette.
+- id: clan-smoke-jaguar-military-identity
+  review_status: NO_UNIFIED_PALETTE
+  reason: Alpha gray/jaguar spots, Epsilon reddish-orange/yellow, and Omega black variants positively demonstrate material formation variation.
+- id: clan-snow-raven-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: raven-alliance-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Successor-state evidence is insufficient for one reusable palette.
+- id: clan-star-adder-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: clan-steel-viper-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: clan-stone-lion-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: clan-widowmaker-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Historical evidence is too thin for a reusable palette.
+- id: republic-of-the-sphere-military-identity
+  review_status: NO_UNIFIED_PALETTE
+  reason: Documented Republic formations are materially varied across Knights, Hastati, Principes, Triarii, and Auxiliaries.
+- id: calderon-protectorate-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: circinus-federation-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: fiefdom-of-randis-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: hanseatic-league-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: magistracy-of-canopus-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Canopian formation evidence is unit-specific and does not establish a MAF-wide palette.
+- id: marian-hegemony-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Formation examples vary and do not establish a Hegemony-wide palette.
+- id: fronc-reaches-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: nueva-castile-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: niops-association-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.
+- id: outworlds-alliance-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Air Wing and Legion examples do not establish one Alliance-wide palette.
+- id: taurian-concordat-military-identity
+  review_status: NO_UNIFIED_PALETTE
+  reason: Accessible TDF examples positively show camouflage/red, dark blue/silver/red, and gray/red schemes.
+- id: rim-worlds-republic-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: Historical military evidence is too thin and modern reconstructions are not sufficient authority.
+- id: star-league-military-identity
+  review_status: NO_UNIFIED_PALETTE
+  reason: SLDF evidence documents multiple olive, white/gray/blue, gray/green, and tan schemes.
+- id: aurigan-coalition-military-identity
+  review_status: INSUFFICIENT_EVIDENCE
+  reason: No accessible organization-wide military scheme remains established.

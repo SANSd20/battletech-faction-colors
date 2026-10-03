@@ -126,7 +126,7 @@ claims:
   observation: Sea Fox military evidence was not sufficient for a reusable organization-wide palette.
 - id: clan-smoke-jaguar-military-identity
   faction_id: clan-smoke-jaguar
-  status: RESEARCH_PENDING
+  status: NO_UNIFIED_PALETTE
   evidence_classification: RESEARCH_REQUIRED
   source_locator: https://camospecs.com/factions/clan-smoke-jaguar/
   supporting_sources:
@@ -173,7 +173,7 @@ claims:
   observation: Com Guards paint vehicles white for official occasions and use appropriate camouflage for combat. This supports a reusable white/light-gray Com Guard identity without claiming white is universal combat camouflage.
 - id: republic-of-the-sphere-military-identity
   faction_id: republic-of-the-sphere
-  status: RESEARCH_PENDING
+  status: NO_UNIFIED_PALETTE
   evidence_classification: RESEARCH_REQUIRED
   observation: Multiple formations are documented, but no reusable organization-wide palette was established in this pass.
 - id: word-of-blake-military-identity
@@ -238,7 +238,7 @@ claims:
   observation: No organization-wide military scheme was established in this pass.
 - id: taurian-concordat-military-identity
   faction_id: taurian-concordat
-  status: RESEARCH_PENDING
+  status: NO_UNIFIED_PALETTE
   evidence_classification: RESEARCH_REQUIRED
   observation: No organization-wide military scheme was established in this pass.
 - id: umayyad-caliphate-military-identity
@@ -255,7 +255,7 @@ claims:
   observation: Historical military evidence was not sufficient for a reusable palette.
 - id: star-league-military-identity
   faction_id: star-league
-  status: RESEARCH_PENDING
+  status: NO_UNIFIED_PALETTE
   evidence_classification: RESEARCH_REQUIRED
   observation: Camo Specs documents several SLDF schemes, but their plurality prevents one reusable palette in this pass.
 - id: aurigan-coalition-military-identity

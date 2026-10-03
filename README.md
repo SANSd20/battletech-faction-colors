@@ -28,6 +28,8 @@ Military Research Pass 3 resolves ComStar and Word of Blake independently from G
 
 Military Research Pass 4 keeps most Periphery and historical identities pending because available Camo Specs evidence is formation-specific or materially varied. Umayyad Caliphate is the exception: its red-star-on-white common military identifying element is represented by a carefully labeled palette sharing the Government red/white UI values; this does not claim a universal uniform scheme. Magistracy of Canopus, Taurian Concordat, Outworlds Alliance, Marian Hegemony, and the remaining Pass 4 identities remain unresolved pending stronger organization-wide evidence.
 
+The final unresolved review records a separate `research/claims/military-review.yaml` status layer. `RESEARCH_PENDING` means a concrete named lead remains; `INSUFFICIENT_EVIDENCE` means no currently accessible evidence supports a palette and no specific unreviewed lead remains; `NO_UNIFIED_PALETTE` means positive evidence shows that a single faction-wide palette would misrepresent documented formation variation. A mature Military dataset therefore need not contain 47 palettes.
+
 ## Presentation site
 
 The project’s GitHub Pages site is the presentation layer for the reusable government/faction UI palettes:
