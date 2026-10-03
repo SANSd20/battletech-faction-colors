@@ -1300,7 +1300,7 @@ palettes:
   palette_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
   roles:
-    primary: '#B52A32'
+    primary: '#CC3928'
     primary_deep: '#501B23'
     primary_surface: '#7A2129'
     panel: '#3C1B21'
@@ -1319,11 +1319,11 @@ palettes:
   contrast_checks:
     foreground_on_panel: 14.06
     foreground_on_panel_alt: 10.57
-    recommended_text_on_primary: 5.77
+    recommended_text_on_primary: 4.51
     recommended_text_on_secondary: 4.94
     recommended_text_on_accent: 4.88
     border_against_panel: 3.99
-  design_note: Red is the provisional primary identity candidate, with blue black as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
+  design_note: Image-derived bright red is the provisional primary identity candidate, with blue black as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation, not
     official BattleTech color specifications.
 - faction_id: star-league
   name: Star League
