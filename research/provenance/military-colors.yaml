@@ -1,0 +1,347 @@
+schema_version: 1
+subject: military_color_provenance
+notes:
+- This file records source observations separately from canonical Military claims and reusable UI palettes.
+- Shrapnel observations were verified against the supplied Box PDFs. Camo Specs observations retain their immediate URL and distinguish reported underlying citations from independently inspected publications.
+- Exact hexadecimal values remain UI_ADAPTATION choices, not official source specifications.
+observations:
+- id: shrapnel-01-smoke-jaguar-gray-uniform
+  faction_id: clan-smoke-jaguar
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 01
+  page: 33
+  subject: Star Colonel Paul Moon
+  observed_colors: [gray]
+  scope: CHARACTER_SPECIFIC / UNIFORM
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Star Colonel Paul Moon is described wearing a pristine gray uniform.
+  limitation: Individual uniform evidence does not override documented formation variation.
+  relationship_to_military_claim: additional_observation_no_status_change
+- id: shrapnel-02-snow-raven-ceremonial-white
+  faction_id: clan-snow-raven
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 02
+  page: 19
+  subject: Snow Raven ceremonial uniform
+  observed_colors: [white]
+  scope: DRESS / CEREMONIAL_UNIFORM
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The Snow Raven ceremonial uniform is described as white trousers and jacket with a white raven-feather cape.
+  limitation: Ceremonial clothing does not establish a universal combat scheme.
+  relationship_to_military_claim: formation_and_ceremonial_only
+- id: shrapnel-03-star-league-138th-parade
+  faction_id: star-league
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 03
+  page: 197
+  subject: 138th Mechanized Infantry Division
+  observed_colors: [olive_drab]
+  scope: FORMATION / DIVISION / PARADE_SCHEME
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The 138th Mechanized Infantry Division entry gives its parade scheme as olive drab.
+  limitation: Division-level parade evidence adds to, but does not replace, the documented plurality of SLDF schemes.
+  relationship_to_military_claim: corroboration_of_no_unified_palette
+- id: shrapnel-10-hells-horses-alpha
+  faction_id: clan-hells-horses
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 10
+  page: 86
+  subject: Savage Coyote, Alpha Galaxy
+  observed_colors: [flat_dark_gray, red]
+  scope: FORMATION / GALAXY / COMBAT_EQUIPMENT
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The Savage Coyote is explicitly described as being in Clan Hell's Horses Alpha Galaxy colors: flat dark gray with red highlights.
+  limitation: Alpha Galaxy evidence is representative and does not establish one scheme for every Hell's Horses formation.
+  relationship_to_military_claim: corroborates_existing_established_palette
+- id: shrapnel-11-jade-falcon-green-black
+  faction_id: clan-jade-falcon
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 11
+  page: 110
+  subject: Jade Falcon warrior uniforms
+  observed_colors: [green, black]
+  scope: MILITARY_WIDE / UNIFORM
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Traditional Jade Falcon warrior uniforms are described as green, while Hazen/Mongol-aligned warriors are described as wearing black uniforms.
+  limitation: Black is a documented ideological/era variation and is not promoted as the universal Clan identity color.
+  relationship_to_military_claim: primary_support_with_scoped_variation
+- id: shrapnel-18-jade-falcon-dress
+  faction_id: clan-jade-falcon
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 18
+  page: 321
+  subject: Jade Falcon dress uniforms
+  observed_colors: [green, yellow]
+  scope: MILITARY_WIDE / DRESS / CEREMONIAL_UNIFORM
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Jade Falcon dress uniforms are described as green and yellow.
+  limitation: Dress evidence is combined with combat-equipment evidence rather than treated alone as universal.
+  relationship_to_military_claim: primary_support
+- id: shrapnel-22-jade-falcon-elementals
+  faction_id: clan-jade-falcon
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 22
+  page: 197
+  subject: Jade Falcon Elementals
+  observed_colors: [yellow, green]
+  scope: COMBAT_EQUIPMENT / BATTLE_ARMOR
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Jade Falcon Elementals are described as yellow-on-green Falcons.
+  limitation: This is a combat-equipment observation, synthesized with recurring uniform evidence rather than generalized from insignia alone.
+  relationship_to_military_claim: primary_support
+- id: shrapnel-26-canopian-chasseurs-livery
+  faction_id: magistracy-of-canopus
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 26
+  subject: Canopian Chasseurs a Cheval DropShips
+  observed_colors: [bright_yellow]
+  scope: FORMATION / UNIT / COMBAT_EQUIPMENT / LIVERY
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Canopian Chasseurs a Cheval material describes bright-yellow painted DropShips and identifies their colors/livery.
+  limitation: Formation-specific livery does not establish a Magistracy-wide Military palette.
+  relationship_to_military_claim: formation_specific_only
+- id: shrapnel-22-draconis-kuritan-red
+  faction_id: draconis-combine
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 22
+  subject: Kuritan/DCMS unit material
+  observed_colors: [red, yellow]
+  scope: FORMATION / UNIT / INSIGNIA / MARKING
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Shrapnel material includes recurring red Kuritan/DCMS and unit-scheme references, including red-and-yellow Marik Guard material elsewhere in the issue set.
+  limitation: Sword of Light, Ghost Regiment, rebel, and individual-unit schemes remain distinct from DCMS-wide synthesis.
+  relationship_to_military_claim: corroborates_existing_established_palette
+- id: shrapnel-15-davion-guards
+  faction_id: federated-suns
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 15
+  subject: Fourth Davion Guards
+  observed_colors: [blue, white, red]
+  scope: FORMATION / UNIT / COMBAT_EQUIPMENT
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The Fourth Davion Guards are described with blue, white, and red BattleMechs.
+  limitation: This is a formation scheme and does not displace the recurring Davion military-green synthesis.
+  relationship_to_military_claim: corroboration_with_unit_variation
+- id: shrapnel-22-davion-green
+  faction_id: federated-suns
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 22
+  subject: Davion unit parade scheme
+  observed_colors: [green, white, blue]
+  scope: FORMATION / PARADE_SCHEME
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: A Davion unit entry gives a parade scheme of Davion Green with white and blue highlights.
+  limitation: Parade highlights remain unit-specific.
+  relationship_to_military_claim: corroborates_existing_established_palette
+- id: shrapnel-18-federated-suns-duty-uniform
+  faction_id: federated-suns
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 18
+  subject: AFFS duty uniform
+  observed_colors: [blue]
+  scope: MILITARY_WIDE / UNIFORM
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The issue references the Forces of the Federated Suns duty uniform.
+  limitation: The surrounding passage does not establish a new faction-wide paint palette.
+  relationship_to_military_claim: unresolved_supporting_lead
+- id: shrapnel-08-free-worlds-league-parade
+  faction_id: free-worlds-league
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 08
+  subject: Free Worlds League unit parade scheme
+  observed_colors: [red, marik_purple, gold]
+  scope: FORMATION / PARADE_SCHEME
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: A Free Worlds League unit parade scheme is described as red fading to Marik purple with gold highlights.
+  limitation: Unit parade treatment is not generalized beyond the existing purple military synthesis.
+  relationship_to_military_claim: corroborates_existing_established_palette
+- id: shrapnel-24-snow-raven-service
+  faction_id: clan-snow-raven
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 24
+  subject: Snow Raven service jacket
+  observed_colors: [white]
+  scope: UNIFORM
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: A white Snow Raven service jacket is described.
+  limitation: A single service garment does not establish a reusable Clan-wide combat palette.
+  relationship_to_military_claim: corroborates_ceremonial_and_uniform_only
+- id: shrapnel-13-jade-falcon-green-coveralls
+  faction_id: clan-jade-falcon
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 13
+  subject: Jade Falcon personnel
+  observed_colors: [green]
+  scope: UNIFORM
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Jade Falcon personnel are described in green coveralls, with the narrative explicitly referring to Jade Falcon green.
+  limitation: Additional corroboration, not a standalone faction-wide conclusion.
+  relationship_to_military_claim: corroboration
+- id: shrapnel-14-marian-legiones
+  faction_id: marian-hegemony
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 14
+  subject: Legiones Marianes
+  scope: FORMATION / UNIT
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: The issue references uniforms and equipment associated with the Legiones Marianes but does not state a color scheme sufficient for promotion.
+  limitation: Unresolved lead; no colors invented.
+  relationship_to_military_claim: unresolved_lead
+- id: shrapnel-25-no-textual-color-observation
+  source_type: primary_periodical
+  source_name: Shrapnel
+  issue: 25
+  scope: NO_RELEVANT_TEXTUAL_COLOR_OBSERVATION
+  observation: The supplied PDF text representation contains no usable color observation after direct review.
+  limitation: This records review coverage, not evidence for a Military palette.
+  relationship_to_military_claim: no_relevant_observation
+
+camo_specs:
+- id: camospecs-federated-suns
+  faction_id: federated-suns
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/federated-suns/house-colors-federated-suns/
+  subject: Davion military colors
+  scope: MILITARY_WIDE with unit-specific parade variation
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Drab military green such as olive drab or hunter green, with typical military greens and tans; red/blue parade schemes are unit-specific.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-draconis-combine
+  faction_id: draconis-combine
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/draconis-combine/
+  subject: DCMS military identity
+  scope: MILITARY_WIDE
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Recurring red with charcoal/black support.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-free-worlds-league
+  faction_id: free-worlds-league
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/free-worlds-league/
+  subject: Free Worlds League military identity
+  scope: MILITARY_WIDE
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Purple with green and light neutral support; Marik Militia markings are not generalized.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-lyran-commonwealth
+  faction_id: lyran-commonwealth
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/lyran-commonwealth/
+  subject: Lyran military identity
+  scope: MILITARY_WIDE
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Blue with blue-gray and gold/white support; unit parade schemes remain representative.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-capellan-confederation
+  faction_id: capellan-confederation
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/capellan-confederation/
+  subject: Capellan military identity
+  scope: MILITARY_WIDE
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Jade/green with burgundy or maroon and gold support.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-frr-kungsarme
+  faction_id: free-rasalhague-republic
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/free-rasalhague-republic/
+  subject: KungsArmé
+  scope: FORMATION / MILITARY ORGANIZATION
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Light blue, slate/gray, red, and silver KungsArmé evidence, kept separate from FRR Government heraldry.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-clan-wolf
+  faction_id: clan-wolf
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/articles/how-to/how-to-painting-a-clan-wolf-scheme/
+  subject: Clan Wolf Galaxies
+  scope: MILITARY_WIDE
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Gray utilitarian treatment used across Wolf Galaxies, with supporting Keshik gray/gold details reported by Camo Specs.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-clan-wolf-in-exile
+  faction_id: clan-wolf-in-exile
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/factions/clan-wolf-in-exile/
+  subject: Clan Wolf in Exile
+  scope: MILITARY_WIDE
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Practical Wolf gray treatment is applied as a separate claim for the separate identity.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-hells-horses-alpha-keshik
+  faction_id: clan-hells-horses
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/unit/alpha-keshik/
+  underlying_citation:
+    publication: FM: Crusader Clans
+    page: 64
+    verification_status: reported_by_camospecs
+  subject: Alpha Keshik
+  scope: FORMATION / KESHIK
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Black equipment with red highlights and gold trim.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-comstar-1st-division
+  faction_id: comstar
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/unit/1st-division/
+  underlying_citation:
+    publication: FM: ComStar
+    page: 17
+    verification_status: reported_by_camospecs
+  subject: Com Guards
+  scope: MILITARY_WIDE with ceremonial/combat distinction
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: White official-occasion vehicles with appropriate camouflage for combat.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-word-of-blake
+  faction_id: word-of-blake
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: https://camospecs.com/unit/36th-division/
+  underlying_citation:
+    publication: FM: ComStar; Starterbook: Wolf and Blake
+    page: 50; 32
+    verification_status: reported_by_camospecs
+  subject: Word of Blake Militia and Shadow formations
+  scope: MILITARY_WIDE synthesis across formations
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: White/camouflage militia convention with recurring charcoal, light gray/white, and red Shadow markings.
+  relationship_to_military_claim: canonical_support
+- id: camospecs-umayyad-caliphate
+  faction_id: umayyad-caliphate
+  source_type: secondary_reference
+  source_name: Camo Specs
+  source_url: pending
+  subject: supplied excerpt military identifier
+  scope: MILITARY_WIDE identifying element
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Red star on white is treated as the only common military identifying element; publication provenance remains pending.
+  relationship_to_military_claim: canonical_support

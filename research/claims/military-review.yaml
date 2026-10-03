@@ -35,9 +35,6 @@ reviewed_claims:
 - id: clan-ice-hellion-military-identity
   review_status: INSUFFICIENT_EVIDENCE
   reason: No accessible organization-wide military scheme or recurring formation synthesis remains.
-- id: clan-jade-falcon-military-identity
-  review_status: INSUFFICIENT_EVIDENCE
-  reason: Formation examples are insufficient to establish one Clan-wide palette.
 - id: clan-nova-cat-military-identity
   review_status: INSUFFICIENT_EVIDENCE
   reason: No accessible organization-wide military scheme or recurring formation synthesis remains.

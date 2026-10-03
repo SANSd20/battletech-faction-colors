@@ -111,9 +111,13 @@ claims:
   observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
 - id: clan-jade-falcon-military-identity
   faction_id: clan-jade-falcon
-  status: RESEARCH_PENDING
-  evidence_classification: RESEARCH_REQUIRED
-  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+  source_locator: research/provenance/military-colors.yaml#shrapnel-11-jade-falcon-green-black
+  supporting_sources:
+  - research/provenance/military-colors.yaml#shrapnel-18-jade-falcon-dress
+  - research/provenance/military-colors.yaml#shrapnel-22-jade-falcon-elementals
+  status: ESTABLISHED
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Independent Shrapnel observations establish recurring green Jade Falcon military identity across traditional warrior uniforms, green/yellow dress uniforms, and yellow-on-green Elementals. Black Hazen/Mongol-aligned uniforms remain a documented scoped variation rather than the universal identity.
 - id: clan-nova-cat-military-identity
   faction_id: clan-nova-cat
   status: RESEARCH_PENDING

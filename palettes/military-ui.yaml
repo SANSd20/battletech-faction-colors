@@ -109,6 +109,17 @@ palettes:
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
   contrast_checks: {foreground_on_panel: 16.13, foreground_on_panel_alt: 13.98, recommended_text_on_primary: 13.84, recommended_text_on_secondary: 5.77, recommended_text_on_accent: 8.48, border_against_panel: 7.35}
   design_note: Representative Alpha Keshik military adaptation: black with red highlights and gold trim. It remains distinct from the Government palette and is not presented as a universal scheme for every Hell's Horses formation.
+- faction_id: clan-jade-falcon
+  name: Clan Jade Falcon
+  group: Clans
+  military_claim_id: clan-jade-falcon-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#427032', primary_deep: '#29451F', primary_surface: '#3B612D', panel: '#182219', panel_alt: '#263521', border: '#83A96C', secondary: '#D6B43A', accent: '#E8DFA7', foreground: '#F1F6E9', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 14.42, foreground_on_panel_alt: 10.89, recommended_text_on_primary: 5.42, recommended_text_on_secondary: 8.13, recommended_text_on_accent: 15.13, border_against_panel: 5.54}
+  design_note: Green is the recurring Jade Falcon Military identity supported by traditional uniforms, green/yellow dress uniforms, and yellow-on-green Elementals. Yellow is secondary/support. Black Hazen/Mongol-aligned uniforms are retained as a documented variation, not a universal palette. Exact values are UI_ADAPTATION choices, not official paint specifications.
 - faction_id: comstar
   name: ComStar
   group: Interstellar organizations
