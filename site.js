@@ -1,22 +1,17 @@
-/*
- * Presentation data is loaded from the repository's authoritative palette file.
- * This intentionally uses a small parser for the project's dependency-free,
- * stable YAML shape instead of introducing a framework or CDN dependency.
- */
-const PALETTE_SOURCE = 'palettes/government-ui.yaml';
+const SOURCES = {
+  government: 'palettes/government-ui.yaml',
+  military: 'palettes/military-ui.yaml',
+  factions: 'factions/remaining-identities.yaml',
+  review: 'research/claims/military-review.yaml'
+};
 
-const esc = (value) => String(value)
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;')
-  .replaceAll("'", '&#039;');
+const esc = (value) => String(value ?? '')
+  .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 
 function scalar(value) {
   const trimmed = value.trim();
-  if ((trimmed.startsWith("'") && trimmed.endsWith("'")) || (trimmed.startsWith('"') && trimmed.endsWith('"'))) {
-    return trimmed.slice(1, -1);
-  }
+  if ((trimmed.startsWith("'") && trimmed.endsWith("'")) || (trimmed.startsWith('"') && trimmed.endsWith('"'))) return trimmed.slice(1, -1);
   if (trimmed === 'true') return true;
   if (trimmed === 'false') return false;
   if (/^-?\d+(\.\d+)?$/.test(trimmed)) return Number(trimmed);
@@ -32,25 +27,15 @@ function flowMap(value) {
 }
 
 function parsePaletteYaml(text) {
-  const lines = text.split(/\r?\n/);
-  const palettes = [];
-  let current = null;
-  let activeMap = null;
+  const lines = text.split(/\r?\n/), palettes = [];
+  let current = null, activeMap = null;
   for (const line of lines) {
     const faction = line.match(/^\- faction_id:\s*(.+)$/);
-    if (faction) {
-      current = { faction_id: scalar(faction[1]) };
-      palettes.push(current);
-      activeMap = null;
-      continue;
-    }
+    if (faction) { current = { faction_id: scalar(faction[1]) }; palettes.push(current); activeMap = null; continue; }
     if (!current) continue;
     if (activeMap) {
       const nested = line.match(/^ {4}([a-z_]+):\s*(.+)$/);
-      if (nested) {
-        current[activeMap][nested[1]] = scalar(nested[2]);
-        continue;
-      }
+      if (nested) { current[activeMap][nested[1]] = scalar(nested[2]); continue; }
       if (line.trim() && !line.startsWith('    ')) activeMap = null;
     }
     const field = line.match(/^  ([a-z_]+):\s*(.*)$/);
@@ -59,84 +44,76 @@ function parsePaletteYaml(text) {
     if (['roles', 'recommended_text', 'contrast_checks'].includes(key)) {
       current[key] = value.trim() ? flowMap(value) : {};
       activeMap = value.trim() ? null : key;
-    }
-    else if (key !== 'notes') current[key] = scalar(value);
+    } else if (key !== 'notes') current[key] = scalar(value);
   }
   if (!palettes.length || palettes.some((palette) => !palette.name || !palette.roles)) throw new Error('No usable palettes found.');
   return palettes;
 }
 
-const labelFor = {
-  primary: 'Primary', secondary: 'Secondary', primary_surface: 'Surface', panel: 'Panel',
-  panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink'
+function parseReviewYaml(text) {
+  const review = {};
+  for (const block of text.split(/\n(?=- id:)/).slice(1)) {
+    const id = block.match(/^- id: (.+)/)?.[1]?.trim();
+    const status = block.match(/\n  review_status: (.+)/)?.[1]?.trim();
+    const reason = block.match(/\n  reason: (.+)/)?.[1]?.trim();
+    if (id) review[id] = { status, reason };
+  }
+  return review;
+}
+
+const labelFor = { primary: 'Primary', secondary: 'Secondary', primary_surface: 'Surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
+const stateCopy = {
+  NO_UNIFIED_PALETTE: { label: 'No unified military palette', className: 'technical-state', text: 'Documented military formations use materially different schemes; a single faction-wide palette would be misleading.' },
+  INSUFFICIENT_EVIDENCE: { label: 'Insufficient evidence', className: 'sketch-state', text: 'Available sources do not support a defensible reusable faction-wide Military palette.' }
 };
 
 function swatch(key, palette) {
   const value = palette.roles[key];
-  const textRole = key === 'primary' ? palette.recommended_text.on_primary
-    : key === 'secondary' ? palette.recommended_text.on_secondary
-    : key === 'accent' ? palette.recommended_text.on_accent
-    : ['primary_surface', 'panel', 'panel_alt', 'border'].includes(key) ? 'foreground' : 'ink';
+  const textRole = key === 'primary' ? palette.recommended_text.on_primary : key === 'secondary' ? palette.recommended_text.on_secondary : key === 'accent' ? palette.recommended_text.on_accent : ['primary_surface', 'panel', 'panel_alt', 'border'].includes(key) ? 'foreground' : 'ink';
   return `<div class="swatch" style="background:${esc(value)};color:${esc(palette.roles[textRole])}"><span class="swatch-label">${esc(labelFor[key])}</span><code>${esc(value)}</code></div>`;
 }
 
-function card(palette) {
-  const r = palette.roles;
+function paletteCard(palette, mode) {
+  const r = palette.roles, contrast = palette.contrast_checks;
   const rootVars = Object.entries(r).map(([key, value]) => `--${key.replaceAll('_', '-')}:${value}`).join(';');
-  const primaryText = r[palette.recommended_text.on_primary];
-  const secondaryText = r[palette.recommended_text.on_secondary];
-  const contrast = palette.contrast_checks;
   const swatches = ['primary', 'secondary', 'primary_surface', 'panel', 'panel_alt', 'border', 'accent', 'foreground', 'ink'].map((key) => swatch(key, palette)).join('');
-  return `<article class="palette-card" style="${rootVars}">
-    <div class="palette-hero">
-      <h3>${esc(palette.name)}</h3>
-      <div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Government / faction identity')} · <code>${esc(palette.identity_claim_status)}</code></div>
-    </div>
-    <div class="palette-body">
-      <div class="palette-labels">
-        <div class="identity-chip primary-chip"><span>Primary identity</span><code>${esc(r.primary)}</code></div>
-        <div class="identity-chip secondary-chip"><span>Secondary / support</span><code>${esc(r.secondary)}</code></div>
-      </div>
-      <div class="swatch-grid">${swatches}</div>
-      <div class="sample-row">
-        <div class="text-sample primary-sample" style="--primary-text:${esc(primaryText)}"><strong>Primary text</strong>Readable sample</div>
-        <div class="text-sample secondary-sample" style="--secondary-text:${esc(secondaryText)}"><strong>Secondary text</strong>Readable sample</div>
-      </div>
-      <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p>
-      <p class="note">${esc(palette.design_note)}</p>
-    </div>
-  </article>`;
+  const primaryText = r[palette.recommended_text.on_primary], secondaryText = r[palette.recommended_text.on_secondary];
+  return `<article class="palette-card" data-faction="${esc(palette.faction_id)}" style="${rootVars}">
+    <div class="palette-hero"><h3>${esc(palette.name)}</h3><div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Identity')} · <code>${mode === 'military' ? 'MILITARY' : esc(palette.identity_claim_status)}</code></div></div>
+    <div class="palette-body"><div class="palette-labels"><div class="identity-chip primary-chip"><span>Primary identity</span><code>${esc(r.primary)}</code></div><div class="identity-chip secondary-chip"><span>Secondary / support</span><code>${esc(r.secondary)}</code></div></div>
+    <div class="swatch-grid">${swatches}</div><div class="sample-row"><div class="text-sample primary-sample" style="--primary-text:${esc(primaryText)}"><strong>Primary text</strong>Readable sample</div><div class="text-sample secondary-sample" style="--secondary-text:${esc(secondaryText)}"><strong>Secondary text</strong>Readable sample</div></div>
+    <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p><p class="note">${esc(palette.design_note)}</p></div></article>`;
 }
 
-function parsePendingFactions(text) {
-  return text.split(/\n(?=- id:)/).slice(1).map((block) => {
-    const name = block.match(/\n\s+name: (.+)/)?.[1]?.trim();
-    const status = block.match(/government_faction_identity:\s*\n\s+status: (.+)/)?.[1]?.trim();
-    return name && status === 'unresolved' ? name : null;
-  }).filter(Boolean);
+function blueprintCard(faction, state) {
+  const copy = stateCopy[state.status];
+  return `<article class="blueprint-card ${copy.className}" data-faction="${esc(faction.faction_id)}"><div class="blueprint-grid" aria-hidden="true"></div><div class="blueprint-content"><p class="blueprint-kicker">Military identity analysis</p><h3>${esc(faction.name)}</h3><div class="blueprint-status">${esc(copy.label)}</div><p>${esc(copy.text)}</p><div class="placeholder-swatches"><span>PRIMARY ?</span><span>SECONDARY ?</span><span>ACCENT ?</span></div><p class="blueprint-reason">${esc(state.reason)}</p></div></article>`;
 }
 
-async function loadPalettes() {
-  const grid = document.querySelector('#palette-grid');
-  const pending = document.querySelector('#pending-identities');
+function getMode() { return new URLSearchParams(location.search).get('identity') === 'military' ? 'military' : 'government'; }
+function setMode(mode) { const url = new URL(location.href); url.searchParams.set('identity', mode); history.pushState({}, '', url); renderMode(mode); }
+
+async function renderMode(mode) {
+  const grid = document.querySelector('#palette-grid'), pending = document.querySelector('#pending-identities');
+  document.body.dataset.identity = mode;
+  document.querySelectorAll('[data-mode]').forEach((button) => { const active = button.dataset.mode === mode; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
+  document.querySelector('#mode-heading').textContent = mode === 'military' ? 'Military identity dark UI palettes' : 'Government / Faction dark UI palettes';
+  document.querySelector('#mode-intro').textContent = mode === 'military' ? 'Military identity is researched separately from Government/Faction identity. Finished cards show supported reusable palettes; technical cards show documented variation or insufficient evidence.' : 'Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.';
+  document.querySelector('#mode-count-label').textContent = mode === 'military' ? 'finished Military palettes' : 'finished Government / faction palettes';
   try {
-    const [paletteResponse, factionResponse] = await Promise.all([
-      fetch(PALETTE_SOURCE, { cache: 'no-cache' }),
-      fetch('factions/remaining-identities.yaml', { cache: 'no-cache' })
-    ]);
-    if (!paletteResponse.ok || !factionResponse.ok) throw new Error(`HTTP ${paletteResponse.status}/${factionResponse.status}`);
-    const [paletteText, factionText] = await Promise.all([paletteResponse.text(), factionResponse.text()]);
-    const palettes = parsePaletteYaml(paletteText);
-    document.querySelector('#palette-count').textContent = palettes.length;
-    grid.innerHTML = palettes.map(card).join('');
-    const unresolved = parsePendingFactions(factionText);
-    if (unresolved.length) {
-      pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Research Pending</h2></div><p>These identities remain visible as part of the expansion scope, but no placeholder colors are presented as findings.</p></div><div class="pending-list">${unresolved.map((name) => `<span>${esc(name)} <b>Research required</b></span>`).join('')}</div>`;
-    }
-  } catch (error) {
-    grid.innerHTML = `<div class="error-card"><strong>Palette data could not be loaded.</strong><br><span>Open <code>${esc(PALETTE_SOURCE)}</code> directly or visit the repository to inspect the authoritative source.</span></div>`;
-    console.error(error);
-  }
+    const urls = mode === 'military' ? [SOURCES.government, SOURCES.military, SOURCES.review] : [SOURCES.government];
+    const responses = await Promise.all(urls.map((url) => fetch(url, { cache: 'no-cache' })));
+    if (responses.some((response) => !response.ok)) throw new Error('Palette data request failed.');
+    const texts = await Promise.all(responses.map((response) => response.text()));
+    const government = parsePaletteYaml(texts[0]);
+    if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = government.map((p) => paletteCard(p, mode)).join(''); pending.innerHTML = ''; return; }
+    const military = parsePaletteYaml(texts[1]), review = parseReviewYaml(texts[2]), byFaction = Object.fromEntries(military.map((p) => [p.faction_id, p]));
+    const cards = government.map((faction) => { const palette = byFaction[faction.faction_id]; if (palette) return paletteCard(palette, mode); const state = review[`${faction.faction_id}-military-identity`]; return state ? blueprintCard(faction, state) : ''; }).join('');
+    const counts = Object.values(review).reduce((a, v) => { a[v.status] = (a[v.status] || 0) + 1; return a; }, {});
+    document.querySelector('#palette-count').textContent = military.length; grid.innerHTML = cards; pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Military research states</h2></div><p>${military.length} finished palettes · ${counts.NO_UNIFIED_PALETTE || 0} technical conclusions · ${counts.INSUFFICIENT_EVIDENCE || 0} insufficient-evidence records.</p></div>`;
+  } catch (error) { grid.innerHTML = `<div class="error-card"><strong>Identity data could not be loaded.</strong><br><span>${esc(error.message)}</span></div>`; pending.innerHTML = ''; console.error(error); }
 }
 
-loadPalettes();
+document.querySelectorAll('[data-mode]').forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
+window.addEventListener('popstate', () => renderMode(getMode()));
+renderMode(getMode());

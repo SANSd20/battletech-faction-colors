@@ -22,8 +22,8 @@
     <section class="hero shell">
       <div class="hero-copy">
         <p class="eyebrow">Source-aware visual reference</p>
-        <h1>Government and faction identities, expressed as reusable UI palettes.</h1>
-        <p class="lede">A compact reference for the current six provisional dark UI palettes. The site presents the project’s reusable palette layer without treating exact digital values as official BattleTech color specifications.</p>
+        <h1>Government and military identities, expressed as reusable UI palettes.</h1>
+        <p class="lede">A source-aware presentation of political/faction identity and separately researched Military identity. The site presents reusable UI adaptations without treating exact digital values as official BattleTech color specifications.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#palettes">Explore palettes <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="#methodology">Read the methodology</a>
@@ -36,8 +36,16 @@
       </div>
     </section>
 
+    <section class="identity-switcher shell" aria-label="Identity view">
+      <div><p class="eyebrow">Identity context</p><h2>Choose the evidence layer</h2></div>
+      <div class="segmented-control" role="group" aria-label="Choose identity mode">
+        <button type="button" class="mode-button is-active" data-mode="government" aria-pressed="true">Government / Faction</button>
+        <button type="button" class="mode-button" data-mode="military" aria-pressed="false">Military</button>
+      </div>
+    </section>
+
     <section class="status-strip shell" aria-label="Project status">
-      <div><strong id="palette-count">44</strong><span>supported palettes</span></div>
+      <div><strong id="palette-count">47</strong><span id="mode-count-label">finished Government / faction palettes</span></div>
       <div><strong>UI_ADAPTATION</strong><span>exact values</span></div>
       <div><strong>PROVISIONAL</strong><span>current approval status</span></div>
       <div><strong>YAML</strong><span>authoritative data source</span></div>
@@ -47,9 +55,9 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Current collection</p>
-          <h2>Government / Faction Dark UI Palettes</h2>
+          <h2 id="mode-heading">Government / Faction dark UI palettes</h2>
         </div>
-        <p class="section-intro">Each card keeps the primary identity color visible first, then shows the supporting colors, surfaces, and recommended text choices used by the reusable palette layer.</p>
+        <p id="mode-intro" class="section-intro">Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.</p>
       </div>
       <div id="palette-grid" class="palette-grid" aria-live="polite">
         <div class="loading-card"><span class="loader" aria-hidden="true"></span>Loading palette data from <code>palettes/government-ui.yaml</code>…</div>
@@ -83,7 +91,7 @@
           <p class="card-kicker">Status and scope</p>
           <h3>What these colors mean</h3>
           <p>Current government/faction identity claims are substantially <code>HERALDRY_DERIVED</code> and <code>RESEARCH_REQUIRED</code>. The exact hexadecimal values shown here are <code>UI_ADAPTATION</code> choices and remain <code>PROVISIONAL</code>.</p>
-          <p>Military identity is tracked separately. These cards are not military paint schemes and do not establish military color standards.</p>
+          <p>Military identity is tracked separately. In Military mode, finished cards show supported reusable palettes; technical blueprints show documented variation that prevents one unified palette; sketch blueprints show insufficient evidence.</p>
         </article>
         <article class="method-card">
           <p class="card-kicker">Rasalhague note</p>
@@ -98,7 +106,7 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <span>BattleTech Faction Colors</span>
-      <span>Presentation layer · data source: <code>palettes/government-ui.yaml</code></span>
+      <span>Presentation layer · data sources: <code>palettes/government-ui.yaml</code> and <code>palettes/military-ui.yaml</code></span>
       <a href="https://github.com/SANSd20/battletech-faction-colors">GitHub repository <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
