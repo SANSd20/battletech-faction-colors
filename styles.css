@@ -82,8 +82,8 @@ h2 { margin-bottom: 0; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.0
 .palette-card { --primary: #356da8; --primary-deep: #1d3b5d; --primary-surface: #294f73; --panel: #202b35; --panel-alt: #2b3a47; --border: #657f96; --secondary: #aab5bf; --accent: #d8e2e8; --foreground: #f0f4f7; --ink: #111111; overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: var(--panel); box-shadow: 0 14px 35px rgba(0, 0, 0, .18); }
 .palette-card.fallback-card { border-color: rgba(216, 221, 224, .72); }
 .fallback-card .palette-hero-meta code { color: #111; background: #d8dde0; }
-.palette-hero { position: relative; min-height: 158px; padding: 25px 26px 22px; background: linear-gradient(135deg, var(--primary-surface), var(--primary-deep)); isolation: isolate; }
-.palette-hero::after { position: absolute; right: -42px; bottom: -85px; width: 230px; height: 230px; border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 50%; content: ""; opacity: .75; }
+.palette-hero { position: relative; min-height: 158px; padding: 25px 26px 22px; background: var(--primary); isolation: isolate; }
+.palette-hero::after { position: absolute; right: -42px; bottom: -85px; width: 230px; height: 230px; border: 1px solid var(--secondary); border-radius: 50%; content: ""; opacity: .34; }
 .palette-hero h3 { position: relative; z-index: 1; max-width: 72%; margin-bottom: 20px; color: var(--foreground); font-size: 1.38rem; line-height: 1.1; letter-spacing: -.025em; }
 .palette-hero-meta { position: relative; z-index: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; color: var(--foreground); font-size: .75rem; }
 .color-dot { display: inline-block; width: 11px; height: 11px; border: 1px solid rgba(255, 255, 255, .45); border-radius: 50%; vertical-align: -1px; }
