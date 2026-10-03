@@ -13,7 +13,7 @@ The remaining expansion records are grouped as Clans, Clan successor states, Suc
 
 The palette roles are application-neutral. They describe faction-themed surfaces, borders, identity colors, supporting colors, and foreground choices. They do not assign application semantics such as `danger`, `success`, `dead`, `disabled`, or `warning`.
 
-The exact hexadecimal values are `UI_ADAPTATION` design choices, not official BattleTech digital color specifications. The underlying identity claims remain `HERALDRY_DERIVED` and `RESEARCH_REQUIRED`, so the reusable UI palettes remain `PROVISIONAL`.
+The exact hexadecimal values are `UI_ADAPTATION` design choices, not official BattleTech digital color specifications. Underlying claims may be heraldry-derived, direct textual, military-standard-derived, representative-derived, or otherwise scoped by their evidence records; palette approval/status is tracked separately and remains explicit in each palette record.
 
 Consumers include BattleTech interfaces, faction selectors, political/strategic maps, charts, and documents. Each consumer maps this reusable palette onto its own semantic UI roles and accessibility requirements without redefining the underlying faction identity.
 
