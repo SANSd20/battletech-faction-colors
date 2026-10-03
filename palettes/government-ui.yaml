@@ -9,7 +9,7 @@ palette_set:
   notes:
   - Exact hexadecimal values are project UI adaptations, not official BattleTech color specifications.
   - Source faction identities remain HERALDRY_DERIVED and RESEARCH_REQUIRED until stronger evidence is approved.
-  - Roles are application-neutral. Consumers such as Combat Infantry and the A Time of War character creator map these colors to their own semantic UI roles.
+  - Roles are application-neutral. Consumers map these colors to their own semantic UI roles and accessibility requirements.
 palettes:
 - faction_id: federated-suns
   name: Federated Suns

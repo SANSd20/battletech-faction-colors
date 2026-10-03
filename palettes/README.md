@@ -15,7 +15,7 @@ The palette roles are application-neutral. They describe faction-themed surfaces
 
 The exact hexadecimal values are `UI_ADAPTATION` design choices, not official BattleTech digital color specifications. The underlying identity claims remain `HERALDRY_DERIVED` and `RESEARCH_REQUIRED`, so the reusable UI palettes remain `PROVISIONAL`.
 
-Known peer consumers include Combat Infantry and the A Time of War (AToW) Character Creator, along with future BattleTech interfaces, faction selectors, political/strategic maps, charts, and documents. Each consumer maps this reusable palette onto its own semantic UI roles and accessibility requirements without redefining the underlying faction identity.
+Consumers include BattleTech interfaces, faction selectors, political/strategic maps, charts, and documents. Each consumer maps this reusable palette onto its own semantic UI roles and accessibility requirements without redefining the underlying faction identity.
 
 The [visual preview](government-ui-preview.html) is a development/reference artifact, not evidence authority.
 
