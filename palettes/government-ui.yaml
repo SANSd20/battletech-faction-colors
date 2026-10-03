@@ -1234,14 +1234,14 @@ palettes:
   palette_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
   roles:
-    primary: '#B52A32'
-    primary_deep: '#501B23'
-    primary_surface: '#7A2129'
-    panel: '#3C1B21'
-    panel_alt: '#5E2831'
-    border: '#C4666D'
-    secondary: '#D3B839'
-    accent: '#798C56'
+    primary: '#356466'
+    primary_deep: '#1E383A'
+    primary_surface: '#2A5052'
+    panel: '#192B2D'
+    panel_alt: '#244043'
+    border: '#6F9997'
+    secondary: '#4B9B4F'
+    accent: '#F07E37'
     foreground: '#F1F6F8'
     ink: '#111111'
   recommended_text:
@@ -1251,14 +1251,13 @@ palettes:
     on_secondary: ink
     on_accent: ink
   contrast_checks:
-    foreground_on_panel: 14.06
-    foreground_on_panel_alt: 10.57
-    recommended_text_on_primary: 5.77
-    recommended_text_on_secondary: 9.61
-    recommended_text_on_accent: 5.12
-    border_against_panel: 3.99
-  design_note: Red is the provisional primary identity candidate, with yellow cream as supporting identity color(s). Exact hex values are UI adaptations from the heraldry observation,
-    not official BattleTech color specifications.
+    foreground_on_panel: 13.66
+    foreground_on_panel_alt: 10.47
+    recommended_text_on_primary: 5.61
+    recommended_text_on_secondary: 5.02
+    recommended_text_on_accent: 6.01
+    border_against_panel: 4.91
+  design_note: Deep teal is the primary Government/Faction identity, with green secondary support and warm orange as an accent drawn from the supplied emblem artwork. Exact hex values are representative UI adaptations from the image, not official BattleTech color specifications; the fiery background is treated as supporting artwork rather than a universal red/orange identity.
 - faction_id: taurian-concordat
   name: Taurian Concordat
   group: Periphery
