@@ -25,6 +25,30 @@ claims:
     confidence: strong
     exact_hex_values: null
 
+  - id: frr-heraldry-user-supplied-emblem
+    faction_id: free-rasalhague-republic
+    subject: government_faction_identity
+    source_type: USER_SUPPLIED_IMAGE_EVIDENCE
+    source_locator: research/assets/free-rasalhague-republic/user-supplied-frr-emblem.png
+    source_sha256: 6A6A8050E188296362FEFE474FBC8310A142885E09BC1D07E36A85011F0C6270
+    observation: The supplied shield emblem is dominated by deep royal blue, with bright ice-blue/cyan edging and white/silver highlights; black, green, and a very small red detail remain minor artwork colors.
+    observed_colors: [deep-royal-blue, ice-blue-cyan, white-silver, black, green, red]
+    identity_color_candidates:
+      primary: [deep-royal-blue]
+      secondary: [ice-blue-cyan]
+      support: [white-silver]
+    excluded_artwork_colors:
+      - color: green
+        reason: minor decorative roundel details, not elevated into the main identity palette
+      - color: red
+        reason: minor dragon detail, not elevated into the main identity palette
+      - color: black
+        reason: structural and linework detail, not elevated into the main identity palette
+    evidence_classification: HERALDRY_DERIVED
+    approval_status: RESEARCH_REQUIRED
+    confidence: direct_visual_observation
+    limitations: User-supplied image provenance is not independently established; selected hexadecimal values are UI_ADAPTATION values derived from representative color families rather than exact official specifications.
+
   - id: dc-heraldry-candidate
     faction_id: draconis-combine
     subject: government_faction_identity

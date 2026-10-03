@@ -67,10 +67,10 @@ palettes:
   identity_claim_status: RESEARCH_REQUIRED
   palette_status: PROVISIONAL
   evidence_classification: UI_ADAPTATION
-  roles: {primary: '#0B6FA4', primary_deep: '#06456A', primary_surface: '#174F70', panel: '#172C38', panel_alt: '#213C4B', border: '#648392', secondary: '#E7B928', accent: '#79C7E3', foreground: '#F1F6F8', ink: '#111111'}
+  roles: {primary: '#465FA8', primary_deep: '#2F3F78', primary_surface: '#354B87', panel: '#17213A', panel_alt: '#223052', border: '#6178B0', secondary: '#49B6D8', accent: '#E4EEF2', foreground: '#F1F6F8', ink: '#111111'}
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
-  contrast_checks: {foreground_on_panel: 13.26, foreground_on_panel_alt: 10.64, recommended_text_on_primary: 5.04, recommended_text_on_secondary: 10.22, recommended_text_on_accent: 9.97, border_against_panel: 3.58}
-  design_note: Swedish-inspired blue and gold/yellow are the approved UI foundation, informed by Rasalhague's documented Swedish/Scandinavian cultural identity. Cyan/light blue and blue-gray remain supporting colors from the heraldry-derived identity. This is a UI adaptation, not a claim that Swedish national colors are canonically specified as official FRR colors.
+  contrast_checks: {foreground_on_panel: 14.66, foreground_on_panel_alt: 11.95, recommended_text_on_primary: 5.57, recommended_text_on_secondary: 8.06, recommended_text_on_accent: 16.02, border_against_panel: 3.67}
+  design_note: Deep royal blue is the primary Government/Faction identity, with ice blue/cyan as the secondary heraldic family and white/silver as support. This UI adaptation is derived from the Camo Specs emblem evidence and the additional user-supplied FRR emblem image; it does not treat sampled hex values as official BattleTech digital color specifications.
 
 - faction_id: clan-blood-spirit
   name: Clan Blood Spirit
