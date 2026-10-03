@@ -1,0 +1,100 @@
+schema_version: 1
+project: battletech-faction-colors
+palette_set:
+  id: military-dark-ui
+  identity_type: military_identity
+  purpose: reusable dark UI adaptation
+  approval_status: PROVISIONAL
+  evidence_classification: UI_ADAPTATION
+  notes:
+  - Exact hexadecimal values are reusable UI adaptations, not official BattleTech paint specifications.
+  - Military evidence remains separate from government/faction heraldry evidence.
+palettes:
+- faction_id: federated-suns
+  name: Federated Suns
+  group: Successor States
+  military_claim_id: federated-suns-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#586B31', primary_deep: '#2E3A1B', primary_surface: '#465B28', panel: '#20271A', panel_alt: '#2D3722', border: '#7F9360', secondary: '#B49A5A', accent: '#D1C59B', foreground: '#F1F4E8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.79, foreground_on_panel_alt: 11.21, recommended_text_on_primary: 5.29, recommended_text_on_secondary: 6.93, recommended_text_on_accent: 10.94, border_against_panel: 4.57}
+  design_note: Davion olive or hunter/drab military green with muted tan/gold support; red and blue parade schemes remain unit-specific and are not promoted to the reusable military identity.
+- faction_id: draconis-combine
+  name: Draconis Combine
+  group: Successor States
+  military_claim_id: draconis-combine-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: SHARED_PRACTICAL_IDENTITY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#9E2B2B', primary_deep: '#4A171A', primary_surface: '#6D2226', panel: '#211D1E', panel_alt: '#30292A', border: '#A97879', secondary: '#2A2D30', accent: '#C8C4B8', foreground: '#F4EEEA', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 14.51, foreground_on_panel_alt: 12.37, recommended_text_on_primary: 6.44, recommended_text_on_secondary: 12.04, recommended_text_on_accent: 10.83, border_against_panel: 4.49}
+  design_note: Red with charcoal/black military support, independently supported by military evidence and practically overlapping the government identity.
+- faction_id: free-worlds-league
+  name: Free Worlds League
+  group: Successor States
+  military_claim_id: free-worlds-league-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#7047A3', primary_deep: '#382550', primary_surface: '#49345F', panel: '#282232', panel_alt: '#372E43', border: '#796A8A', secondary: '#3F7048', accent: '#E5E2D8', foreground: '#F0EBF5', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.12, foreground_on_panel_alt: 10.96, recommended_text_on_primary: 5.74, recommended_text_on_secondary: 4.94, recommended_text_on_accent: 14.57, border_against_panel: 3.11}
+  design_note: Purple, green, and light neutral; Marik Militia red/blue side markings are not generalized faction-wide.
+- faction_id: lyran-commonwealth
+  name: Lyran Commonwealth
+  group: Successor States
+  military_claim_id: lyran-commonwealth-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#356DA8', primary_deep: '#1D3B5D', primary_surface: '#294F73', panel: '#202B35', panel_alt: '#2B3A47', border: '#657F96', secondary: '#75624E', accent: '#D8E2E8', foreground: '#F0F4F7', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.02, foreground_on_panel_alt: 10.56, recommended_text_on_primary: 4.86, recommended_text_on_secondary: 5.22, recommended_text_on_accent: 14.35, border_against_panel: 3.45}
+  design_note: Blue and blue-gray with gold/white support; parade and academy schemes remain representative variants.
+- faction_id: capellan-confederation
+  name: Capellan Confederation
+  group: Successor States
+  military_claim_id: capellan-confederation-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  roles: {primary: '#3D6D55', primary_deep: '#203E32', primary_surface: '#315B48', panel: '#1C3028', panel_alt: '#294438', border: '#739B84', secondary: '#6E2932', accent: '#C5A244', foreground: '#EEF6F0', ink: '#111111'}
+  contrast_checks: {foreground_on_panel: 12.69, foreground_on_panel_alt: 9.64, recommended_text_on_primary: 5.36, recommended_text_on_secondary: 9.41, recommended_text_on_accent: 7.76, border_against_panel: 4.49}
+  design_note: Jade/green with burgundy or maroon and gold; application-specific militia and parade uses remain separate.
+- faction_id: free-rasalhague-republic
+  name: Free Rasalhague Republic
+  group: Successor States
+  military_claim_id: free-rasalhague-republic-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#6BAFC5', primary_deep: '#2C5968', primary_surface: '#477F92', panel: '#20353D', panel_alt: '#2E4B55', border: '#8FB8C4', secondary: '#586671', accent: '#B33A3A', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: foreground, on_accent: foreground}
+  contrast_checks: {foreground_on_panel: 11.77, foreground_on_panel_alt: 8.55, recommended_text_on_primary: 7.70, recommended_text_on_secondary: 5.42, recommended_text_on_accent: 5.38, border_against_panel: 6.00}
+  design_note: Light blue with slate/gray, red, and silver based on KungsArmé military evidence; it is intentionally not the government Swedish-inspired blue/gold palette.
+- faction_id: clan-wolf
+  name: Clan Wolf
+  group: Clans
+  military_claim_id: clan-wolf-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#8A9298', primary_deep: '#343B40', primary_surface: '#5A646B', panel: '#20262A', panel_alt: '#30383D', border: '#AEB8BE', secondary: '#B79A42', accent: '#D8DDE0', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 14.05, foreground_on_panel_alt: 10.96, recommended_text_on_primary: 5.98, recommended_text_on_secondary: 6.94, recommended_text_on_accent: 13.79, border_against_panel: 7.58}
+  design_note: Clan Wolf gray is an all-around utilitarian scheme used by Wolf Galaxies; gold is limited support from documented Keshik kill-marking evidence.
+- faction_id: clan-wolf-in-exile
+  name: Clan Wolf in Exile
+  group: Clans
+  military_claim_id: clan-wolf-in-exile-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: REPRESENTATIVE_DERIVED
+  roles: {primary: '#8A9298', primary_deep: '#343B40', primary_surface: '#5A646B', panel: '#20262A', panel_alt: '#30383D', border: '#AEB8BE', secondary: '#B79A42', accent: '#D8DDE0', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 14.05, foreground_on_panel_alt: 10.96, recommended_text_on_primary: 5.98, recommended_text_on_secondary: 6.94, recommended_text_on_accent: 13.79, border_against_panel: 7.58}
+  design_note: Shared practical military treatment with Clan Wolf based on the available Wolf military scheme evidence; Wolf in Exile remains a separate identity and claim.

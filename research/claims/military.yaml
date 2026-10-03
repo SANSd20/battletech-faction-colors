@@ -1,0 +1,249 @@
+schema_version: 1
+subject: military_identity
+notes:
+- Military claims are separate from government/faction heraldry claims.
+- Full palettes are limited to identities with reusable military evidence; pending claims remain machine-readable without invented colors.
+claims:
+- id: federated-suns-military-identity
+  faction_id: federated-suns
+  source_locator: https://camospecs.com/factions/federated-suns/house-colors-federated-suns/
+  observation: Camo Specs describes Davion green as drab military green such as olive drab or hunter green, with typical military greens and tans; red/blue parade schemes are unit-specific.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: draconis-combine-military-identity
+  faction_id: draconis-combine
+  source_locator: https://camospecs.com/factions/draconis-combine/
+  observation: Military identity is retained as independently researched red with charcoal/black support.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: free-worlds-league-military-identity
+  faction_id: free-worlds-league
+  source_locator: https://camospecs.com/factions/free-worlds-league/
+  observation: Military identity is purple with green and light neutral support; Marik Militia side markings are not generalized.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: lyran-commonwealth-military-identity
+  faction_id: lyran-commonwealth
+  source_locator: https://camospecs.com/factions/lyran-commonwealth/
+  observation: Military identity is blue with blue-gray and gold/white support; unit parade schemes remain representative.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: capellan-confederation-military-identity
+  faction_id: capellan-confederation
+  source_locator: https://camospecs.com/factions/capellan-confederation/
+  observation: Military identity is jade/green with burgundy/maroon and gold support; militia variants remain application-specific.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: free-rasalhague-republic-military-identity
+  faction_id: free-rasalhague-republic
+  source_locator: https://camospecs.com/factions/free-rasalhague-republic/
+  observation: KungsArmé military evidence supports light blue, slate/gray, red, and silver; this is distinct from the government palette.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: clan-wolf-military-identity
+  faction_id: clan-wolf
+  source_locator: https://camospecs.com/articles/how-to/how-to-painting-a-clan-wolf-scheme/
+  observation: Camo Specs describes Clan Wolf gray as an all-around utilitarian scheme used by all Wolf Galaxies; supporting Keshik evidence documents gray and gold details.
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  status: ESTABLISHED
+- id: clan-wolf-in-exile-military-identity
+  faction_id: clan-wolf-in-exile
+  source_locator: https://camospecs.com/factions/clan-wolf-in-exile/
+  observation: Available military evidence supports the shared practical Wolf gray treatment; this is a separate claim for a separate faction identity.
+  evidence_classification: REPRESENTATIVE_DERIVED
+  status: ESTABLISHED
+- id: clan-blood-spirit-military-identity
+  faction_id: clan-blood-spirit
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-burrock-military-identity
+  faction_id: clan-burrock
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-cloud-cobra-military-identity
+  faction_id: clan-cloud-cobra
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-coyote-military-identity
+  faction_id: clan-coyote
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-diamond-shark-military-identity
+  faction_id: clan-diamond-shark
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Diamond Shark military evidence was not sufficient for a reusable organization-wide palette.
+- id: clan-fire-mandrill-military-identity
+  faction_id: clan-fire-mandrill
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-ghost-bear-military-identity
+  faction_id: clan-ghost-bear
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-goliath-scorpion-military-identity
+  faction_id: clan-goliath-scorpion
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: scorpion-empire-military-identity
+  faction_id: scorpion-empire
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Successor-state military evidence was not sufficient for a reusable palette.
+- id: clan-hells-horses-military-identity
+  faction_id: clan-hells-horses
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-ice-hellion-military-identity
+  faction_id: clan-ice-hellion
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-jade-falcon-military-identity
+  faction_id: clan-jade-falcon
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-nova-cat-military-identity
+  faction_id: clan-nova-cat
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+- id: clan-sea-fox-military-identity
+  faction_id: clan-sea-fox
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Sea Fox military evidence was not sufficient for a reusable organization-wide palette.
+- id: clan-smoke-jaguar-military-identity
+  faction_id: clan-smoke-jaguar
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: The supplied Smoke Jaguar image is representative government/faction evidence, not independent military evidence; no military palette is invented.
+- id: clan-snow-raven-military-identity
+  faction_id: clan-snow-raven
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: raven-alliance-military-identity
+  faction_id: raven-alliance
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Successor-state military evidence was not sufficient for a reusable palette.
+- id: clan-star-adder-military-identity
+  faction_id: clan-star-adder
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: clan-steel-viper-military-identity
+  faction_id: clan-steel-viper
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: clan-stone-lion-military-identity
+  faction_id: clan-stone-lion
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: clan-widowmaker-military-identity
+  faction_id: clan-widowmaker
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Historical Clan Widowmaker military evidence was not sufficient for a reusable palette.
+- id: comstar-military-identity
+  faction_id: comstar
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: republic-of-the-sphere-military-identity
+  faction_id: republic-of-the-sphere
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Multiple formations are documented, but no reusable organization-wide palette was established in this pass.
+- id: word-of-blake-military-identity
+  faction_id: word-of-blake
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: calderon-protectorate-military-identity
+  faction_id: calderon-protectorate
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: circinus-federation-military-identity
+  faction_id: circinus-federation
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: fiefdom-of-randis-military-identity
+  faction_id: fiefdom-of-randis
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: hanseatic-league-military-identity
+  faction_id: hanseatic-league
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: magistracy-of-canopus-military-identity
+  faction_id: magistracy-of-canopus
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: marian-hegemony-military-identity
+  faction_id: marian-hegemony
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: fronc-reaches-military-identity
+  faction_id: fronc-reaches
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: nueva-castile-military-identity
+  faction_id: nueva-castile
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: niops-association-military-identity
+  faction_id: niops-association
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: outworlds-alliance-military-identity
+  faction_id: outworlds-alliance
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: taurian-concordat-military-identity
+  faction_id: taurian-concordat
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.
+- id: umayyad-caliphate-military-identity
+  faction_id: umayyad-caliphate
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: The red-star-on-white excerpt identifies a common insignia but explicitly says uniforms are disparate; it does not establish a universal military paint scheme.
+- id: rim-worlds-republic-military-identity
+  faction_id: rim-worlds-republic
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Historical military evidence was not sufficient for a reusable palette.
+- id: star-league-military-identity
+  faction_id: star-league
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: Camo Specs documents several SLDF schemes, but their plurality prevents one reusable palette in this pass.
+- id: aurigan-coalition-military-identity
+  faction_id: aurigan-coalition
+  status: RESEARCH_PENDING
+  evidence_classification: RESEARCH_REQUIRED
+  observation: No organization-wide military scheme was established in this pass.

@@ -8,7 +8,7 @@ Research and canonical color records for BattleTech faction identities.
 - `factions/` contains canonical faction identity records.
 - `palettes/` contains consumer-specific adaptations.
 
-Military identity is separate from government/faction identity. A color can be useful for a military paint scheme without being a government or faction identity color, and vice versa.
+Military identity is separate from government/faction identity. A color can be useful for a military paint scheme without being a government or faction identity color, and vice versa. The reusable military palette dataset is in `palettes/military-ui.yaml`; its provenance claims are in `research/claims/military.yaml`.
 
 ## Evidence and approval
 
@@ -20,7 +20,7 @@ No exact hex values are canonical in the initial records. Hex values derived fro
 
 ## Initial scope
 
-The initial records cover Federated Suns, Draconis Combine, Free Worlds League, Lyran Commonwealth, Capellan Confederation, and Free Rasalhague Republic. The government/faction candidates are provisional heraldry-derived interpretations of Camo Specs faction emblems and retain claim-level provenance in `research/claims/initial-six.yaml`. The remaining-identity expansion is recorded separately in `research/claims/remaining-identities.yaml` and `factions/remaining-identities.yaml`; two identities remain unresolved rather than receiving invented palettes. The supplied Clan Smoke Jaguar evidence is preserved under `research/assets/clan-smoke-jaguar/`.
+The initial records cover Federated Suns, Draconis Combine, Free Worlds League, Lyran Commonwealth, Capellan Confederation, and Free Rasalhague Republic. The government/faction candidates are provisional heraldry-derived interpretations of Camo Specs faction emblems and retain claim-level provenance in `research/claims/initial-six.yaml`. The remaining-identity expansion is recorded separately in `research/claims/remaining-identities.yaml` and `factions/remaining-identities.yaml`. Military evidence is recorded independently: eight identities currently have reusable military palettes, while the remaining identities are explicitly research-pending rather than receiving invented colors. Clan Wolf in Exile remains separate while sharing Clan Wolf's practical military treatment; Smoke Jaguar's supplied image remains government/representative evidence only until independent military evidence is established.
 
 ## Presentation site
 
