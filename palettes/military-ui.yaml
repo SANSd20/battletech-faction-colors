@@ -98,3 +98,14 @@ palettes:
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
   contrast_checks: {foreground_on_panel: 14.05, foreground_on_panel_alt: 10.96, recommended_text_on_primary: 5.98, recommended_text_on_secondary: 6.94, recommended_text_on_accent: 13.79, border_against_panel: 7.58}
   design_note: Shared practical military treatment with Clan Wolf based on the available Wolf military scheme evidence; Wolf in Exile remains a separate identity and claim.
+- faction_id: clan-hells-horses
+  name: Clan Hell's Horses
+  group: Clans
+  military_claim_id: clan-hells-horses-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: REPRESENTATIVE_DERIVED
+  roles: {primary: '#22272B', primary_deep: '#121A20', primary_surface: '#191F25', panel: '#131A1F', panel_alt: '#1C272E', border: '#BCA752', secondary: '#B52A32', accent: '#D6A72F', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 16.13, foreground_on_panel_alt: 13.98, recommended_text_on_primary: 13.84, recommended_text_on_secondary: 5.77, recommended_text_on_accent: 8.48, border_against_panel: 7.35}
+  design_note: Representative Alpha Keshik military adaptation: black with red highlights and gold trim. It remains distinct from the Government palette and is not presented as a universal scheme for every Hell's Horses formation.

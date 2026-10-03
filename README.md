@@ -22,6 +22,8 @@ No exact hex values are canonical in the initial records. Hex values derived fro
 
 The initial records cover Federated Suns, Draconis Combine, Free Worlds League, Lyran Commonwealth, Capellan Confederation, and Free Rasalhague Republic. The government/faction candidates are provisional heraldry-derived interpretations of Camo Specs faction emblems and retain claim-level provenance in `research/claims/initial-six.yaml`. The remaining-identity expansion is recorded separately in `research/claims/remaining-identities.yaml` and `factions/remaining-identities.yaml`. Military evidence is recorded independently: eight identities currently have reusable military palettes, while the remaining identities are explicitly research-pending rather than receiving invented colors. Clan Wolf in Exile remains separate while sharing Clan Wolf's practical military treatment; Smoke Jaguar's supplied image remains government/representative evidence only until independent military evidence is established.
 
+Clan Military Pass 2 deepens the Clan claims without merging successor identities. Hell's Horses now has a representative-derived black/red/gold Military palette based on Alpha Keshik evidence and *FM: Crusader Clans*. Smoke Jaguar remains pending because independently documented formations use materially different schemes; a single Clan-wide palette would overstate the evidence. Unresolved Clan records remain explicit in `research/claims/military.yaml` for the future blueprint presentation.
+
 ## Presentation site
 
 The project’s GitHub Pages site is the presentation layer for the reusable government/faction UI palettes:

@@ -99,9 +99,11 @@ claims:
   observation: Successor-state military evidence was not sufficient for a reusable palette.
 - id: clan-hells-horses-military-identity
   faction_id: clan-hells-horses
-  status: RESEARCH_PENDING
-  evidence_classification: RESEARCH_REQUIRED
-  observation: No organization-wide military scheme was established in this pass; emblem evidence is insufficient.
+  source_locator: https://camospecs.com/unit/alpha-keshik/
+  source_publication: FM: Crusader Clans, page 64
+  status: ESTABLISHED
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Alpha Keshik evidence documents black equipment with red highlights and gold trim. This is a strong representative Keshik result, not an assertion that every Hell's Horses formation uses one universal scheme.
 - id: clan-ice-hellion-military-identity
   faction_id: clan-ice-hellion
   status: RESEARCH_PENDING
@@ -126,7 +128,12 @@ claims:
   faction_id: clan-smoke-jaguar
   status: RESEARCH_PENDING
   evidence_classification: RESEARCH_REQUIRED
-  observation: The supplied Smoke Jaguar image is representative government/faction evidence, not independent military evidence; no military palette is invented.
+  source_locator: https://camospecs.com/factions/clan-smoke-jaguar/
+  supporting_sources:
+  - https://camospecs.com/unit/alpha-galaxy-12/
+  - https://camospecs.com/unit/epsilon-galaxy-5/
+  - https://camospecs.com/unit/omega-galaxy-6/
+  observation: Independent military evidence is mixed: Alpha uses flat gray with jaguar spots, Epsilon uses dull reddish orange with yellow trim, and Omega uses a black jaguar-camo variation with blue and red/yellow details. The supplied image is representative government/faction evidence, so no universal Military palette is invented.
 - id: clan-snow-raven-military-identity
   faction_id: clan-snow-raven
   status: RESEARCH_PENDING
