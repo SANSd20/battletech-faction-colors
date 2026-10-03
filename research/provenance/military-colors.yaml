@@ -223,6 +223,81 @@ camo_specs:
   evidence_classification: MILITARY-STANDARD_DERIVED
   observation: Drab military green such as olive drab or hunter green, with typical military greens and tans; red/blue parade schemes are unit-specific.
   relationship_to_military_claim: canonical_support
+- id: house-arano-aurigan-mech-bay-red-gold
+  faction_id: aurigan-coalition
+  source_type: DIRECT_PRIMARY_SOURCE
+  source_name: House Arano: The Aurigan Coalition
+  publisher: Catalyst Game Labs
+  year: 2019
+  printed_page: 6
+  pdf_page: 8
+  subject: Aurigan BattleMech bay and Arano Royal Guard
+  observed_colors: [red, gold]
+  scope: MILITARY_WIDE / COMBAT_EQUIPMENT / LIVERY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: The Aurigan Mech bay contains rows of red-and-gold BattleMechs, and the Arano Royal Guard is being painted in the red-and-gold livery of House Arano.
+  limitation: The House Arano livery is a recurring Coalition context, while individual formations may retain their own treatment.
+  relationship_to_military_claim: primary_support
+- id: house-arano-royal-guard-thunderbolt
+  faction_id: aurigan-coalition
+  source_type: DIRECT_PRIMARY_SOURCE
+  source_name: House Arano: The Aurigan Coalition
+  publisher: Catalyst Game Labs
+  year: 2019
+  printed_page: 7
+  pdf_page: 9
+  subject: Arano Royal Guard Thunderbolt
+  observed_colors: [red, gold]
+  scope: FORMATION / ROYAL_GUARD / COMBAT_EQUIPMENT
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: A Royal Guard Thunderbolt is explicitly described as red-and-gold of the Arano Royal Guard.
+  limitation: Royal Guard evidence is combined with the broader Coalition and uniform observations for synthesis.
+  relationship_to_military_claim: primary_support
+- id: house-arano-aurigan-uniforms
+  faction_id: aurigan-coalition
+  source_type: DIRECT_PRIMARY_SOURCE
+  source_name: House Arano: The Aurigan Coalition
+  publisher: Catalyst Game Labs
+  year: 2019
+  printed_page: 25
+  pdf_page: 27
+  subject: Aurigan Coalition Military uniforms
+  observed_colors: [dark_gray, burgundy, red, white, gold]
+  scope: MILITARY_WIDE / UNIFORM / DRESS_UNIFORM
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Most soldiers at formal occasions use the House Arano dress uniform; enlisted uniforms are dark gray tunics and trousers, officers use high-collared red and white coats accented in gold, and field troops use dark gray or burgundy fatigues.
+  limitation: Dress uniforms vary by House, so the Arano treatment is representative rather than a claim that every House dresses identically.
+  relationship_to_military_claim: primary_support
+- id: house-arano-aurigan-coalition-red-gold
+  faction_id: aurigan-coalition
+  source_type: DIRECT_PRIMARY_SOURCE
+  source_name: House Arano: The Aurigan Coalition
+  publisher: Catalyst Game Labs
+  year: 2019
+  printed_page: 38
+  pdf_page: 40
+  subject: Karen Andris's Thunderbolt / Operation RESTORED HOPE
+  observed_colors: [red, gold]
+  scope: MILITARY_WIDE / COMBAT_EQUIPMENT / HERALDRY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Karen Andris's Thunderbolt previously carried Arano heraldry and the red-and-gold colors of the Aurigan Coalition during Operation RESTORED HOPE.
+  limitation: This explicit Coalition wording supports the recurring synthesis; it does not erase formation-specific exceptions.
+  relationship_to_military_claim: primary_support
+- id: house-arano-rampart-company-exception
+  faction_id: aurigan-coalition
+  source_type: DIRECT_PRIMARY_SOURCE
+  source_name: House Arano: The Aurigan Coalition
+  publisher: Catalyst Game Labs
+  year: 2019
+  printed_page: 36
+  pdf_page: 38
+  subject: Rampart Company
+  observed_colors: individualized
+  scope: SPECIAL_OPERATIONS / COMBAT_EQUIPMENT
+  evidence_classification: REPRESENTATIVE_DERIVED
+  observation: Rampart Company deliberately lacks a standard identifying color scheme; each BattleMech uses the pilot's chosen colors and heraldry to support plausible deniability.
+  limitation: This is a scoped special-operations exception and is not evidence against the broader reusable Aurigan Military identity.
+  relationship_to_military_claim: documented_exception
 - id: camospecs-draconis-combine
   faction_id: draconis-combine
   source_type: secondary_reference

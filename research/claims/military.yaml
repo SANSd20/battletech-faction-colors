@@ -264,6 +264,13 @@ claims:
   observation: Camo Specs documents several SLDF schemes, but their plurality prevents one reusable palette in this pass.
 - id: aurigan-coalition-military-identity
   faction_id: aurigan-coalition
-  status: RESEARCH_PENDING
-  evidence_classification: RESEARCH_REQUIRED
-  observation: No organization-wide military scheme was established in this pass.
+  source_locator: research/provenance/military-colors.yaml#house-arano-aurigan-coalition-red-gold
+  supporting_sources:
+  - research/provenance/military-colors.yaml#house-arano-aurigan-mech-bay-red-gold
+  - research/provenance/military-colors.yaml#house-arano-royal-guard-thunderbolt
+  - research/provenance/military-colors.yaml#house-arano-aurigan-uniforms
+  - research/provenance/military-colors.yaml#house-arano-rampart-company-exception
+  status: ESTABLISHED
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  relationship_to_government: SHARED_PRACTICAL_IDENTITY
+  observation: Direct House Arano evidence establishes recurring red-and-gold Aurigan combat-equipment identity, supported by dark gray/burgundy uniforms and red/white/gold officer dress treatment. Rampart Company is a deliberate special-operations exception with individualized schemes.

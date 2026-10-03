@@ -104,6 +104,3 @@ reviewed_claims:
 - id: star-league-military-identity
   review_status: NO_UNIFIED_PALETTE
   reason: SLDF evidence documents multiple olive, white/gray/blue, gray/green, and tan schemes.
-- id: aurigan-coalition-military-identity
-  review_status: INSUFFICIENT_EVIDENCE
-  reason: No accessible organization-wide military scheme remains established.

@@ -154,3 +154,14 @@ palettes:
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
   contrast_checks: {foreground_on_panel: 14.09, foreground_on_panel_alt: 11.39, recommended_text_on_primary: 5.88, recommended_text_on_secondary: 16.55, recommended_text_on_accent: 12.79, border_against_panel: 3.68}
   design_note: Intentionally shares the Government red/white UI values because the independent military evidence identifies red-star-on-white as the only common military element. It does not claim a universal Umayyad uniform scheme.
+- faction_id: aurigan-coalition
+  name: Aurigan Coalition
+  group: Periphery
+  military_claim_id: aurigan-coalition-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: SHARED_PRACTICAL_IDENTITY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#B52A32', primary_deep: '#501B23', primary_surface: '#7A2129', panel: '#252628', panel_alt: '#3A3032', border: '#8B7775', secondary: '#E0B23A', accent: '#E6E8E5', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 13.90, foreground_on_panel_alt: 11.69, recommended_text_on_primary: 5.77, recommended_text_on_secondary: 9.53, recommended_text_on_accent: 15.32, border_against_panel: 3.60}
+  design_note: Red and gold form the reusable Aurigan Coalition Military identity, supported directly by Royal Guard and Coalition BattleMech descriptions. Dark gray/burgundy and white derive from standard uniform descriptions. Rampart Company is a documented special-operations exception that deliberately uses individualized schemes. Exact values are UI_ADAPTATION choices, not official paint specifications.
