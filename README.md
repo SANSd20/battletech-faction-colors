@@ -24,6 +24,8 @@ The initial records cover Federated Suns, Draconis Combine, Free Worlds League, 
 
 Clan Military Pass 2 deepens the Clan claims without merging successor identities. Hell's Horses now has a representative-derived black/red/gold Military palette based on Alpha Keshik evidence and *FM: Crusader Clans*. Smoke Jaguar remains pending because independently documented formations use materially different schemes; a single Clan-wide palette would overstate the evidence. Unresolved Clan records remain explicit in `research/claims/military.yaml` for the future blueprint presentation.
 
+Military Research Pass 3 resolves ComStar and Word of Blake independently from Government/Faction heraldry. ComStar uses a white/light-gray organizational adaptation grounded in Com Guard evidence, while Word of Blake uses a distinct charcoal/light-gray/red synthesis grounded in Militia and Shadow Division evidence. Republic of the Sphere and Star League remain pending because their documented formations use multiple schemes without a defensible single reusable identity.
+
 ## Presentation site
 
 The project’s GitHub Pages site is the presentation layer for the reusable government/faction UI palettes:

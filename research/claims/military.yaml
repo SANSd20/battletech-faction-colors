@@ -166,9 +166,11 @@ claims:
   observation: Historical Clan Widowmaker military evidence was not sufficient for a reusable palette.
 - id: comstar-military-identity
   faction_id: comstar
-  status: RESEARCH_PENDING
-  evidence_classification: RESEARCH_REQUIRED
-  observation: No organization-wide military scheme was established in this pass.
+  source_locator: https://camospecs.com/unit/1st-division/
+  source_publication: FM: ComStar, page 17
+  status: ESTABLISHED
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Com Guards paint vehicles white for official occasions and use appropriate camouflage for combat. This supports a reusable white/light-gray Com Guard identity without claiming white is universal combat camouflage.
 - id: republic-of-the-sphere-military-identity
   faction_id: republic-of-the-sphere
   status: RESEARCH_PENDING
@@ -176,9 +178,14 @@ claims:
   observation: Multiple formations are documented, but no reusable organization-wide palette was established in this pass.
 - id: word-of-blake-military-identity
   faction_id: word-of-blake
-  status: RESEARCH_PENDING
-  evidence_classification: RESEARCH_REQUIRED
-  observation: No organization-wide military scheme was established in this pass.
+  source_locator: https://camospecs.com/unit/36th-division/
+  supporting_sources:
+  - https://camospecs.com/unit/44th-shadow-division/
+  - https://camospecs.com/unit/opacus-venatori/
+  source_publication: FM: ComStar, page 50; Starterbook: Wolf and Blake, page 32
+  status: ESTABLISHED
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  observation: Word of Blake Militia shares the Com Guard white-or-camouflage convention, while Shadow formations independently document recurring charcoal/black, light gray/white, and red marking elements. The palette represents the documented military identity family, not one universal scheme for every division.
 - id: calderon-protectorate-military-identity
   faction_id: calderon-protectorate
   status: RESEARCH_PENDING

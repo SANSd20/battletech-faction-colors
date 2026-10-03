@@ -109,3 +109,25 @@ palettes:
   recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: foreground, on_accent: ink}
   contrast_checks: {foreground_on_panel: 16.13, foreground_on_panel_alt: 13.98, recommended_text_on_primary: 13.84, recommended_text_on_secondary: 5.77, recommended_text_on_accent: 8.48, border_against_panel: 7.35}
   design_note: Representative Alpha Keshik military adaptation: black with red highlights and gold trim. It remains distinct from the Government palette and is not presented as a universal scheme for every Hell's Horses formation.
+- faction_id: comstar
+  name: ComStar
+  group: Interstellar organizations
+  military_claim_id: comstar-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#C7CED3', primary_deep: '#4B555E', primary_surface: '#737D86', panel: '#20262A', panel_alt: '#30383D', border: '#AEB8BE', secondary: '#DDE3E6', accent: '#79868D', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: ink, on_secondary: ink, on_accent: ink}
+  contrast_checks: {foreground_on_panel: 11.87, foreground_on_panel_alt: 14.57, recommended_text_on_primary: 5.04, recommended_text_on_secondary: 14.57, recommended_text_on_accent: 5.04, border_against_panel: 7.58}
+  design_note: White/light gray Com Guard ceremonial and organizational identity with charcoal support; combat camouflage remains an operational variation.
+- faction_id: word-of-blake
+  name: Word of Blake
+  group: Interstellar organizations
+  military_claim_id: word-of-blake-military-identity
+  military_status: ESTABLISHED
+  relationship_to_government: DISTINCT_MILITARY
+  evidence_classification: MILITARY-STANDARD_DERIVED
+  roles: {primary: '#30383D', primary_deep: '#182128', primary_surface: '#222A30', panel: '#171F25', panel_alt: '#222F36', border: '#AB9B79', secondary: '#DDE3E6', accent: '#B33A3A', foreground: '#F1F6F8', ink: '#111111'}
+  recommended_text: {on_panel: foreground, on_panel_alt: foreground, on_primary: foreground, on_secondary: ink, on_accent: foreground}
+  contrast_checks: {foreground_on_panel: 10.96, foreground_on_panel_alt: 14.57, recommended_text_on_primary: 10.96, recommended_text_on_secondary: 14.57, recommended_text_on_accent: 5.38, border_against_panel: 6.11}
+  design_note: White/camouflage militia roots with charcoal, light gray, and red Shadow Division elements; this is a reusable synthesis across documented formations, not a claim of one paint scheme for every unit.
