@@ -73,16 +73,19 @@ function swatch(key, palette) {
   return `<div class="swatch" style="background:${esc(value)};color:${esc(palette.roles[textRole])}"><span class="swatch-label">${esc(labelFor[key])}</span><code>${esc(value)}</code></div>`;
 }
 
-function paletteCard(palette, mode) {
+function paletteCard(palette, mode, presentation = null) {
   const r = palette.roles, contrast = palette.contrast_checks;
   const rootVars = Object.entries(r).map(([key, value]) => `--${key.replaceAll('_', '-')}:${value}`).join(';');
   const swatches = ['primary', 'secondary', 'primary_surface', 'panel', 'panel_alt', 'border', 'accent', 'foreground', 'ink'].map((key) => swatch(key, palette)).join('');
   const primaryText = r[palette.recommended_text.on_primary], secondaryText = r[palette.recommended_text.on_secondary];
-  return `<article class="palette-card" data-faction="${esc(palette.faction_id)}" style="${rootVars}">
-    <div class="palette-hero"><h3>${esc(palette.name)}</h3><div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Identity')} · <code>${mode === 'military' ? 'MILITARY' : esc(palette.identity_claim_status)}</code></div></div>
+  const presentationClass = presentation ? ' fallback-card' : '';
+  const statusLabel = presentation ? 'GOVERNMENT PALETTE FALLBACK' : mode === 'military' ? 'MILITARY' : esc(palette.identity_claim_status);
+  const statusNote = presentation ? 'Military-specific evidence is insufficient for a reusable Clan-wide palette. Government/Faction colors are shown as the approved practical UI fallback.' : palette.design_note;
+  return `<article class="palette-card${presentationClass}" data-faction="${esc(palette.faction_id)}" style="${rootVars}">
+    <div class="palette-hero"><h3>${esc(palette.name)}</h3><div class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${esc(palette.group || 'Identity')} · <code>${statusLabel}</code></div></div>
     <div class="palette-body"><div class="palette-labels"><div class="identity-chip primary-chip"><span>Primary identity</span><code>${esc(r.primary)}</code></div><div class="identity-chip secondary-chip"><span>Secondary / support</span><code>${esc(r.secondary)}</code></div></div>
     <div class="swatch-grid">${swatches}</div><div class="sample-row"><div class="text-sample primary-sample" style="--primary-text:${esc(primaryText)}"><strong>Primary text</strong>Readable sample</div><div class="text-sample secondary-sample" style="--secondary-text:${esc(secondaryText)}"><strong>Secondary text</strong>Readable sample</div></div>
-    <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p><p class="note">${esc(palette.design_note)}</p></div></article>`;
+    <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p><p class="note">${esc(statusNote)}</p></div></article>`;
 }
 
 function presentationPalettes(palettes) {
@@ -117,9 +120,10 @@ async function renderMode(mode) {
     const government = parsePaletteYaml(texts[0]);
     if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = presentationPalettes(government).map((p) => paletteCard(p, mode)).join(''); pending.innerHTML = ''; return; }
     const military = parsePaletteYaml(texts[1]), review = parseReviewYaml(texts[2]), byFaction = Object.fromEntries(military.map((p) => [p.faction_id, p]));
-    const cards = presentationPalettes(government).map((faction) => { const palette = byFaction[faction.faction_id] || (faction.faction_id === 'clan-wolf-presentation' ? { ...byFaction['clan-wolf'], name: faction.name, faction_id: faction.faction_id, design_note: `${byFaction['clan-wolf'].design_note} Presentation grouping: Clan Wolf in Exile remains a separate authoritative identity and is shown here alongside Clan Wolf.` } : null); if (palette) return paletteCard(palette, mode); const state = review[`${faction.faction_id}-military-identity`]; return state ? blueprintCard(faction, state) : ''; }).join('');
+    let fallbackCount = 0;
+    const cards = presentationPalettes(government).map((faction) => { const state = review[`${faction.faction_id}-military-identity`]; const palette = byFaction[faction.faction_id] || (faction.faction_id === 'clan-wolf-presentation' ? { ...byFaction['clan-wolf'], name: faction.name, faction_id: faction.faction_id, design_note: `${byFaction['clan-wolf'].design_note} Presentation grouping: Clan Wolf in Exile remains a separate authoritative identity and is shown here alongside Clan Wolf.` } : null); if (palette) return paletteCard(palette, mode); if (state?.status === 'INSUFFICIENT_EVIDENCE' && ['Clans', 'Clan successor states'].includes(faction.group)) { fallbackCount += 1; return paletteCard({ ...faction, faction_id: faction.faction_id }, mode, true); } return state ? blueprintCard(faction, state) : ''; }).join('');
     const counts = Object.values(review).reduce((a, v) => { a[v.status] = (a[v.status] || 0) + 1; return a; }, {});
-    document.querySelector('#palette-count').textContent = military.length; grid.innerHTML = cards; pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Military research states</h2></div><p>${military.length} finished palettes · ${counts.NO_UNIFIED_PALETTE || 0} technical conclusions · ${counts.INSUFFICIENT_EVIDENCE || 0} insufficient-evidence records.</p></div>`;
+    document.querySelector('#palette-count').textContent = military.length; grid.innerHTML = cards; pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Military research states</h2></div><p>${military.length} source-supported palettes · ${fallbackCount} Clan Government-palette fallbacks · ${counts.NO_UNIFIED_PALETTE || 0} technical conclusions · ${(counts.INSUFFICIENT_EVIDENCE || 0) - fallbackCount} non-Clan insufficient-evidence records.</p></div>`;
   } catch (error) { grid.innerHTML = `<div class="error-card"><strong>Identity data could not be loaded.</strong><br><span>${esc(error.message)}</span></div>`; pending.innerHTML = ''; console.error(error); }
 }
 

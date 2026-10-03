@@ -30,6 +30,8 @@ Military Research Pass 4 keeps most Periphery and historical identities pending 
 
 The final unresolved review records a separate `research/claims/military-review.yaml` status layer. `RESEARCH_PENDING` means a concrete named lead remains; `INSUFFICIENT_EVIDENCE` means no currently accessible evidence supports a palette and no specific unreviewed lead remains; `NO_UNIFIED_PALETTE` means positive evidence shows that a single faction-wide palette would misrepresent documented formation variation. A mature Military dataset therefore need not contain 47 palettes.
 
+For eligible Clan and Clan-successor identities marked `INSUFFICIENT_EVIDENCE`, the presentation layer may show the corresponding Government/Faction palette as an explicit practical `GOVERNMENT_PALETTE_FALLBACK`; this does not change the Military evidence status or apply to `NO_UNIFIED_PALETTE` or non-Clans.
+
 ## Presentation site
 
 Consumer projects should follow [`docs/CONSUMING-PALETTES.md`](docs/CONSUMING-PALETTES.md) when selecting an identity context or handling unresolved Military evidence.

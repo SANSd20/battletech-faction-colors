@@ -31,6 +31,8 @@ Available evidence positively demonstrates materially different military schemes
 
 Current evidence does not support a defensible reusable faction-wide Military palette. Do not treat a Government / Faction palette as a military fallback, and do not present placeholder colors as findings. Keep the consumer state visibly unresolved until the authoritative research state changes.
 
+For a Clan or Clan-successor identity with `INSUFFICIENT_EVIDENCE`, consumers may use that identity's Government / Faction palette as the standard practical Military UI fallback. This is a `GOVERNMENT_PALETTE_FALLBACK` and remains a `UI_ADAPTATION`, not Military evidence; the underlying Military status stays `INSUFFICIENT_EVIDENCE`. Formation-specific evidence may be preferable for an exact consumer context. This fallback is forbidden for `NO_UNIFIED_PALETTE` and does not apply to non-Clans without a future project decision.
+
 ## Integration guidance
 
 Resolve identities by their stable `faction_id`, read the current YAML files at integration time, and preserve the distinction between Government / Faction and Military. The presentation site may group records for readability—for example, Clan Wolf and Clan Wolf in Exile are shown together as `Clan Wolf / Clan Wolf in Exile`—but their authoritative records, IDs, claims, and palette entries remain separate.
