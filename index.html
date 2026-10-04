@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="BattleTech government, faction, and military color reference based on documented sources.">
   <title>BattleTech Faction Colors</title>
-    <link rel="stylesheet" href="styles.css?rev=v11-card-refine">
+    <link rel="stylesheet" href="styles.css?rev=v11-about-cleanup">
 </head>
 <body>
   <header class="site-header">
@@ -61,32 +61,10 @@
       </noscript>
     </section>
 
-    <section id="methodology" class="methodology shell">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">How to read this</p>
-          <h2>Presentation is not evidence authority.</h2>
-        </div>
-        <p class="section-intro">The project keeps source observations, identity conclusions, reusable UI palettes, and future consumer presentations distinct.</p>
-      </div>
-      <div class="method-grid">
-        <article class="method-card method-flow">
-          <p class="card-kicker">Information flow</p>
-          <div class="flow-list">
-            <span>Sources</span><i aria-hidden="true">↓</i>
-            <span>Research / provenance</span><i aria-hidden="true">↓</i>
-            <span>Canonical faction identity</span><i aria-hidden="true">↓</i>
-            <span>Reusable UI palettes</span><i aria-hidden="true">↓</i>
-            <span class="flow-highlight">Consumer / presentation layers</span>
-          </div>
-        </article>
-        <article class="method-card">
-          <p class="card-kicker">Status and scope</p>
-          <h3>What these colors mean</h3>
-          <p>Source evidence and identity conclusions are tracked separately from reusable display palettes.</p>
-          <p>Government/Faction and Military identity are separate evidence contexts. Exact hexadecimal values are UI adaptations unless a source explicitly specifies a digital value. Unresolved Military cases remain visibly unresolved rather than receiving invented source colors.</p>
-        </article>
-      </div>
+    <section id="methodology" class="methodology shell" aria-labelledby="about-colors-heading">
+      <h2 id="about-colors-heading">About these colors</h2>
+      <p>Government/Faction and Military colors are researched separately. Exact hexadecimal values are UI adaptations unless a source explicitly specifies a digital value. Unresolved Military cases are shown as unresolved rather than assigned invented colors.</p>
+      <a href="https://github.com/SANSd20/battletech-faction-colors">View methodology / sources on GitHub <span aria-hidden="true">↗</span></a>
     </section>
   </main>
 
@@ -97,6 +75,6 @@
     </div>
   </footer>
 
-    <script src="site.js?rev=v11-card-refine"></script>
+    <script src="site.js?rev=v11-about-cleanup"></script>
 </body>
 </html>
