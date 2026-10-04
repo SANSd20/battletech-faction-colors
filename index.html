@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A source-aware visual reference for BattleTech government and faction UI palettes.">
+  <meta name="description" content="BattleTech government, faction, and military color reference based on documented sources.">
   <title>BattleTech Faction Colors</title>
-    <link rel="stylesheet" href="styles.css?rev=v11-hero-cleanup">
+    <link rel="stylesheet" href="styles.css?rev=v11-simplified">
 </head>
 <body>
   <header class="site-header">
@@ -25,38 +25,28 @@
   <main>
     <section class="hero shell">
       <div class="hero-copy">
-        <p class="eyebrow">BattleTech faction color reference</p>
         <h1>BattleTech Faction Colors</h1>
         <p class="lede">Government and military faction colors based on documented sources, with uncertain or unavailable colors clearly identified.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#palettes">Explore palettes <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="#methodology">Read the methodology</a>
         </div>
       </div>
     </section>
 
     <section class="identity-switcher shell" aria-label="Identity view">
-      <div><p class="eyebrow">Identity context</p><h2>Choose the evidence layer</h2></div>
+      <div><h2>Choose the evidence layer</h2></div>
       <div class="segmented-control" role="group" aria-label="Choose identity mode">
         <button type="button" class="mode-button is-active" data-mode="government" aria-pressed="true">Government / Faction</button>
         <button type="button" class="mode-button" data-mode="military" aria-pressed="false">Military</button>
       </div>
     </section>
 
-    <section class="status-strip shell" aria-label="Project status">
-      <div><strong id="palette-count">47</strong><span id="mode-count-label">finished Government / faction palettes</span></div>
-      <div><strong>UI_ADAPTATION</strong><span>exact values</span></div>
-      <div><strong>PROVISIONAL</strong><span>current approval status</span></div>
-      <div><strong>YAML</strong><span>authoritative data source</span></div>
-    </section>
-
     <section id="palettes" class="palette-section shell">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Current collection</p>
           <h2 id="mode-heading">Government / Faction Colors</h2>
         </div>
-        <p id="mode-intro" class="section-intro">Political and heraldic faction identities expressed as reusable UI adaptations. Exact digital values are project choices, not official BattleTech color specifications.</p>
+        <p id="mode-intro" class="section-intro">Political and faction identity colors.</p>
       </div>
       <div class="collection-controls" aria-label="Palette browsing controls">
         <button type="button" class="utility-button" data-collection-action="expand">Expand All</button>
@@ -93,14 +83,8 @@
         <article class="method-card">
           <p class="card-kicker">Status and scope</p>
           <h3>What these colors mean</h3>
-          <p>Current government/faction identity claims are substantially <code>HERALDRY_DERIVED</code> and <code>RESEARCH_REQUIRED</code>. The exact hexadecimal values shown here are <code>UI_ADAPTATION</code> choices and remain <code>PROVISIONAL</code>.</p>
-          <p>Military identity is tracked separately. In Military mode, finished cards show supported reusable palettes; technical blueprints show documented variation that prevents one unified palette; sketch blueprints show insufficient evidence.</p>
-        </article>
-        <article class="method-card">
-          <p class="card-kicker">Rasalhague note</p>
-          <h3>Heraldry-derived UI adaptation</h3>
-          <p>Free Rasalhague Government/Faction presentation follows the supplied heraldry image and the Camo Specs heraldry observation: deep royal blue is primary, with ice-blue/cyan and white/silver support.</p>
-          <p>The hexadecimal values are UI_ADAPTATION choices; they are not official BattleTech digital color specifications. FRR Military evidence remains separate and is based on KungsArmé evidence.</p>
+          <p>Source evidence and identity conclusions are tracked separately from reusable display palettes.</p>
+          <p>Government/Faction and Military identity are separate evidence contexts. Exact hexadecimal values are UI adaptations unless a source explicitly specifies a digital value. Unresolved Military cases remain visibly unresolved rather than receiving invented source colors.</p>
         </article>
       </div>
     </section>
@@ -109,11 +93,10 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <span>BattleTech Faction Colors</span>
-      <span>Presentation layer · data sources: <code>palettes/government-ui.yaml</code> and <code>palettes/military-ui.yaml</code></span>
       <a href="https://github.com/SANSd20/battletech-faction-colors">GitHub repository <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 
-    <script src="site.js?rev=v11-ux"></script>
+    <script src="site.js?rev=v11-simplified"></script>
 </body>
 </html>

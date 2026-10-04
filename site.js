@@ -61,10 +61,10 @@ function parseReviewYaml(text) {
   return review;
 }
 
-const labelFor = { primary: 'Primary', secondary: 'Secondary', primary_surface: 'Surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
+const labelFor = { primary: 'Primary Identity', secondary: 'Secondary / Support', primary_surface: 'Surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
 const stateCopy = {
-  NO_UNIFIED_PALETTE: { label: 'No unified military palette', className: 'technical-state', text: 'Documented military formations use materially different schemes; a single faction-wide palette would be misleading.' },
-  INSUFFICIENT_EVIDENCE: { label: 'Insufficient evidence', className: 'sketch-state', text: 'Available sources do not support a defensible reusable faction-wide Military palette.' }
+  NO_UNIFIED_PALETTE: { label: 'No unified military palette', className: 'technical-state' },
+  INSUFFICIENT_EVIDENCE: { label: 'Insufficient evidence', className: 'sketch-state' }
 };
 const expansionState = new Map();
 
@@ -87,10 +87,10 @@ function swatch(key, palette) {
 }
 
 function paletteCard(palette, mode, presentation = null) {
-  const r = palette.roles, contrast = palette.contrast_checks;
+  const r = palette.roles;
   const rootVars = Object.entries(r).map(([key, value]) => `--${key.replaceAll('_', '-')}:${value}`).join(';');
   const swatches = ['primary', 'secondary', 'primary_surface', 'panel', 'panel_alt', 'border', 'accent', 'foreground', 'ink'].map((key) => swatch(key, palette)).join('');
-  const headerText = chooseReadableText(r.primary, palette), primaryText = chooseReadableText(r.primary, palette), secondaryText = chooseReadableText(r.secondary, palette);
+  const headerText = chooseReadableText(r.primary, palette);
   const primaryChipText = chooseReadableText(r.primary, palette), secondaryChipText = chooseReadableText(r.secondary, palette);
   const presentationClass = presentation ? ' fallback-card' : '';
   const statusLabel = presentation ? 'GOVERNMENT PALETTE FALLBACK' : '';
@@ -98,10 +98,8 @@ function paletteCard(palette, mode, presentation = null) {
   const expanded = expansionState.get(palette.faction_id) === true;
   const meta = [palette.group || 'Identity', statusLabel ? `<code>${esc(statusLabel)}</code>` : ''].filter(Boolean).map((value) => typeof value === 'string' && value.startsWith('<') ? value : `<span>${esc(value)}</span>`).join('');
   return `<article class="palette-card${presentationClass}${expanded ? ' is-expanded' : ''}" data-faction="${esc(palette.faction_id)}" style="${rootVars}">
-    <button type="button" class="palette-hero palette-disclosure" style="color:${esc(headerText)}" aria-expanded="${expanded}" aria-controls="palette-body-${esc(palette.faction_id)}"><span class="palette-hero-copy"><h3>${esc(palette.name)}</h3><span class="palette-hero-meta"><span class="color-dot" style="background:${esc(r.primary)}"></span>${meta}</span></span><span class="disclosure-icon" aria-hidden="true">⌄</span></button>
-    <div id="palette-body-${esc(palette.faction_id)}" class="palette-body"${expanded ? '' : ' hidden'}><div class="palette-labels"><div class="identity-chip primary-chip" style="color:${esc(primaryChipText)}"><span>Primary identity</span><code>${esc(r.primary)}</code></div><div class="identity-chip secondary-chip" style="color:${esc(secondaryChipText)}"><span>Secondary / support</span><code>${esc(r.secondary)}</code></div></div>
-    <div class="swatch-grid">${swatches}</div><div class="sample-row"><div class="text-sample primary-sample" style="--primary-text:${esc(primaryText)}"><strong>Primary text</strong>Readable sample</div><div class="text-sample secondary-sample" style="--secondary-text:${esc(secondaryText)}"><strong>Secondary text</strong>Readable sample</div></div>
-    <p class="note">Recommended text contrast: primary <code>${esc(contrast.recommended_text_on_primary)}</code> · secondary <code>${esc(contrast.recommended_text_on_secondary)}</code> · accent <code>${esc(contrast.recommended_text_on_accent)}</code></p><p class="note">${esc(statusNote)}</p></div></article>`;
+    <button type="button" class="palette-hero palette-disclosure" style="color:${esc(headerText)}" aria-expanded="${expanded}" aria-controls="palette-body-${esc(palette.faction_id)}"><span class="palette-hero-copy"><h3>${esc(palette.name)}</h3><span class="palette-hero-meta">${meta}</span></span><span class="disclosure-icon" aria-hidden="true">⌄</span></button>
+    <div id="palette-body-${esc(palette.faction_id)}" class="palette-body"${expanded ? '' : ' hidden'}><div class="swatch-grid">${swatches}</div><p class="note">${esc(statusNote)}</p></div></article>`;
 }
 
 function presentationPalettes(palettes) {
@@ -116,7 +114,7 @@ function presentationPalettes(palettes) {
 function blueprintCard(faction, state) {
   const copy = stateCopy[state.status];
   const expanded = expansionState.get(faction.faction_id) === true;
-  return `<article class="blueprint-card ${copy.className}${expanded ? ' is-expanded' : ''}" data-faction="${esc(faction.faction_id)}"><div class="blueprint-grid" aria-hidden="true"></div><button type="button" class="blueprint-disclosure" aria-expanded="${expanded}" aria-controls="blueprint-body-${esc(faction.faction_id)}"><span><span class="blueprint-kicker">Military identity analysis</span><h3>${esc(faction.name)}</h3><span class="blueprint-status">${esc(copy.label)}</span></span><span class="disclosure-icon" aria-hidden="true">⌄</span></button><div id="blueprint-body-${esc(faction.faction_id)}" class="blueprint-content"${expanded ? '' : ' hidden'}><p>${esc(copy.text)}</p><div class="placeholder-swatches"><span>PRIMARY ?</span><span>SECONDARY ?</span><span>ACCENT ?</span></div><p class="blueprint-reason">${esc(state.reason)}</p></div></article>`;
+  return `<article class="blueprint-card ${copy.className}${expanded ? ' is-expanded' : ''}" data-faction="${esc(faction.faction_id)}"><div class="blueprint-grid" aria-hidden="true"></div><button type="button" class="blueprint-disclosure" aria-expanded="${expanded}" aria-controls="blueprint-body-${esc(faction.faction_id)}"><span><h3>${esc(faction.name)}</h3><span class="blueprint-status">${esc(copy.label)}</span></span><span class="disclosure-icon" aria-hidden="true">⌄</span></button><div id="blueprint-body-${esc(faction.faction_id)}" class="blueprint-content"${expanded ? '' : ' hidden'}><p class="blueprint-reason">${esc(state.reason)}</p></div></article>`;
 }
 
 function getMode() { return new URLSearchParams(location.search).get('identity') === 'military' ? 'military' : 'government'; }
@@ -127,20 +125,21 @@ async function renderMode(mode) {
   document.body.dataset.identity = mode;
   document.querySelectorAll('[data-mode]').forEach((button) => { const active = button.dataset.mode === mode; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
   document.querySelector('#mode-heading').textContent = mode === 'military' ? 'Military Colors' : 'Government / Faction Colors';
-  document.querySelector('#mode-intro').textContent = 'Government and military faction colors based on documented sources, with uncertain or unavailable colors clearly identified.';
-  document.querySelector('#mode-count-label').textContent = mode === 'military' ? 'finished Military palettes' : 'finished Government / faction palettes';
+  document.querySelector('#mode-intro').textContent = mode === 'military'
+    ? 'Reusable military identity colors and documented unresolved cases.'
+    : 'Political and faction identity colors.';
   try {
     const urls = mode === 'military' ? [SOURCES.government, SOURCES.military, SOURCES.review] : [SOURCES.government, SOURCES.military];
     const responses = await Promise.all(urls.map((url) => fetch(url, { cache: 'no-cache' })));
     if (responses.some((response) => !response.ok)) throw new Error('Palette data request failed.');
     const texts = await Promise.all(responses.map((response) => response.text()));
     const government = parsePaletteYaml(texts[0]), militaryGroups = mode === 'government' ? Object.fromEntries(parsePaletteYaml(texts[1]).map((p) => [p.faction_id, p.group])) : {};
-    if (mode === 'government') { document.querySelector('#palette-count').textContent = government.length; grid.innerHTML = presentationPalettes(government).map((p) => paletteCard(militaryGroups[p.faction_id] && !p.group ? { ...p, group: militaryGroups[p.faction_id] } : p, mode)).join(''); pending.innerHTML = ''; return; }
+    if (mode === 'government') { grid.innerHTML = presentationPalettes(government).map((p) => paletteCard(militaryGroups[p.faction_id] && !p.group ? { ...p, group: militaryGroups[p.faction_id] } : p, mode)).join(''); pending.innerHTML = ''; return; }
     const military = parsePaletteYaml(texts[1]), review = parseReviewYaml(texts[2]), byFaction = Object.fromEntries(military.map((p) => [p.faction_id, p]));
     let fallbackCount = 0;
     const cards = presentationPalettes(government).map((faction) => { const state = review[`${faction.faction_id}-military-identity`]; const palette = byFaction[faction.faction_id] || (faction.faction_id === 'clan-wolf-presentation' ? { ...byFaction['clan-wolf'], name: faction.name, faction_id: faction.faction_id, design_note: `${byFaction['clan-wolf'].design_note} Presentation grouping: Clan Wolf in Exile remains a separate authoritative identity and is shown here alongside Clan Wolf.` } : null); if (palette) return paletteCard(palette, mode); if (state?.status === 'INSUFFICIENT_EVIDENCE' && ['Clans', 'Clan successor states'].includes(faction.group)) { fallbackCount += 1; return paletteCard({ ...faction, faction_id: faction.faction_id }, mode, true); } return state ? blueprintCard(faction, state) : ''; }).join('');
     const counts = Object.values(review).reduce((a, v) => { a[v.status] = (a[v.status] || 0) + 1; return a; }, {});
-    document.querySelector('#palette-count').textContent = military.length; grid.innerHTML = cards; pending.innerHTML = `<div class="pending-heading"><div><p class="eyebrow">Evidence boundary</p><h2>Military research states</h2></div><p>${military.length} source-supported palettes · ${fallbackCount} Clan Government-palette fallbacks · ${counts.NO_UNIFIED_PALETTE || 0} technical conclusions · ${(counts.INSUFFICIENT_EVIDENCE || 0) - fallbackCount} non-Clan insufficient-evidence records.</p></div>`;
+    grid.innerHTML = cards; pending.innerHTML = `<p class="military-summary">${military.length} supported · ${fallbackCount} Government fallbacks · ${counts.NO_UNIFIED_PALETTE || 0} no unified palette · ${(counts.INSUFFICIENT_EVIDENCE || 0) - fallbackCount} insufficient evidence</p>`;
   } catch (error) { grid.innerHTML = `<div class="error-card"><strong>Identity data could not be loaded.</strong><br><span>${esc(error.message)}</span></div>`; pending.innerHTML = ''; console.error(error); }
 }
 
