@@ -1,0 +1,201 @@
+schema_version: 1
+project: battletech-faction-colors
+purpose: Audit of Government/Faction consumer colors for source-supported third identity colors.
+scope: 47 current palettes in palettes/government-ui.yaml
+method: Existing consumer accent roles were traced to the linked Government/Faction claim; only explicit identity/support/trim semantics were eligible for promotion. Neutral, observed-only, provisional, military, and UI-construction colors remain non-tertiary.
+records:
+- faction_id: federated-suns
+  claim_id: fs-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+  rationale: Claim supports primary and secondary identity candidates; no approved third identity role.
+- faction_id: draconis-combine
+  claim_id: dc-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: free-worlds-league
+  claim_id: fwl-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: lyran-commonwealth
+  claim_id: lc-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: capellan-confederation
+  claim_id: cc-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: free-rasalhague-republic
+  claim_id: frr-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-blood-spirit
+  claim_id: clan-blood-spirit-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-burrock
+  claim_id: clan-burrock-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-cloud-cobra
+  claim_id: clan-cloud-cobra-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-coyote
+  claim_id: clan-coyote-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-diamond-shark
+  claim_id: clan-diamond-shark-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-fire-mandrill
+  claim_id: clan-fire-mandrill-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-ghost-bear
+  claim_id: clan-ghost-bear-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-goliath-scorpion
+  claim_id: clan-goliath-scorpion-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: scorpion-empire
+  claim_id: scorpion-empire-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-hells-horses
+  claim_id: clan-hells-horses-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-ice-hellion
+  claim_id: clan-ice-hellion-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-jade-falcon
+  claim_id: clan-jade-falcon-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-nova-cat
+  claim_id: clan-nova-cat-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-sea-fox
+  claim_id: clan-sea-fox-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-smoke-jaguar
+  claim_id: clan-smoke-jaguar-representative-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-snow-raven
+  claim_id: clan-snow-raven-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: raven-alliance
+  claim_id: raven-alliance-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-star-adder
+  claim_id: clan-star-adder-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-steel-viper
+  claim_id: clan-steel-viper-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-stone-lion
+  claim_id: clan-stone-lion-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-widowmaker
+  claim_id: clan-widowmaker-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-wolf
+  claim_id: clan-wolf-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: clan-wolf-in-exile
+  claim_id: clan-wolf-in-exile-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: comstar
+  claim_id: comstar-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: republic-of-the-sphere
+  claim_id: republic-of-the-sphere-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: word-of-blake
+  claim_id: word-of-blake-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: calderon-protectorate
+  claim_id: calderon-protectorate-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: circinus-federation
+  claim_id: circinus-federation-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: fiefdom-of-randis
+  claim_id: fiefdom-of-randis-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: hanseatic-league
+  claim_id: hanseatic-league-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: magistracy-of-canopus
+  claim_id: magistracy-of-canopus-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: marian-hegemony
+  claim_id: marian-hegemony-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: fronc-reaches
+  claim_id: fronc-reaches-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: nueva-castile
+  claim_id: nueva-castile-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: niops-association
+  claim_id: niops-association-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: outworlds-alliance
+  claim_id: outworlds-alliance-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: taurian-concordat
+  claim_id: taurian-concordat-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: rim-worlds-republic
+  claim_id: rim-worlds-republic-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: star-league
+  claim_id: star-league-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+- faction_id: aurigan-coalition
+  claim_id: aurigan-coalition-house-arano-colors
+  existing_consumer_accent: retained separately as UI accent; same adaptation is also used for tertiary
+  tertiary: true
+  semantic_role: trim
+  color: gold
+  evidence_classification: REPRESENTATIVE_DERIVED
+  approval_status: representative
+  rationale: Direct primary source establishes House Arano red and black with gold trim; House Arano is the approved representative basis for the Aurigan Coalition, not a universal national-color claim.
+- faction_id: umayyad-caliphate
+  claim_id: umayyad-caliphate-heraldry-candidate
+  existing_consumer_accent: retained as UI-only accent
+  tertiary: false
+  rationale: Red/white identity treatment is supported, but no approved third identity role is established.

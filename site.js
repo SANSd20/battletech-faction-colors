@@ -61,7 +61,7 @@ function parseReviewYaml(text) {
   return review;
 }
 
-const labelFor = { primary: 'Primary', secondary: 'Secondary / Support', primary_surface: 'Surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
+const labelFor = { primary: 'Primary', secondary: 'Secondary / Support', tertiary: 'Tertiary', primary_surface: 'Surface', panel: 'Panel', panel_alt: 'Panel alt', border: 'Border', accent: 'Accent', foreground: 'Foreground', ink: 'Ink' };
 const stateCopy = {
   NO_UNIFIED_PALETTE: { label: 'No unified military palette', className: 'technical-state' },
   INSUFFICIENT_EVIDENCE: { label: 'Insufficient evidence', className: 'sketch-state' }
@@ -89,7 +89,7 @@ function swatch(key, palette) {
 function paletteCard(palette, mode, presentation = null) {
   const r = palette.roles;
   const rootVars = Object.entries(r).map(([key, value]) => `--${key.replaceAll('_', '-')}:${value}`).join(';');
-  const swatches = ['primary', 'secondary'].filter((key) => palette.roles[key]).map((key) => swatch(key, palette)).join('');
+  const swatches = ['primary', 'secondary', 'tertiary'].filter((key) => palette.roles[key]).map((key) => swatch(key, palette)).join('');
   const headerText = chooseReadableText(r.primary, palette);
   const primaryChipText = chooseReadableText(r.primary, palette), secondaryChipText = chooseReadableText(r.secondary, palette);
   const presentationClass = presentation ? ' fallback-card' : '';

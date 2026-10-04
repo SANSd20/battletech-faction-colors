@@ -450,4 +450,12 @@ factions:
   government_faction_identity:
     status: provisional
     candidate_claim_id: aurigan-coalition-heraldry-candidate
+    identity_colors:
+      trim:
+        semantic_role: trim
+        candidate_claim_id: aurigan-coalition-house-arano-colors
+        status: representative
+        evidence_classification: REPRESENTATIVE_DERIVED
+        color: gold
+        note: House Arano's documented gold trim is used as the approved representative Government/Faction trim basis for the Aurigan Coalition; it is not asserted as a universal Aurigan national-color claim.
     exact_hex_values: null

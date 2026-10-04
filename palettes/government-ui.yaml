@@ -1372,6 +1372,7 @@ palettes:
     panel_alt: '#5E2831'
     border: '#C4666D'
     secondary: '#111111'
+    tertiary: '#D6A72F'
     accent: '#D6A72F'
     foreground: '#F1F6F8'
     ink: '#111111'
