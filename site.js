@@ -89,7 +89,7 @@ function swatch(key, palette) {
 function paletteCard(palette, mode, presentation = null) {
   const r = palette.roles;
   const rootVars = Object.entries(r).map(([key, value]) => `--${key.replaceAll('_', '-')}:${value}`).join(';');
-  const swatches = ['primary', 'secondary', 'primary_surface', 'panel', 'panel_alt', 'border', 'accent', 'foreground', 'ink'].map((key) => swatch(key, palette)).join('');
+  const swatches = ['primary', 'secondary', 'primary_surface', 'panel', 'panel_alt', 'border', 'accent', 'foreground'].map((key) => swatch(key, palette)).join('');
   const headerText = chooseReadableText(r.primary, palette);
   const primaryChipText = chooseReadableText(r.primary, palette), secondaryChipText = chooseReadableText(r.secondary, palette);
   const presentationClass = presentation ? ' fallback-card' : '';
